@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">"   Events"</string>
+    <string name="text1">Fragment 1</string>
+    <string name="text2">Fragment2</string>
+    <string name="title_section1">Todays</string>
+    <string name="title_section2">Tomorrow</string>
+    <string name="title_section3">Later</string>
+    <string-array name="societies">
+
+    <item>All Societies</item>
+
+    <item>My Societies</item>
+
+    <item>Edit</item>
+
+    </string-array>
+
+    <string name="directions">Get Directions</string>
+    <string name="action_settings">Settings</string>
+
+</resources>

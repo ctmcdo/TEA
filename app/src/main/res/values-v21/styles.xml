@@ -1,0 +1,18 @@
+<resources>>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <!-- Customize your theme here. -->
+
+        <item name="colorPrimary">@color/primaryColor</item>
+
+        <item name="colorPrimaryDark">@color/primaryColorDark</item>
+
+        <item name="colorAccent">@color/accentColor</item>
+        <item name="homeAsUpIndicator">@mipmap/ic_menu_white_24dp</item>
+
+    </style>
+
+
+
+</resources>

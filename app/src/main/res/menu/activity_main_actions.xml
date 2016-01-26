@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:yourapp="http://schemas.android.com/apk/res-auto">
+
+
+    <item android:id="@+id/settings_id"
+
+        android:title="settings"
+
+        android:icon="@mipmap/ic_search_white_24dp"
+
+        yourapp:showAsAction="always"
+
+        ></item>
+
+
+
+</menu>
