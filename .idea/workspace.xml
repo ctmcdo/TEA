@@ -1,203 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="24ba1165-372e-4d3c-9b0d-cccd0254df21" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties.lock" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/outputFileStates.bin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/gradle/wrapper/gradle-wrapper.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/app_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/calendar_btn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/directions_btn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/tcd_logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/textured_background.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/tick.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_menu_white_24dp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_search_white_24dp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/design_23_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/espresso_core_2_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/espresso_idling_resource_2_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/hamcrest_core_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/hamcrest_integration_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/hamcrest_library_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/javawriter_2_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/javax_annotation_api_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/javax_inject_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/joda_time_2_8_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jsr305_2_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/junit_dep_4_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_annotations_23_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_23_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/testing_support_lib_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TEA_Android.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/Android.mk" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/build.gradle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/build.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/custom_rules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/deploy.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/gradle.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/gradle/wrapper/gradle-wrapper.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/gradlew" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/gradlew.bat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/proguard-project.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/proguard.cfg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/rules.gradle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/AndroidManifest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/AuthFailureError.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/Cache.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/CacheDispatcher.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/DefaultRetryPolicy.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/ExecutorDelivery.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/InternalUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/Network.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/NetworkDispatcher.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/NetworkError.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/NetworkResponse.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/NoConnectionError.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/ParseError.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/RedirectError.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/Request.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/RequestQueue.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/Response.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/ResponseDelivery.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/RetryPolicy.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/ServerError.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/TimeoutError.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/VolleyError.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/VolleyLog.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/toolbox/AndroidAuthenticator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/toolbox/Authenticator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/toolbox/BasicNetwork.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/toolbox/ByteArrayPool.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/toolbox/ClearCacheRequest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/toolbox/DiskBasedCache.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/toolbox/HttpClientStack.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/toolbox/HttpHeaderParser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/toolbox/HttpStack.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/toolbox/HurlStack.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/toolbox/ImageLoader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/toolbox/ImageRequest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/toolbox/JsonArrayRequest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/toolbox/JsonObjectRequest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/toolbox/JsonRequest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/toolbox/NetworkImageView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/toolbox/NoCache.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/toolbox/PoolingByteArrayOutputStream.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/toolbox/RequestFuture.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/toolbox/StringRequest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/toolbox/Volley.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/test/java/com/android/volley/CacheDispatcherTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/test/java/com/android/volley/NetworkDispatcherTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/test/java/com/android/volley/RequestQueueIntegrationTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/test/java/com/android/volley/RequestQueueTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/test/java/com/android/volley/RequestTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/test/java/com/android/volley/ResponseDeliveryTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/test/java/com/android/volley/mock/MockCache.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/test/java/com/android/volley/mock/MockHttpClient.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/test/java/com/android/volley/mock/MockHttpStack.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/test/java/com/android/volley/mock/MockHttpURLConnection.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/test/java/com/android/volley/mock/MockNetwork.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/test/java/com/android/volley/mock/MockRequest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/test/java/com/android/volley/mock/MockResponseDelivery.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/test/java/com/android/volley/mock/ShadowSystemClock.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/test/java/com/android/volley/mock/TestRequest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/test/java/com/android/volley/mock/WaitableQueue.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/test/java/com/android/volley/toolbox/AndroidAuthenticatorTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/test/java/com/android/volley/toolbox/BasicNetworkTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/test/java/com/android/volley/toolbox/ByteArrayPoolTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/test/java/com/android/volley/toolbox/CacheTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/test/java/com/android/volley/toolbox/DiskBasedCacheTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/test/java/com/android/volley/toolbox/HttpClientStackTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/test/java/com/android/volley/toolbox/HttpHeaderParserTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/test/java/com/android/volley/toolbox/HurlStackTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/test/java/com/android/volley/toolbox/ImageLoaderTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/test/java/com/android/volley/toolbox/ImageRequestTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/test/java/com/android/volley/toolbox/JsonRequestCharsetTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/test/java/com/android/volley/toolbox/JsonRequestTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/test/java/com/android/volley/toolbox/NetworkImageViewTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/test/java/com/android/volley/toolbox/PoolingByteArrayOutputStreamTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/test/java/com/android/volley/toolbox/RequestFutureTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/test/java/com/android/volley/toolbox/RequestQueueTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/test/java/com/android/volley/toolbox/RequestTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/test/java/com/android/volley/toolbox/ResponseTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/test/java/com/android/volley/toolbox/StringRequestTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/test/java/com/android/volley/utils/CacheTestUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/test/java/com/android/volley/utils/ImmediateResponseDelivery.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-volley-master/src/test/resources/org.robolectric.Config.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/proguard-rules.pro" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/example/cmcdona2/tea/ApplicationTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/cmcdona2/tea/Ents/EntItem.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/cmcdona2/tea/Ents/EntsActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/cmcdona2/tea/Ents/EntsAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/cmcdona2/tea/Ents/Tabs/LaterFrag.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/cmcdona2/tea/Ents/Tabs/TodayFrag.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/cmcdona2/tea/Ents/Tabs/TomorrowFrag.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/cmcdona2/tea/Other/Constants.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/cmcdona2/tea/ParticularEnt/ParticularEntActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/cmcdona2/tea/ParticularEnt/ParticularEntFrag.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/cmcdona2/tea/Socs/SocItem.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/cmcdona2/tea/Socs/SocsActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/cmcdona2/tea/Socs/SocsAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/cmcdona2/tea/Splash/SplashActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/AndroidManifest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/grid_color_selector.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/oval_btn.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/ent_item.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/ents_activity.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/ents_to_frags.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/particular_ent_activity.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/particular_ent_activity_frag.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/soc_item.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/socs_activity.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/splash.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/tab_frag.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/menu/activity_main_actions.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/menu/checkbox.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/values-v21/styles.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/values-w820dp/dimens.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/test/java/com/example/cmcdona2/theresgoodboostonight/ExampleUnitTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/contributors.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradle.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradlew" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradlew.bat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/local.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/settings.gradle" />
+    <list default="true" id="d3bbe8d8-6252-4cb7-bbbe-d04bbe251d87" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/TEA_Android.iml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/outputFileStates.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/design_23_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/design_23_0_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/espresso_core_2_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/espresso_core_2_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/espresso_idling_resource_2_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/espresso_idling_resource_2_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_23_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_23_0_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/testing_support_lib_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/testing_support_lib_0_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android-volley-master/build.gradle" afterPath="$PROJECT_DIR$/android-volley-master/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
     </list>
-    <ignored path="TEA_Android.iws" />
+    <ignored path="Android.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -211,8 +39,39 @@
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view />
+      </state>
+    </system>
+  </component>
   <component name="FavoritesManager">
-    <favorites_list name="TEA_Android" />
+    <favorites_list name="Android" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.1111112">
+              <caret line="9" column="27" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/android-volley-master/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="2.096774">
+              <caret line="52" column="38" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
@@ -224,19 +83,19 @@
         <entry>
           <key>
             <ExternalProjectPojo>
-              <option name="name" value="TEA_Android" />
+              <option name="name" value="Android" />
               <option name="path" value="$PROJECT_DIR$" />
             </ExternalProjectPojo>
           </key>
           <value>
             <list>
               <ExternalProjectPojo>
-                <option name="name" value="TEA_Android" />
-                <option name="path" value="$PROJECT_DIR$" />
-              </ExternalProjectPojo>
-              <ExternalProjectPojo>
                 <option name="name" value=":app" />
                 <option name="path" value="$PROJECT_DIR$/app" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value="Android" />
+                <option name="path" value="$PROJECT_DIR$" />
               </ExternalProjectPojo>
               <ExternalProjectPojo>
                 <option name="name" value=":android-volley-master" />
@@ -257,17 +116,17 @@
                 <option name="name" value="clean" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the components produced by root project 'TEA_Android'. [incubating]" />
+                <option name="description" value="Displays the components produced by root project 'Android'. [incubating]" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="components" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays all dependencies declared in root project 'TEA_Android'." />
+                <option name="description" value="Displays all dependencies declared in root project 'Android'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="dependencies" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the insight into a specific dependency in root project 'TEA_Android'." />
+                <option name="description" value="Displays the insight into a specific dependency in root project 'Android'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="dependencyInsight" />
               </ExternalTaskPojo>
@@ -282,22 +141,22 @@
                 <option name="name" value="init" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the configuration model of root project 'TEA_Android'. [incubating]" />
+                <option name="description" value="Displays the configuration model of root project 'Android'. [incubating]" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="model" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the sub-projects of root project 'TEA_Android'." />
+                <option name="description" value="Displays the sub-projects of root project 'Android'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="projects" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the properties of root project 'TEA_Android'." />
+                <option name="description" value="Displays the properties of root project 'Android'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="properties" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the tasks runnable from root project 'TEA_Android' (some of the displayed tasks may belong to subprojects)." />
+                <option name="description" value="Displays the tasks runnable from root project 'Android' (some of the displayed tasks may belong to subprojects)." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="tasks" />
               </ExternalTaskPojo>
@@ -2049,7 +1908,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="7250176116000" />
+        <entry key="$PROJECT_DIR$" value="7269677652000" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -2227,38 +2086,6 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/intellij/annotations/12.0/annotations-12.0.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/external/lombok/lombok-ast/0.2.3/lombok-ast-0.2.3-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/external/lombok/lombok-ast/0.2.3/lombok-ast-0.2.3.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle/1.3.1/f03da49001aa1274822a8265453e496127515e13/gradle-1.3.1-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle/1.3.1/f9f3d53c24efd3b9176ec36aeed9c518954c2fd9/gradle-1.3.1.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle-core/1.3.1/5b678d9b1656bfd09c39c5c65deb9a0bdf141aaa/gradle-core-1.3.1-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle-core/1.3.1/70731f5b83a22faa2f25d6281f6812977f64f520/gradle-core-1.3.1.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder/1.3.1/c28ada3461bdfe0e26a3fcd74cd00b80de7e1383/builder-1.3.1-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder/1.3.1/83e6307a43477f2a5ff0b5b654b131425c3dcbc5/builder-1.3.1.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint/24.3.1/6b1dcead03399197796d64b5f891e89f902420ee/lint-24.3.1-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint/24.3.1/57cb2a6361f32753bee3670f072f097840219e34/lint-24.3.1.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-model/1.3.1/f25d38149595b9cbc5292b775835e36fb0734e64/builder-model-1.3.1-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-model/1.3.1/16c0a3e34af44f31f757144d7c1bf045777dff88/builder-model-1.3.1.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-test-api/1.3.1/2b606649d93d44621961df27488b6598161ed793/builder-test-api-1.3.1-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-test-api/1.3.1/1954d436ec3eeea11070e91e6c808232837728b8/builder-test-api-1.3.1.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/sdklib/24.3.1/9ed8ec95c205923234740f78c9937d5c1d073b5e/sdklib-24.3.1-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/sdklib/24.3.1/1a4226d7db1381552b94fee30453a08fbfd678a5/sdklib-24.3.1.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/sdk-common/24.3.1/4d174e34a0a72d0ed6346074d4de009b7dea90f9/sdk-common-24.3.1-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/sdk-common/24.3.1/5c28ab2dda1600eddaa978e095f0d8c044cac33b/sdk-common-24.3.1.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/common/24.3.1/bc53a90f1946a2616a37361d8cbcb79d74819579/common-24.3.1-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/common/24.3.1/92f1a60ebb004e2969661315de200232f90e0a80/common-24.3.1.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/manifest-merger/24.3.1/23d3189d5f2eba7c0653f70cc26106e2d9c295f6/manifest-merger-24.3.1-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/manifest-merger/24.3.1/b9b0fc1064f963774beb573469ac371bf0c2c461/manifest-merger-24.3.1.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.ddms/ddmlib/24.3.1/d20b7452c76470b2d4442989fda41fcf9f18dacd/ddmlib-24.3.1-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.ddms/ddmlib/24.3.1/2018ea863b14fe3aeaf2b49316ee98567e1d9c11/ddmlib-24.3.1.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint-checks/24.3.1/606831c23251acf115949306b6c20be19e60a8f9/lint-checks-24.3.1-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint-checks/24.3.1/ee1edb630d923511bb46bef4da148dcb0a74a029/lint-checks-24.3.1.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/annotations/24.3.1/8cad6d336a2f6bd32d04b251621d375991ba3f49/annotations-24.3.1-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/annotations/24.3.1/3c0f015e74a277e90ca34229458dd767aa39bb30/annotations-24.3.1.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.layoutlib/layoutlib-api/24.3.1/46242e3d715941c59be336dbd31cfafae1b68205/layoutlib-api-24.3.1-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.layoutlib/layoutlib-api/24.3.1/982783a222369254fce34336cc48155bbd87e3fd/layoutlib-api-24.3.1.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/dvlib/24.3.1/40c9bf825ee7a931b096a94d3994f49109b59d1c/dvlib-24.3.1-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/dvlib/24.3.1/1d78ec584fb99277e54e849b8ab57b860d590c17/dvlib-24.3.1.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint-api/24.3.1/ab078c2ba2196e5f4595bdd39701e022d8929976/lint-api-24.3.1-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint-api/24.3.1/f5666b0d8408e79273a17cbe89c673c98f37b9fa/lint-api-24.3.1.jar" />
                           </list>
                         </option>
                         <option name="path" value="$PROJECT_DIR$/android-volley-master" />
@@ -2359,7 +2186,7 @@
                   </entry>
                 </map>
               </option>
-              <option name="name" value="TEA_Android" />
+              <option name="name" value="app" />
               <option name="projectBuildClasspath">
                 <list>
                   <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.4-all/6r4uqcc6ovnq6ac6s0txzcpc0/gradle-2.4/src/announce" />
@@ -2486,10 +2313,17 @@
       <projects_view />
     </option>
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/android-volley-master/build.gradle" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="716" />
+    <option name="height" value="712" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -2517,25 +2351,26 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="ProjectPane" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="TEA_Android" />
+              <option name="myItemId" value="Android" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="device.picker.selection" value="Nexus_4_API_23" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager" selected="Android Application.app">
@@ -2698,22 +2533,15 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="24ba1165-372e-4d3c-9b0d-cccd0254df21" name="Default" comment="" />
-      <created>1453838512842</created>
+      <changelist id="d3bbe8d8-6252-4cb7-bbbe-d04bbe251d87" name="Default" comment="" />
+      <created>1453935303873</created>
       <option name="number" value="Default" />
-      <updated>1453838512842</updated>
+      <updated>1453935303873</updated>
     </task>
-    <task id="LOCAL-00001" summary="Initial Commit. (crash upon no events - fix and code cleanup)">
-      <created>1453838648250</created>
-      <option name="number" value="00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1453838648250</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="716" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="712" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -2721,7 +2549,7 @@
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -2730,31 +2558,125 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Initial Commit. (crash upon no events - fix and code cleanup)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit. (crash upon no events - fix and code cleanup)" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/local.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android-volley-master/rules.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android-volley-master/proguard-project.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.048387095">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android-volley-master/proguard.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/proguard-rules.pro">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1111112">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android-volley-master/src/main/java/com/android/volley/NetworkResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.2222223">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android-volley-master/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.096774">
+          <caret line="52" column="38" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
