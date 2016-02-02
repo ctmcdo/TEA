@@ -150,6 +150,7 @@ public class SocsActivity extends ActionBarActivity {
                             storeArray(idsActive, "idsActive", SocsActivity.this);
                         }
                     });
+
                 }
             });
 
