@@ -35,6 +35,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.cmcdona2.tea.Other.Constants;
+import com.example.cmcdona2.tea.ParticularSoc.ParticularSocActivity;
 import com.example.cmcdona2.tea.Socs.SocsActivity;
 import com.example.cmcdona2.tea.Splash.SplashActivity;
 import com.example.cmcdona2.tea.Ents.Tabs.LaterFrag;
@@ -312,6 +313,14 @@ public class EntsActivity extends ActionBarActivity implements ActionBar.TabList
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
             startActivity(intent);
             finish();
+        } else if (position == 3) {
+
+            appPrefsEditor.putBoolean("fromEntsActivity", true).commit();
+
+            Intent intent = new Intent(EntsActivity.this, ParticularSocActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            startActivity(intent);
+            finish();
         }
     }
 
@@ -403,13 +412,36 @@ public class EntsActivity extends ActionBarActivity implements ActionBar.TabList
     }
 
     public boolean[] loadArray(Context mContext) {
-
         SharedPreferences appPrefs = mContext.getSharedPreferences("appPrefs", 0);
+
         int size = appPrefs.getInt("idsActive" + "_size", 0);
         boolean array[] = new boolean[size];
-        for (int i = 0; i < size; i++)
-            array[i] = appPrefs.getBoolean("idsActive" + "_" + i, false);
-        return array;
+        final int chosenSociety = appPrefs.getInt("chosenSociety", -1);
+
+        if(chosenSociety >= 0)  //Was this activity started from ParticularSocActivity?
+        {
+            /*
+            If this activity was started by ParticularSocActivity, chosenSociety will be a positive number,
+            corresponding to the list position of the society clicked on by the user
+            */
+
+            SharedPreferences.Editor appPrefsEditor = appPrefs.edit();
+            appPrefsEditor.putInt("chosenSociety", -1); //Set this flag back to -1, to prevent the particularSoc selection from being permanent
+            appPrefsEditor.commit();
+
+            //Set all societies to have their events hidden, except the one clicked on by the user in ParticularSocActivity
+            for (int i = 0; i < size; i++)
+                array[i] = false;
+
+            array[chosenSociety] = true;
+        }
+        else //Did not come from ParticularSocActivity - set society events to appear as normal
+        {
+            for (int i = 0; i < size; i++)
+                array[i] = appPrefs.getBoolean("idsActive" + "_" + i, false);
+        }
+
+        return array;   //Return the array of societies whose events are to be displayed
     }
 
     @Override
