@@ -17,5 +17,8 @@
 
     <string name="directions">Get Directions</string>
     <string name="action_settings">Settings</string>
+    <string name="action_logout">Logout</string>
+    <string name="action_search">Search</string>
+    <string name="action_refresh">Refresh</string>
 
 </resources>

@@ -1,18 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    xmlns:yourapp="http://schemas.android.com/apk/res-auto">
+    <!--Refresh-->
+    <item
+        android:id="@+id/action_refresh"
+        android:title="@string/action_refresh"
+        app:showAsAction="never" />
 
+    <!--Search-->
+    <item
+        android:id="@+id/action_search"
+        android:title="@string/action_search"
+        android:icon="@drawable/search_icon"
+        app:showAsAction="always" />
 
-    <item android:id="@+id/settings_id"
+    <!--Settings-->
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
 
-        android:title="settings"
-
-        android:icon="@mipmap/ic_search_white_24dp"
-
-        yourapp:showAsAction="always"
-
-        ></item>
+    <!-- Log Out -->
+    <item
+        android:id="@+id/action_logout"
+        android:title="@string/action_logout"
+        app:showAsAction="never" />
 
 
 

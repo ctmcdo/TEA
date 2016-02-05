@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.cmcdona2.tea" >
 
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
@@ -10,18 +12,22 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+
         <activity
             android:name="com.example.cmcdona2.tea.Splash.SplashActivity"
             android:label="@string/app_name" >
         </activity>
+
         <activity
             android:name="com.example.cmcdona2.tea.Socs.SocsActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
+
         <activity android:name="com.example.cmcdona2.tea.Ents.EntsActivity"
             android:label=""
             />

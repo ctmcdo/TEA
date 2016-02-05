@@ -10,9 +10,12 @@ import android.provider.CalendarContract;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Base64;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -49,6 +52,7 @@ public class ParticularEntActivity extends AppCompatActivity implements Particul
     public int EndHour;
     public int EndMinute;
     public String societyName;
+    public Toolbar toolbar;
 
     @Override
 
@@ -99,11 +103,16 @@ public class ParticularEntActivity extends AppCompatActivity implements Particul
                 }
 
                 setContentView(R.layout.particular_ent_activity_frag);
-                ActionBar actionBar;
-                actionBar = getSupportActionBar();
-                actionBar.setIcon(R.drawable.app_icon);
-                actionBar.setDisplayUseLogoEnabled(true);
-                actionBar.setDisplayShowHomeEnabled(true);
+
+//                toolbar = (Toolbar) findViewById(R.id.toolbar);
+//                //Toolbar will now take on default Action Bar characteristics
+//                setActionBar(toolbar);
+//                //You can now use and reference the ActionBar
+
+                //ActionBar actionBar;
+                //actionBar.setIcon(R.drawable.app_icon);
+                //actionBar.setDisplayUseLogoEnabled(true);
+                //actionBar.setDisplayShowHomeEnabled(true);
 
                 ImageView view = (ImageView) findViewById(R.id.myImgView);
                 view.setImageBitmap(bm);
@@ -114,6 +123,15 @@ public class ParticularEntActivity extends AppCompatActivity implements Particul
             }
         });
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        // Inflate the menu items for use in the action bar
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.activity_main_actions, menu);
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override
