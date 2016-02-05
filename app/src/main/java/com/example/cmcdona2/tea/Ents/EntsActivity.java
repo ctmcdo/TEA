@@ -27,6 +27,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -70,6 +71,7 @@ public class EntsActivity extends ActionBarActivity implements ActionBar.TabList
     public ActionBar actionBar;
     private ListView listView;
     private DrawerLayout drawerLayout;
+    public Toolbar toolbar;
 
 
     @Override
@@ -77,6 +79,11 @@ public class EntsActivity extends ActionBarActivity implements ActionBar.TabList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ents_to_frags);
         SocsActivity.SocsActivity.finish();
+
+        //toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //Toolbar will now take on default Action Bar characteristics
+        //setActionBar(toolbar);
+        //You can now use and reference the ActionBar
 
 
         if (getIntent().getBooleanExtra("biPassedSocsActivity", false)) {
@@ -117,7 +124,7 @@ public class EntsActivity extends ActionBarActivity implements ActionBar.TabList
                     actionBar.newTab().setText(mSectionsPagerAdapter.getPageTitle(i)).setTabListener(this), i, setPos[i]);
         }
 
-        // actionBar.setIcon(R.drawable.app_icon);
+        actionBar.setIcon(R.drawable.app_icon);
 
         actionBar.setDisplayUseLogoEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
@@ -439,11 +446,8 @@ public class EntsActivity extends ActionBarActivity implements ActionBar.TabList
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-
         MenuInflater menuInflater = getMenuInflater();
-
         menuInflater.inflate(R.menu.activity_main_actions, menu);
-
         return super.onCreateOptionsMenu(menu);
     }
 
