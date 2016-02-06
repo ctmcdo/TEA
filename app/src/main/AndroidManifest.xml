@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.cmcdona2.tea">
-=======
->>>>>>> ParticularSocBranch
+
+
 
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.cmcdona2.tea" >
->>>>>>> master
+
 
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -19,49 +14,35 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-<<<<<<< HEAD
+
         android:theme="@style/AppTheme">
         <activity
             android:name=".Splash.SplashActivity"
             android:label="@string/app_name"></activity>
-        <activity
-            android:name=".Socs.SocsActivity"
-            android:label="@string/app_name">
+
 =======
         android:theme="@style/AppTheme" >
 
-        <activity
-            android:name="com.example.cmcdona2.tea.Splash.SplashActivity"
-            android:label="@string/app_name" >
-        </activity>
+
 
         <activity
             android:name="com.example.cmcdona2.tea.Socs.SocsActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
-<<<<<<< HEAD
-=======
->>>>>>> master
->>>>>>> ParticularSocBranch
+
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
 
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> ParticularSocBranch
+
 
         <activity android:name="com.example.cmcdona2.tea.Ents.EntsActivity"
             android:label=""
             />
->>>>>>> master
-        <activity
-            android:name=".Ents.EntsActivity"
-            android:label="" />
+
+   
         <activity
             android:name=".ParticularEnt.ParticularEntActivity"
             android:label="@string/app_name"
