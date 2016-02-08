@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,8 +46,14 @@ public class SocsAdapter extends ArrayAdapter<SocItem> {
             actives = loadArray("idsActive", this.getContext());
 
         }
+
         View row = convertView;
         ViewHolder holder;
+
+        if (previouslyLaunched) {
+            if (actives[position])
+                row.setActivated(true);
+        }
 
         if (row == null) {
             LayoutInflater inflater = ((Activity) context).getLayoutInflater();
@@ -59,14 +66,10 @@ public class SocsAdapter extends ArrayAdapter<SocItem> {
             holder = (ViewHolder) row.getTag();
         }
 
-        if (previouslyLaunched) {
-            if (actives[position])
-                row.setActivated(true);
-        }
-
         SocItem item = data.get(position);
         holder.imageTitle.setText(item.getTitle());
         holder.image.setImageBitmap(item.getImage());
+
         return row;
     }
 
@@ -83,5 +86,18 @@ public class SocsAdapter extends ArrayAdapter<SocItem> {
         for (int i = 0; i < size; i++)
             array[i] = appPrefs.getBoolean(arrayName + "_" + i, false);
         return array;
+    }
+
+    @Override
+
+    public int getViewTypeCount() {
+
+        return getCount();
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+
+        return position;
     }
 }

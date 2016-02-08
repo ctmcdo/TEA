@@ -286,6 +286,7 @@ public class EntsActivity extends ActionBarActivity implements ActionBar.TabList
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        Toast.makeText(EntsActivity.this, "hello", Toast.LENGTH_LONG).show();
         SharedPreferences appPrefs = EntsActivity.this.getSharedPreferences("appPrefs", 0);
         SharedPreferences.Editor appPrefsEditor = appPrefs.edit();
 

@@ -139,6 +139,8 @@ public class SocsActivity extends ActionBarActivity {
 
                             Integer i = (int) (long) id;
 
+                            Toast.makeText(SocsActivity.this, ""+position, Toast.LENGTH_LONG).show();
+
                             if (v.isActivated()) {
                                 v.setActivated(false);
                                 idsActive[i] = false;

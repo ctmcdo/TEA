@@ -19,6 +19,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Base64;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -168,7 +169,7 @@ public class ParticularSocActivity extends ActionBarActivity implements AdapterV
     //OnItemClick listener for the navigation drawer
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+        Toast.makeText(ParticularSocActivity.this, "hello", Toast.LENGTH_LONG).show();
         SharedPreferences appPrefs = ParticularSocActivity.this.getSharedPreferences("appPrefs", 0);
         SharedPreferences.Editor appPrefsEditor = appPrefs.edit();
 
@@ -182,10 +183,13 @@ public class ParticularSocActivity extends ActionBarActivity implements AdapterV
             overridePendingTransition(0, 0); //0 for no animation
             finish();
         } else if (position == 1) { //My Societies
+            Log.v("positionOne", ""+ position);
             appPrefsEditor.putBoolean("allSocsFlag", false).commit();
             Intent intent = new Intent(ParticularSocActivity.this, EntsActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            Log.v("positionTwo", "" + position);
             startActivity(intent);
+            Log.v("positionThree", "" + position);
             overridePendingTransition(0, 0); //0 for no animation
             finish();
         } else if (position == 2) { //Edit
