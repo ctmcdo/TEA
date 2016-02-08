@@ -50,11 +50,6 @@ public class SocsAdapter extends ArrayAdapter<SocItem> {
         View row = convertView;
         ViewHolder holder;
 
-        if (previouslyLaunched) {
-            if (actives[position])
-                row.setActivated(true);
-        }
-
         if (row == null) {
             LayoutInflater inflater = ((Activity) context).getLayoutInflater();
             row = inflater.inflate(layoutResourceId, parent, false);
@@ -64,6 +59,11 @@ public class SocsAdapter extends ArrayAdapter<SocItem> {
             row.setTag(holder);
         } else {
             holder = (ViewHolder) row.getTag();
+        }
+
+        if (previouslyLaunched) {
+            if (actives[position])
+                row.setActivated(true);
         }
 
         SocItem item = data.get(position);
@@ -100,4 +100,5 @@ public class SocsAdapter extends ArrayAdapter<SocItem> {
 
         return position;
     }
+
 }
