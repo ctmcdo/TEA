@@ -2,180 +2,53 @@
 <items version="2" >
 
     <item
-<<<<<<< HEAD
-        jar="C:\Users\John\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
+        jar="/home/colin/.gradle/caches/modules-2/files-2.1/joda-time/joda-time/2.8.2/d27c24204c5e507b16fec01006b3d0f1ec42aed4/joda-time-2.8.2.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="C:\Users\John\Desktop\pullMon\Android-master\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-df9bafb6a0faf70ab58b7ceccc979888f4a675f5.jar" />
+        sha1="d27c24204c5e507b16fec01006b3d0f1ec42aed4">
+        <dex dex="/home/colin/Documents/TEA/app/build/intermediates/pre-dexed/debug/joda-time-2.8.2-283aa949222572c886a8f61d91d4d7ce1ce74607.jar" />
     </item>
     <item
-<<<<<<< HEAD
-        jar="/Users/colinmcdonagh/Desktop/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="/Users/colinmcdonagh/Desktop/Android/app/build/intermediates/pre-dexed/debug/classes-6cd083eeca5e1abbe2edf175be95632e6682f5e7.jar" />
-    </item>
-    <item
-        jar="/Users/colinmcdonagh/Desktop/Android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="/Users/colinmcdonagh/Desktop/Android/app/build/intermediates/pre-dexed/debug/classes-13b0bd38f296b0d4c6eda7d7ce1b999532ac890b.jar" />
-    </item>
-    <item
-        jar="/Users/colinmcdonagh/Desktop/Android/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
-        <dex dex="/Users/colinmcdonagh/Desktop/Android/app/build/intermediates/pre-dexed/debug/classes-2e8d58220e5e9aebf3de6a5f1ae2ec084faee64e.jar" />
-=======
-        jar="C:\Users\John\Desktop\pullMon\Android-master\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="C:\Users\John\Desktop\pullMon\Android-master\app\build\intermediates\pre-dexed\debug\classes-37b8c3e49d3201c19db3aa8de776846002045cf4.jar" />
-    </item>
-    <item
-        jar="C:\Users\John\Desktop\pullMon\Android-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
+        jar="/home/colin/Documents/TEA/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="C:\Users\John\Desktop\pullMon\Android-master\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-5fe3007dbb7d39b4f20f03e25585d8d41ff06241.jar" />
+        <dex dex="/home/colin/Documents/TEA/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1-3f269ccec8870c48037bca3b0f5bd80292b07038.jar" />
     </item>
     <item
-        jar="C:\Users\John\.gradle\caches\modules-2\files-2.1\joda-time\joda-time\2.8.2\d27c24204c5e507b16fec01006b3d0f1ec42aed4\joda-time-2.8.2.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d27c24204c5e507b16fec01006b3d0f1ec42aed4">
-        <dex dex="C:\Users\John\Desktop\pullMon\Android-master\app\build\intermediates\pre-dexed\debug\joda-time-2.8.2-dbccf85a111ae05d9f9def7b183fd088cf746109.jar" />
-    </item>
-    <item
-        jar="C:\Users\John\Desktop\pullMon\Android-master\app\build\intermediates\exploded-aar\com.mcxiaoke.volley\android-volley-master\1.0.19\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="e2e1332f053789662c7c85e04ef10e120ab942fb">
-        <dex dex="C:\Users\John\Desktop\pullMon\Android-master\app\build\intermediates\pre-dexed\debug\classes-5a6e98519fcf15b91d380734938dc2219847b503.jar" />
-    </item>
-    <item
-        jar="C:\Users\John\Desktop\pullMon\Android-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="C:\Users\John\Desktop\pullMon\Android-master\app\build\intermediates\pre-dexed\debug\classes-3abb70b35863fa7b66b1e242abd019ea60ecc99e.jar" />
-    </item>
-    <item
-        jar="C:\Users\John\Desktop\pullMon\Android-master\app\build\intermediates\exploded-aar\com.android.support\design\23.0.1\jars\classes.jar"
-=======
-<<<<<<< HEAD
-        jar="C:\Users\JamieH\.gradle\caches\modules-2\files-2.1\joda-time\joda-time\2.8.2\d27c24204c5e507b16fec01006b3d0f1ec42aed4\joda-time-2.8.2.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d27c24204c5e507b16fec01006b3d0f1ec42aed4">
-        <dex dex="C:\Users\JamieH\Documents\College\TrinityEventsApp\app\build\intermediates\pre-dexed\debug\joda-time-2.8.2-ac3a12ef0df3366003b52494b78f3b47d714806b.jar" />
-=======
-        jar="/Users/colinmcdonagh/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        jar="/home/colin/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="/Users/colinmcdonagh/Desktop/Android/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1-029920c85c71a3e8813a89d85da8ac04924582ed.jar" />
->>>>>>> 6f6a570272624ab4997e8b5df53821307d041b18
+        <dex dex="/home/colin/Documents/TEA/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1-3d1b3c1a4e8dcfdd3bcf244e741477f2adbdcb7c.jar" />
     </item>
     <item
-        jar="C:\Users\JamieH\Documents\College\TrinityEventsApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
+        jar="/home/colin/Documents/TEA/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="C:\Users\JamieH\Documents\College\TrinityEventsApp\app\build\intermediates\pre-dexed\debug\classes-d4faf55c63207b9f1283483f2acf68dc03a6d1ce.jar" />
+        <dex dex="/home/colin/Documents/TEA/app/build/intermediates/pre-dexed/debug/classes-b94d7ae6894b11f829d96abb561604b7cb94611b.jar" />
     </item>
     <item
-<<<<<<< HEAD
-        jar="C:\Users\JamieH\Documents\College\TrinityEventsApp\app\build\intermediates\exploded-aar\com.mcxiaoke.volley\android-volley-master\1.0.19\jars\classes.jar"
+        jar="/home/colin/Documents/TEA/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="fa4b8accba3b45d9d96802c303243e853ce56d05">
-        <dex dex="C:\Users\JamieH\Documents\College\TrinityEventsApp\app\build\intermediates\pre-dexed\debug\classes-738e8188314c725890f318cfecd81e1cdacbc85b.jar" />
+        sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
+        <dex dex="/home/colin/Documents/TEA/app/build/intermediates/pre-dexed/debug/classes-3840a9fae144122034298b9a922c56d24bd18a19.jar" />
     </item>
     <item
-        jar="C:\Users\JamieH\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="C:\Users\JamieH\Documents\College\TrinityEventsApp\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-f8b2d8344d15084a15888823f02d1a9a682b0621.jar" />
-    </item>
-    <item
-        jar="C:\Users\JamieH\Documents\College\TrinityEventsApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
+        jar="/home/colin/Documents/TEA/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="C:\Users\JamieH\Documents\College\TrinityEventsApp\app\build\intermediates\pre-dexed\debug\classes-ebba71edc7481d2e1192bc9ef124f9fe9199cc14.jar" />
+        <dex dex="/home/colin/Documents/TEA/app/build/intermediates/pre-dexed/debug/classes-f2fcb0a15d884f2af32004a7d9182ab27f1fc12f.jar" />
     </item>
     <item
-        jar="C:\Users\JamieH\Documents\College\TrinityEventsApp\app\build\intermediates\exploded-aar\com.android.support\design\23.0.1\jars\classes.jar"
+        jar="/home/colin/Documents/TEA/app/build/intermediates/exploded-aar/com.mcxiaoke.volley/android-volley-master/1.0.19/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
-        <dex dex="C:\Users\JamieH\Documents\College\TrinityEventsApp\app\build\intermediates\pre-dexed\debug\classes-ff70b3cd302d0f08f0c2167bc0415be38588718c.jar" />
-    </item>
-    <item
-        jar="C:\Users\JamieH\Documents\College\TrinityEventsApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="C:\Users\JamieH\Documents\College\TrinityEventsApp\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-f22ce92bb2e74533fe28278c71544d2bb0d549be.jar" />
-=======
-        jar="/Users/colinmcdonagh/Desktop/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
->>>>>>> master
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
-        <dex dex="C:\Users\John\Desktop\pullMon\Android-master\app\build\intermediates\pre-dexed\debug\classes-fa944fe34964ca5eafb8932e9d204b50f7c4fe10.jar" />
->>>>>>> ParticularSocBranch
-    </item>
-    <item
-        jar="/Users/colinmcdonagh/Desktop/Android/app/build/intermediates/exploded-aar/com.mcxiaoke.volley/android-volley-master/1.0.19/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="b7013ef6208596ae409e2df9fa323efbb6bb4390">
-        <dex dex="/Users/colinmcdonagh/Desktop/Android/app/build/intermediates/pre-dexed/debug/classes-f4db26dc3a69bde2b88ed739e222177547f9e65c.jar" />
-    </item>
-    <item
-<<<<<<< HEAD
-        jar="/Users/colinmcdonagh/.gradle/caches/modules-2/files-2.1/joda-time/joda-time/2.8.2/d27c24204c5e507b16fec01006b3d0f1ec42aed4/joda-time-2.8.2.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d27c24204c5e507b16fec01006b3d0f1ec42aed4">
-        <dex dex="/Users/colinmcdonagh/Desktop/Android/app/build/intermediates/pre-dexed/debug/joda-time-2.8.2-5d974010c3c71053d85e513d67fa371f9fcfbb97.jar" />
-    </item>
-    <item
-        jar="/Users/colinmcdonagh/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="/Users/colinmcdonagh/Desktop/Android/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1-029920c85c71a3e8813a89d85da8ac04924582ed.jar" />
-=======
-        jar="/Users/colinmcdonagh/Desktop/Android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="/Users/colinmcdonagh/Desktop/Android/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1-18a8f2db90011d51e03c65a3b566afcf3564fdb7.jar" />
-    </item>
-    <item
-        jar="/Users/colinmcdonagh/.gradle/caches/modules-2/files-2.1/joda-time/joda-time/2.8.2/d27c24204c5e507b16fec01006b3d0f1ec42aed4/joda-time-2.8.2.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d27c24204c5e507b16fec01006b3d0f1ec42aed4">
-        <dex dex="/Users/colinmcdonagh/Desktop/Android/app/build/intermediates/pre-dexed/debug/joda-time-2.8.2-5d974010c3c71053d85e513d67fa371f9fcfbb97.jar" />
-    </item>
-    <item
-        jar="/Users/colinmcdonagh/Desktop/Android/app/build/intermediates/exploded-aar/com.mcxiaoke.volley/android-volley-master/1.0.19/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="45393ecb3b3d078c41ca2a45a66e543e27c7b56d">
-        <dex dex="/Users/colinmcdonagh/Desktop/Android/app/build/intermediates/pre-dexed/debug/classes-f4db26dc3a69bde2b88ed739e222177547f9e65c.jar" />
->>>>>>> 6f6a570272624ab4997e8b5df53821307d041b18
->>>>>>> ParticularSocBranch
+        sha1="f16cd05872e22586abb4326dcdfab83b2fc8a723">
+        <dex dex="/home/colin/Documents/TEA/app/build/intermediates/pre-dexed/debug/classes-7db52657bc7f375f59e25d6a77b74ec794f0428f.jar" />
     </item>
 
 </items>

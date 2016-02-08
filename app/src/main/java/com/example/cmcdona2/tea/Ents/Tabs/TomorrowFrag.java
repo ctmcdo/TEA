@@ -7,6 +7,7 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Base64;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -63,6 +64,9 @@ public class TomorrowFrag extends android.support.v4.app.Fragment {
         String[] eventName = new String[numOfEventsPassed];
         String[] imageTemp = new String[numOfEventsPassed];
         String[] eventTimings = new String[numOfEventsPassed];
+        String[] eventDisplayTimes = new String[numOfEventsPassed];
+        String[] startTimes = new String[numOfEventsPassed];
+        String[] endTimes = new String[numOfEventsPassed];
         String[] splitEventIDsAndTimes;
         String eventIDsAndTimes;
         String additive;
@@ -87,6 +91,12 @@ public class TomorrowFrag extends android.support.v4.app.Fragment {
                 eventName[counter] = appPrefs.getString("eventName" + additive, "");
                 imageTemp[counter] = appPrefs.getString("imageTemp" + additive, "");
                 eventTimings[counter] = eventIDsAndTimes;
+                eventDisplayTimes[counter] = eventTimings[counter].split(" ")[1];
+                startTimes[counter] = eventDisplayTimes[counter].split("-")[0].trim();
+                endTimes[counter] = eventDisplayTimes[counter].split("-")[1].trim();
+                if(startTimes[counter].equals(endTimes[counter]))
+                    eventDisplayTimes[counter] = eventDisplayTimes[counter].split("-")[0];
+                Log.v("displayTime", "" + eventDisplayTimes[counter]);
                 EventId[counter] = Integer.parseInt(stringIDs[i]);
                 counter++;
             }
@@ -100,7 +110,7 @@ public class TomorrowFrag extends android.support.v4.app.Fragment {
             data = Base64.decode(imageTemp[i], Base64.DEFAULT);
             bm = BitmapFactory.decodeByteArray(data, 0, data.length);
 
-            EntItem dataProvider = new EntItem(bm, eventName[i], eventTimings[i]);
+            EntItem dataProvider = new EntItem(bm, eventName[i], eventDisplayTimes[i]);
             adapter.add(dataProvider);
         }
 

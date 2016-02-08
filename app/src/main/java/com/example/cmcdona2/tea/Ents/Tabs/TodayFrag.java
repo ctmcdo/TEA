@@ -63,6 +63,9 @@ public class TodayFrag extends android.support.v4.app.Fragment {
         String[] eventName = new String[numOfEventsPassed];
         String[] imageTemp = new String[numOfEventsPassed];
         String[] eventTimings = new String[numOfEventsPassed];
+        String[] eventDisplayTimes = new String[numOfEventsPassed];
+        String[] startTimes = new String[numOfEventsPassed];
+        String[] endTimes = new String[numOfEventsPassed];
         String[] splitEventIDsAndTimes;
         String eventIDsAndTimes;
         final int[] EventId = new int[numOfEventsPassed];
@@ -87,6 +90,12 @@ public class TodayFrag extends android.support.v4.app.Fragment {
                 eventName[counter] = appPrefs.getString("eventName" + additive, "");
                 imageTemp[counter] = appPrefs.getString("imageTemp" + additive, "");
                 eventTimings[counter] = eventIDsAndTimes;
+                eventDisplayTimes[counter] = eventTimings[counter].split(" ")[1];
+                startTimes[counter] = eventDisplayTimes[counter].split("-")[0].trim();
+                endTimes[counter] = eventDisplayTimes[counter].split("-")[1].trim();
+                if(startTimes[counter].equals(endTimes[counter]))
+                    eventDisplayTimes[counter] = eventDisplayTimes[counter].split("-")[0];
+                Log.v("displayTime", "" + eventDisplayTimes[counter]);
 
                 EventId[counter] = Integer.parseInt(stringID);
                 counter++;
@@ -101,7 +110,7 @@ public class TodayFrag extends android.support.v4.app.Fragment {
             data = Base64.decode(imageTemp[i], Base64.DEFAULT);
             bm = BitmapFactory.decodeByteArray(data, 0, data.length);
 
-            EntItem dataProvider = new EntItem(bm, eventName[i], eventTimings[i]);
+            EntItem dataProvider = new EntItem(bm, eventName[i], eventDisplayTimes[i]);
             adapter.add(dataProvider);
         }
         mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {

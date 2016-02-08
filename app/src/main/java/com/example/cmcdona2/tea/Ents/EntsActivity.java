@@ -309,18 +309,20 @@ public class EntsActivity extends ActionBarActivity implements ActionBar.TabList
 
             appPrefsEditor.putBoolean("fromEntsActivity", true).commit();
 
-            Intent intent = new Intent(EntsActivity.this, SocsActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-            startActivity(intent);
-            finish();
-        } else if (position == 3) {
-
-            appPrefsEditor.putBoolean("fromEntsActivity", true).commit();
-
             Intent intent = new Intent(EntsActivity.this, ParticularSocActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
             startActivity(intent);
             finish();
+
+        } else if (position == 3) {
+
+            appPrefsEditor.putBoolean("fromEntsActivity", true).commit();
+
+            Intent intent = new Intent(EntsActivity.this, SocsActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            startActivity(intent);
+            finish();
+
         }
     }
 
