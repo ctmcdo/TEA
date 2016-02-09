@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -59,6 +60,7 @@ public class ParticularEntFrag extends Fragment {
         View view = inflater.inflate(R.layout.particular_ent_activity, container, false);
 
         eventName = (TextView) view.findViewById(R.id.eventName);
+
 
         eventDescription = (TextView) view.findViewById(R.id.eventDescription);
 
