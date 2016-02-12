@@ -57,7 +57,7 @@ public class SocsActivity extends ActionBarActivity {
         //caching for previosulyLaunched and fromEntsActivity
 
         SharedPreferences appPrefs = SocsActivity.this.getSharedPreferences("appPrefs", 0);
-        SharedPreferences.Editor appPrefsEditor = appPrefs.edit();
+        final SharedPreferences.Editor appPrefsEditor = appPrefs.edit();
 
         final Boolean fromEntsActivity = appPrefs.getBoolean("fromEntsActivity", false);
 
@@ -103,6 +103,8 @@ public class SocsActivity extends ActionBarActivity {
                         String[] imageTemp = new String[len];
                         bm = new Bitmap[len];
                         str = new String[len];
+
+                        appPrefsEditor.putInt("idsActive_size", len).commit();
 
                         for (int i = 0; i < len; i++) {
 
