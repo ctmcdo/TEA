@@ -77,6 +77,7 @@ public class EntsActivity extends ActionBarActivity implements ActionBar.TabList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.ents_to_frags);
         SocsActivity.SocsActivity.finish();
 
@@ -89,6 +90,9 @@ public class EntsActivity extends ActionBarActivity implements ActionBar.TabList
         if (getIntent().getBooleanExtra("biPassedSocsActivity", false)) {
 
             Intent intent = new Intent(EntsActivity.this, SplashActivity.class);
+            final SharedPreferences appPrefs = this.getSharedPreferences("appPrefs", 0);
+            final SharedPreferences.Editor appPrefsEditor = appPrefs.edit();
+            appPrefsEditor.putBoolean("allSocsFlag", false).commit();
             startActivity(intent);
         }
 
@@ -268,6 +272,33 @@ public class EntsActivity extends ActionBarActivity implements ActionBar.TabList
             return true;
         }
 
+
+        final SharedPreferences appPrefs = this.getSharedPreferences("appPrefs", 0);
+        final SharedPreferences.Editor appPrefsEditor = appPrefs.edit();
+        switch (item.getItemId()){
+            case R.id.action_refresh:
+                int position;
+                position = appPrefs.getInt("position", 1);
+                if (position == 0)
+                    appPrefsEditor.putBoolean("allSocsFlag", false).commit();
+
+                if (position == 1)
+                    appPrefsEditor.putBoolean("allSocsFlag", true).commit();
+
+                Intent intent = new Intent(this, EntsActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                intent.putExtra("fromFrag", true);
+                //  intent.putExtra("recursive", true);
+
+                intent.putExtra("tabPosition", mViewPager.getCurrentItem());
+
+                startActivity(intent);
+                this.overridePendingTransition(R.anim.fadein,R.anim.fadeout);
+                this.finish();
+                return true;
+
+        }
+
         return super.onOptionsItemSelected(item);
     }
 
@@ -293,19 +324,24 @@ public class EntsActivity extends ActionBarActivity implements ActionBar.TabList
         appPrefsEditor.putInt("position", position).commit();
 
         if (position == 0) {
-            appPrefsEditor.putBoolean("allSocsFlag", true).commit();
-            Intent intent = new Intent(EntsActivity.this, EntsActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-            startActivity(intent);
-            overridePendingTransition(0, 0); //0 for no animation
-            finish();
-        } else if (position == 1) {
+
             appPrefsEditor.putBoolean("allSocsFlag", false).commit();
             Intent intent = new Intent(EntsActivity.this, EntsActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
             startActivity(intent);
             overridePendingTransition(0, 0); //0 for no animation
             finish();
+
+        } else if (position == 1) {
+
+
+            appPrefsEditor.putBoolean("allSocsFlag", true).commit();
+            Intent intent = new Intent(EntsActivity.this, EntsActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            startActivity(intent);
+            overridePendingTransition(0, 0); //0 for no animation
+            finish();
+
         } else if (position == 2) {
 
             appPrefsEditor.putBoolean("fromEntsActivity", true).commit();

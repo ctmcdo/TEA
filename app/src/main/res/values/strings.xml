@@ -7,13 +7,13 @@
     <string name="title_section3">Later</string>
     <string-array name="societies">
 
-        <item>All Socs</item>
-
         <item>My Socs</item>
+
+        <item>All Socs</item>
 
         <item>Particular Soc</item>
 
-        <item>Prefs</item>
+        <item>Prefrences</item>
 
     </string-array>
 

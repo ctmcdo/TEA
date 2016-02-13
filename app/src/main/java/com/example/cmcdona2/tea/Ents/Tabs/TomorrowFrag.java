@@ -48,7 +48,7 @@ public class TomorrowFrag extends android.support.v4.app.Fragment {
         ListView listView;
         listView = (ListView) v.findViewById(R.id.list_view);
         adapter = new EntsAdapter(this.getContext(), R.layout.ent_item);
-        final SwipeRefreshLayout mSwipeRefreshLayout = (SwipeRefreshLayout) v.findViewById(R.id.activity_main_swipe_refresh_layout);
+
         listView.setAdapter(adapter);
 
         String loadedString;
@@ -114,33 +114,7 @@ public class TomorrowFrag extends android.support.v4.app.Fragment {
             adapter.add(dataProvider);
         }
 
-        mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
 
-                int position;
-                position = appPrefs.getInt("position", 0);
-                if (position == 0)
-                    appPrefsEditor.putBoolean("allSocsFlag", true).commit();
-
-                if (position == 1)
-                    appPrefsEditor.putBoolean("allSocsFlag", false).commit();
-
-                Intent intent = new Intent(TomorrowFrag.this.getContext(), EntsActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                intent.putExtra("fromFrag", true);
-                intent.putExtra("tabPosition", 1);
-                startActivity(intent);
-                getActivity().overridePendingTransition(0, 0);
-
-                getActivity().finish();
-
-                mSwipeRefreshLayout.setRefreshing(false);
-
-            }
-
-
-        });
 
         listView.setOnItemClickListener(
                 new AdapterView.OnItemClickListener() {

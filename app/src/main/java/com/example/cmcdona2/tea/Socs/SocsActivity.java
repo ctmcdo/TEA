@@ -76,7 +76,9 @@ public class SocsActivity extends ActionBarActivity {
         if (fromEntsActivity || !previouslyLaunched) {
 
             if (!fromEntsActivity) {
+
                 Intent intent = new Intent(SocsActivity.this, SplashActivity.class);
+                appPrefsEditor.putBoolean("allSocsFlag", false).commit();
                 startActivity(intent);
             }
 
@@ -164,6 +166,7 @@ public class SocsActivity extends ActionBarActivity {
             //splash and bipass
             Intent intent = new Intent(SocsActivity.this, EntsActivity.class);
             intent.putExtra("biPassedSocsActivity", true);
+            appPrefsEditor.putBoolean("allSocsFlag", false).commit();
             startActivity(intent);
         }
 
