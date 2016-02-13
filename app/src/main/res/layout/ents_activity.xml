@@ -7,6 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
+        android:background="#d9d9d9"
 
         >
         <FrameLayout
@@ -19,8 +20,7 @@
             <ListView
                 android:id="@+id/list_view"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/textured_background">
+                android:layout_height="wrap_content">
             </ListView>
 
 
