@@ -143,7 +143,7 @@ public class SocsActivity extends ActionBarActivity {
 
                             Integer i = (int) (long) id;
 
-                            Toast.makeText(SocsActivity.this, ""+position, Toast.LENGTH_LONG).show();
+                            //Toast.makeText(SocsActivity.this, ""+position, Toast.LENGTH_LONG).show();
 
                             if (v.isActivated()) {
                                 v.setActivated(false);
@@ -189,7 +189,8 @@ public class SocsActivity extends ActionBarActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(SocsActivity.this, error.getMessage().toString(), Toast.LENGTH_LONG).show();
+                        //Toast.makeText(SocsActivity.this, error.getMessage().toString(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(SocsActivity.this, "Please turn on wifi", Toast.LENGTH_LONG).show();
                     }
                 });
 
@@ -214,6 +215,26 @@ public class SocsActivity extends ActionBarActivity {
     }
 
     public void tickOnClick(MenuItem item) {
+
+        Boolean atLeastOneHasBeenSelected = false;
+
+        for(int i = 0; i <len; i++){
+            if(idsActive[i]){
+                atLeastOneHasBeenSelected = true;
+                break;
+            }
+        }
+
+        if(atLeastOneHasBeenSelected){
+            tickOnClickCallback();
+        }
+        else{
+            Toast.makeText(SocsActivity.this, "Please select a society", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    public void tickOnClickCallback() {
+
         Intent intent = new Intent(SocsActivity.this, EntsActivity.class);
 
         SharedPreferences appPrefs = SocsActivity.this.getSharedPreferences("appPrefs", 0);

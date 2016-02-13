@@ -317,7 +317,7 @@ public class EntsActivity extends ActionBarActivity implements ActionBar.TabList
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Toast.makeText(EntsActivity.this, "hello", Toast.LENGTH_LONG).show();
+        //Toast.makeText(EntsActivity.this, "hello", Toast.LENGTH_LONG).show();
         SharedPreferences appPrefs = EntsActivity.this.getSharedPreferences("appPrefs", 0);
         SharedPreferences.Editor appPrefsEditor = appPrefs.edit();
 
@@ -436,7 +436,8 @@ public class EntsActivity extends ActionBarActivity implements ActionBar.TabList
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(EntsActivity.this, error.getMessage(), Toast.LENGTH_LONG).show();
+                        //Toast.makeText(EntsActivity.this, error.getMessage(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(EntsActivity.this, "Please turn on wifi", Toast.LENGTH_LONG).show();
                     }
                 });
 
@@ -488,6 +489,16 @@ public class EntsActivity extends ActionBarActivity implements ActionBar.TabList
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.activity_main_actions, menu);
         return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(this.drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            this.drawerLayout.closeDrawer(GravityCompat.START);
+        }
+        else {
+            super.onBackPressed();
+        }
     }
 
 }

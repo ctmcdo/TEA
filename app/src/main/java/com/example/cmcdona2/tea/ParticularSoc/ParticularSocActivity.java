@@ -169,7 +169,7 @@ public class ParticularSocActivity extends ActionBarActivity implements AdapterV
     //OnItemClick listener for the navigation drawer
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Toast.makeText(ParticularSocActivity.this, "hello", Toast.LENGTH_LONG).show();
+        //Toast.makeText(ParticularSocActivity.this, "hello", Toast.LENGTH_LONG).show();
         SharedPreferences appPrefs = ParticularSocActivity.this.getSharedPreferences("appPrefs", 0);
         SharedPreferences.Editor appPrefsEditor = appPrefs.edit();
 
@@ -229,7 +229,8 @@ public class ParticularSocActivity extends ActionBarActivity implements AdapterV
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(ParticularSocActivity.this, error.getMessage().toString(), Toast.LENGTH_LONG).show();
+                        //Toast.makeText(ParticularSocActivity.this, error.getMessage().toString(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(ParticularSocActivity.this, "Please turn on wifi", Toast.LENGTH_LONG).show();
                     }
                 });
 
@@ -253,6 +254,16 @@ public class ParticularSocActivity extends ActionBarActivity implements AdapterV
         }
 
         return imageItems;
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(this.drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            this.drawerLayout.closeDrawer(GravityCompat.START);
+        }
+        else {
+            super.onBackPressed();
+        }
     }
 
 }

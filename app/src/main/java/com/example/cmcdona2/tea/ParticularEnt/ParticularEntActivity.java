@@ -184,7 +184,8 @@ public class ParticularEntActivity extends AppCompatActivity implements Particul
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(ParticularEntActivity.this, error.getMessage(), Toast.LENGTH_LONG).show();
+                        //Toast.makeText(ParticularEntActivity.this, error.getMessage(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(ParticularEntActivity.this, "Please turn on wifi", Toast.LENGTH_LONG).show();
                     }
                 });
 
