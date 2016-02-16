@@ -128,7 +128,7 @@ public class EntsActivity extends ActionBarActivity implements ActionBar.TabList
                     actionBar.newTab().setText(mSectionsPagerAdapter.getPageTitle(i)).setTabListener(this), i, setPos[i]);
         }
 
-        actionBar.setIcon(R.drawable.app_icon);
+        //actionBar.setIcon(R.drawable.app_icon);
 
         actionBar.setDisplayUseLogoEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);

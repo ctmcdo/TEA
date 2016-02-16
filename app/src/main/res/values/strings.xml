@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">"   TEA   "</string>
+    <string name="app_name">"Casper"</string>
     <string name="text1">Fragment 1</string>
     <string name="text2">Fragment2</string>
     <string name="title_section1">Today</string>

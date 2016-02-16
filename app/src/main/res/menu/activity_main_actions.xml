@@ -10,11 +10,13 @@
         app:showAsAction="never" />
 
     <!--Search-->
+    <!--
     <item
         android:id="@+id/action_search"
         android:title="@string/action_search"
         android:icon="@drawable/search_icon"
         app:showAsAction="always" />
+        -->
 
     <!--Settings-->
     <item
