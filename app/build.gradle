@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.1"
 
     defaultConfig {
-        applicationId "com.example.cmcdona2.theresgoodboostonight"
+        applicationId "com.tea.cmcdona2.casper"
         minSdkVersion 16
         targetSdkVersion 23
         versionCode 1

@@ -1,4 +1,4 @@
-package com.example.cmcdona2.tea;
+package com.tea.cmcdona2.casper;
 
 import org.junit.Test;
 
