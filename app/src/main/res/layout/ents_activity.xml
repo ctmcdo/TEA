@@ -23,6 +23,16 @@
                 android:layout_height="wrap_content">
             </ListView>
 
+            <TextView
+                android:id="@+id/empty_list_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textStyle="bold|italic"
+                android:textSize="20sp"
+                android:visibility="gone"
+                android:text="@string/noEvents" >
+            </TextView>
 
         </FrameLayout>
 

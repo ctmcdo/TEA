@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.tea.cmcdona2.casper.Ents.EntItem;
 import com.tea.cmcdona2.casper.Ents.EntsAdapter;
@@ -45,6 +46,7 @@ public class TomorrowFrag extends android.support.v4.app.Fragment {
         EntsAdapter adapter;
         ListView listView;
         listView = (ListView) v.findViewById(R.id.list_view);
+        listView.setEmptyView(v.findViewById(R.id.empty_list_item));
         adapter = new EntsAdapter(this.getContext(), R.layout.ent_item);
 
         listView.setAdapter(adapter);
