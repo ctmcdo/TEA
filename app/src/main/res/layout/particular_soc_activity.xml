@@ -18,6 +18,14 @@
     </FrameLayout>
 
     <ListView
+        android:id="@+id/societies_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+    </ListView>
+
+    <ListView
         android:id="@+id/drawer_list"
         android:entries="@array/societies"
         android:divider="@null"
@@ -25,14 +33,6 @@
         android:layout_height="match_parent"
         android:layout_gravity="left"
         android:background="@color/white">
-    </ListView>
-
-    <ListView
-        android:id="@+id/societies_list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true" >
     </ListView>
 
 </android.support.v4.widget.DrawerLayout>
