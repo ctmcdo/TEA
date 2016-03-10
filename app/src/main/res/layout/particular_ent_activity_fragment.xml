@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <ImageView
+
+        android:layout_width="fill_parent"
+        android:paddingTop="20dp"
+        android:layout_height="120dp"
+        android:name="com.example.cmcdona2.theresgoodboostonight.SocietyPicture"
+        android:id="@+id/myImgView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/eventName"
+        android:text=""
+        android:layout_below="@+id/myImgView"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp" />
+
+    <ScrollView
+        android:id="@+id/SCROLLER_ID"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:paddingTop="15dp"
+        android:layout_below="@+id/eventName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:fillViewport="true"
+        android:paddingBottom="80dp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/eventDescription"
+            android:padding="12dp"
+            android:paddingBottom="80dp"
+            android:layout_below="@+id/eventName"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:text="" />
+    </ScrollView>
+
+    <ImageButton
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:width="100dp"
+        android:background="@drawable/oval_btn"
+        android:src="@drawable/calendar_btn"
+        android:text="Notify"
+        android:id="@+id/going"
+        android:layout_marginLeft="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/oval_btn"
+        android:src="@drawable/directions_btn"
+        android:text="@string/directions"
+        android:width="65dp"
+        android:id="@+id/getDirections"
+        android:layout_marginRight="70dp"
+        android:layout_alignTop="@+id/going"
+        android:layout_alignParentRight="true"
+        />
+
+
+</RelativeLayout>

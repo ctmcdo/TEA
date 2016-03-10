@@ -105,6 +105,15 @@ public class TodayFrag extends android.support.v4.app.Fragment {
             }
         }
 
+        appPrefsEditor.putInt("swipeCount", counter).commit();
+
+        StringBuilder sb = new StringBuilder();
+        for(int i = 0; i < counter; i++){
+            sb.append(Integer.toString(EventId[i])).append(',');
+        }
+
+        appPrefsEditor.putString("swipeEventId", sb.toString()).commit();
+
 
         Log.v("counter", "" + counter);
 
@@ -127,6 +136,7 @@ public class TodayFrag extends android.support.v4.app.Fragment {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long ld) {
                         String pos = Integer.toString(position);
+                        appPrefsEditor.putInt("swipePosition", position).commit();
                         String Event = String.valueOf(parent.getItemAtPosition(position));
                         Intent intent = new Intent(getActivity(), ParticularEntActivity.class);
                         intent.putExtra("Event", Event);

@@ -198,7 +198,7 @@ public class ParticularSocActivity extends ActionBarActivity implements AdapterV
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
             startActivity(intent);
             finish();
-        } else if (position == 3) { //Preferences
+        } else if (position == 3) { //Edit
 
             appPrefsEditor.putBoolean("fromEntsActivity", true).commit();
 
