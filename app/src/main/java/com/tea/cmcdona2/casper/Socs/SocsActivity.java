@@ -27,6 +27,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.tea.cmcdona2.casper.LogReg.LogIn;
 import com.tea.cmcdona2.casper.Other.Constants;
 import com.tea.cmcdona2.casper.Ents.EntsActivity;
 import com.tea.cmcdona2.casper.R;
@@ -80,6 +81,9 @@ public class SocsActivity extends ActionBarActivity {
                 Intent intent = new Intent(SocsActivity.this, SplashActivity.class);
                 appPrefsEditor.putBoolean("allSocsFlag", false).commit();
                 startActivity(intent);
+
+                Intent loginIntent = new Intent(this, LogIn.class);
+                startActivity(loginIntent);
             }
 
             //else fromEntsActivity so no need for splash, then run activity
