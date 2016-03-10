@@ -1,6 +1,7 @@
 package com.tea.cmcdona2.casper.LogReg;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -109,7 +110,12 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
                     public void onResponse(String response) {
                         if(response.trim().equals("success")){
 
-                            Intent hIntent = new Intent(Register.this, EntsActivity.class);
+                            SharedPreferences appPrefs = Register.this.getSharedPreferences("appPrefs", 0);
+                            final SharedPreferences.Editor appPrefsEditor = appPrefs.edit();
+                            boolean alreadyRegistered = true;
+                            appPrefsEditor.putBoolean("alreadyRegistered", alreadyRegistered).commit();
+
+                            Intent hIntent = new Intent(Register.this, SocsActivity.class);
                             startActivity(hIntent);
                         }else{
                             Toast.makeText(Register.this,response,Toast.LENGTH_LONG).show();

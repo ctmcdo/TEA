@@ -49,6 +49,7 @@ public class SocsActivity extends ActionBarActivity {
     public SocsAdapter gridAdapter;
     public ProgressDialog loading;
     public Boolean previouslyLaunched;
+    public Boolean alreadyRegistered;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,6 +74,7 @@ public class SocsActivity extends ActionBarActivity {
         actionBar.setDisplayShowHomeEnabled(true);
 
         previouslyLaunched = appPrefs.getBoolean("previouslyLaunched", false);
+        alreadyRegistered = appPrefs.getBoolean("alreadyRegistered", false);
 
         if (fromEntsActivity || !previouslyLaunched) {
 
@@ -81,9 +83,10 @@ public class SocsActivity extends ActionBarActivity {
                 Intent intent = new Intent(SocsActivity.this, SplashActivity.class);
                 appPrefsEditor.putBoolean("allSocsFlag", false).commit();
                 startActivity(intent);
-
-                Intent loginIntent = new Intent(this, LogIn.class);
-                startActivity(loginIntent);
+                if(!alreadyRegistered) {
+                    Intent loginIntent = new Intent(this, LogIn.class);
+                    startActivity(loginIntent);
+                }
             }
 
             //else fromEntsActivity so no need for splash, then run activity
