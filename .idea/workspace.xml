@@ -9,11 +9,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2f86d9d-7d94-4ee2-b969-0888bd6d0c79" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" />
+    <list default="true" id="b2f86d9d-7d94-4ee2-b969-0888bd6d0c79" name="Default" comment="Made Register send to SocsActivity">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/tea/cmcdona2/casper/LogReg/Register.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/tea/cmcdona2/casper/LogReg/Register.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/tea/cmcdona2/casper/Socs/SocsActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/tea/cmcdona2/casper/Socs/SocsActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -68,7 +64,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tea/cmcdona2/casper/Socs/SocsActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="84" column="38" selection-start-line="84" selection-start-column="38" selection-end-line="84" selection-end-column="38" />
+              <caret line="70" column="42" selection-start-line="70" selection-start-column="42" selection-end-line="70" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -77,10 +73,10 @@
       <file leaf-file-name="Register.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tea/cmcdona2/casper/LogReg/Register.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45617172">
-              <caret line="119" column="30" selection-start-line="119" selection-start-column="30" selection-end-line="119" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.21288015">
+              <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
               <folding>
-                <element signature="e#5077#5093#0" expanded="true" />
+                <element signature="e#5001#5017#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2398,8 +2394,8 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_register.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_log_in.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tea/cmcdona2/casper/LogReg/LogIn.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/tea/cmcdona2/casper/Socs/SocsActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tea/cmcdona2/casper/LogReg/Register.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/tea/cmcdona2/casper/Socs/SocsActivity.java" />
       </list>
     </option>
   </component>
@@ -2852,7 +2848,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457629182987</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Made Register send to SocsActivity">
+      <created>1457631130394</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1457631130394</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2905,7 +2907,8 @@
     <MESSAGE value="Added log in and register screens&#10;" />
     <MESSAGE value="Added email and password encryption&#10;" />
     <MESSAGE value="Added code to SocActivity to send it to Log in activity&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added code to SocActivity to send it to Log in activity&#10;" />
+    <MESSAGE value="Made Register send to SocsActivity" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made Register send to SocsActivity" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -3003,17 +3006,17 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tea/cmcdona2/casper/Socs/SocsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="84" column="38" selection-start-line="84" selection-start-column="38" selection-end-line="84" selection-end-column="38" />
+          <caret line="70" column="42" selection-start-line="70" selection-start-column="42" selection-end-line="70" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tea/cmcdona2/casper/LogReg/Register.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45617172">
-          <caret line="119" column="30" selection-start-line="119" selection-start-column="30" selection-end-line="119" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.21288015">
+          <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
           <folding>
-            <element signature="e#5077#5093#0" expanded="true" />
+            <element signature="e#5001#5017#0" expanded="true" />
           </folding>
         </state>
       </provider>

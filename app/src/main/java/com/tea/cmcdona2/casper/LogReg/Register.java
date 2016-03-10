@@ -34,8 +34,6 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
 
     Button register;
     TextView login;
-    //DatabaseHelper databaseHelper;
-    //LocalUserHelper localUserHelper;
     EditText rName, rLastName, etEmail, etPassword, etPassword2;
 
     @Override

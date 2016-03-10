@@ -69,7 +69,6 @@ public class SocsActivity extends ActionBarActivity {
         // actionBar.setIcon(R.drawable.app_icon);
         ActionBar actionBar;
         actionBar = getSupportActionBar();
-        //actionBar.setIcon(R.drawable.app_icon);
         actionBar.setDisplayUseLogoEnabled(true);
         actionBar.setDisplayShowHomeEnabled(true);
 
