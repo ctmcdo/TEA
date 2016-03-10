@@ -19,4 +19,8 @@ public class Constants {
     public static final String KEY_ID = "ID";
     public static final String KEY_STARTDATE = "Start Date";
     public static final String KEY_ENDDATE = "End Date";
+    public static final String LOGIN_URL = "http://clontarfguitarlessons.com/verifyUser.php";
+    public static final String REGISTER_URL = "http://clontarfguitarlessons.com/registerUser.php";
+    public static final String KEY_EMAIL = "email";
+    public static final String KEY_PASSWORD = "password";
 }

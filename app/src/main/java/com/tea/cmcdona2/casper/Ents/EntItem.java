@@ -4,7 +4,7 @@ import android.graphics.Bitmap;
 
 public class EntItem {
 
-    //test commit
+
     private Bitmap bi;
     private String events_title;
     private String events_timing;
