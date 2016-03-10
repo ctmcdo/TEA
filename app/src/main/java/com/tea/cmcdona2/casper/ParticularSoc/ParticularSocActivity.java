@@ -173,15 +173,8 @@ public class ParticularSocActivity extends ActionBarActivity implements AdapterV
 
         appPrefsEditor.putInt("position", position).commit();
 
-        if (position == 0) {    //All Societies
-            appPrefsEditor.putBoolean("allSocsFlag", true).commit();
-            Intent intent = new Intent(ParticularSocActivity.this, EntsActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-            startActivity(intent);
-            overridePendingTransition(0, 0); //0 for no animation
-            finish();
-        } else if (position == 1) { //My Societies
-            Log.v("positionOne", ""+ position);
+        if (position == 0) { //My Societies
+            Log.v("positionOne", "" + position);
             appPrefsEditor.putBoolean("allSocsFlag", false).commit();
             Intent intent = new Intent(ParticularSocActivity.this, EntsActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
@@ -190,19 +183,26 @@ public class ParticularSocActivity extends ActionBarActivity implements AdapterV
             Log.v("positionThree", "" + position);
             overridePendingTransition(0, 0); //0 for no animation
             finish();
-        } else if (position == 2) { //Edit
-
-            appPrefsEditor.putBoolean("fromEntsActivity", true).commit();
-
-            Intent intent = new Intent(ParticularSocActivity.this, SocsActivity.class);
+        } else if (position == 1) {    //All Societies
+            appPrefsEditor.putBoolean("allSocsFlag", true).commit();
+            Intent intent = new Intent(ParticularSocActivity.this, EntsActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
             startActivity(intent);
+            overridePendingTransition(0, 0); //0 for no animation
             finish();
-        } else if (position == 3) { //ParticularSoc
+        } else if (position == 2) { //ParticularSoc
 
             appPrefsEditor.putBoolean("fromEntsActivity", true).commit();
 
             Intent intent = new Intent(ParticularSocActivity.this, ParticularSocActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            startActivity(intent);
+            finish();
+        } else if (position == 3) { //Preferences
+
+            appPrefsEditor.putBoolean("fromEntsActivity", true).commit();
+
+            Intent intent = new Intent(ParticularSocActivity.this, SocsActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
             startActivity(intent);
             finish();
