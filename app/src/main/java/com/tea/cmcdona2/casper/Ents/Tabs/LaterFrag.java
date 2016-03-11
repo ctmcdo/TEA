@@ -40,7 +40,7 @@ public class LaterFrag extends android.support.v4.app.Fragment {
     public LaterFrag() {
         // Required empty public constructor
     }
-
+    int counter1 = 0;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -111,14 +111,15 @@ public class LaterFrag extends android.support.v4.app.Fragment {
             }
         }
 
-        appPrefsEditor.putInt("swipeCount", counter).commit();
+        counter1 = counter;
+
 
         StringBuilder sb = new StringBuilder();
         for(int i = 0; i < counter; i++){
             sb.append(Integer.toString(EventId[i])).append(',');
         }
 
-        appPrefsEditor.putString("swipeEventId", sb.toString()).commit();
+        final String swipeEventId = sb.toString();
 
 
         for (int i = 0; i < counter; i++) {
@@ -138,12 +139,12 @@ public class LaterFrag extends android.support.v4.app.Fragment {
                 new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long ld) {
-                        String pos = Integer.toString(position);
-                        appPrefsEditor.putInt("swipePosition", position).commit();
                         String Event = String.valueOf(parent.getItemAtPosition(position));
                         Intent intent = new Intent(getActivity(), ParticularEntActivity.class);
                         intent.putExtra("Event", Event);
-                        intent.putExtra("ID", EventId[position]);
+                        intent.putExtra("swipeEventId", swipeEventId);
+                        intent.putExtra("swipeCount", counter1);
+                        intent.putExtra("swipePosition", position);
                         startActivity(intent);
                     }
                 }

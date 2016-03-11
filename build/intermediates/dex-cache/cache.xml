@@ -2,53 +2,53 @@
 <items version="2" >
 
     <item
-        jar="/users/ugrad/cmcdona2/Desktop/endOfDays/Android-master/app/build/intermediates/exploded-aar/com.mcxiaoke.volley/android-volley-master/1.0.19/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="c13570b700e87666a9822d9f6af935a2e55156f2">
-        <dex dex="/users/ugrad/cmcdona2/Desktop/endOfDays/Android-master/app/build/intermediates/pre-dexed/debug/classes-c1a13ca58184d8737ae77e196b321571ac660654.jar" />
-    </item>
-    <item
-        jar="/users/ugrad/cmcdona2/Desktop/endOfDays/Android-master/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="/users/ugrad/cmcdona2/Desktop/endOfDays/Android-master/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1-8a382a482e9212094e45d1775e33cf8bffcb1796.jar" />
-    </item>
-    <item
-        jar="/users/ugrad/cmcdona2/Desktop/endOfDays/Android-master/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
-        <dex dex="/users/ugrad/cmcdona2/Desktop/endOfDays/Android-master/app/build/intermediates/pre-dexed/debug/classes-69be6591af3f0936c1be1b9fb04b305391ad829a.jar" />
-    </item>
-    <item
-        jar="/users/ugrad/cmcdona2/Desktop/endOfDays/Android-master/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="/users/ugrad/cmcdona2/Desktop/endOfDays/Android-master/app/build/intermediates/pre-dexed/debug/classes-7e6dc0e198ef42eeba387f13780d4c024ca97cae.jar" />
-    </item>
-    <item
-        jar="/users/ugrad/cmcdona2/Desktop/endOfDays/Android-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jar="/users/ugrad/gargab/Desktop/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="/users/ugrad/cmcdona2/Desktop/endOfDays/Android-master/app/build/intermediates/pre-dexed/debug/classes-107f19bfa46c9ae23cddf6f03b20440d0d96b16c.jar" />
-    </item>
-    <item
-        jar="/users/ugrad/cmcdona2/.gradle/caches/modules-2/files-2.1/joda-time/joda-time/2.8.2/d27c24204c5e507b16fec01006b3d0f1ec42aed4/joda-time-2.8.2.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d27c24204c5e507b16fec01006b3d0f1ec42aed4">
-        <dex dex="/users/ugrad/cmcdona2/Desktop/endOfDays/Android-master/app/build/intermediates/pre-dexed/debug/joda-time-2.8.2-6cf9aa9f77cbba58af02c3b11e104963c40ba267.jar" />
+        <dex dex="/users/ugrad/gargab/Desktop/android/app/build/intermediates/pre-dexed/debug/classes-fa575677105b27dbab48c24f10152fafe8a2829f.jar" />
     </item>
     <item
         jar="/opt/android-sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="/users/ugrad/cmcdona2/Desktop/endOfDays/Android-master/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1-55544acaf7567404cc89c13faa7d16877bb6a718.jar" />
+        <dex dex="/users/ugrad/gargab/Desktop/android/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1-55544acaf7567404cc89c13faa7d16877bb6a718.jar" />
+    </item>
+    <item
+        jar="/users/ugrad/gargab/Desktop/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/users/ugrad/gargab/Desktop/android/app/build/intermediates/pre-dexed/debug/classes-8ca80aa19162b1f713ebe03fcf8cb198229d00b3.jar" />
+    </item>
+    <item
+        jar="/users/ugrad/gargab/Desktop/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/users/ugrad/gargab/Desktop/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1-33666a4f545954d7714eb306c19d555c923e0943.jar" />
+    </item>
+    <item
+        jar="/users/ugrad/gargab/Desktop/android/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
+        <dex dex="/users/ugrad/gargab/Desktop/android/app/build/intermediates/pre-dexed/debug/classes-698f03315d787f3b9ee755eece6652aa44b271a7.jar" />
+    </item>
+    <item
+        jar="/users/ugrad/gargab/.gradle/caches/modules-2/files-2.1/joda-time/joda-time/2.8.2/d27c24204c5e507b16fec01006b3d0f1ec42aed4/joda-time-2.8.2.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d27c24204c5e507b16fec01006b3d0f1ec42aed4">
+        <dex dex="/users/ugrad/gargab/Desktop/android/app/build/intermediates/pre-dexed/debug/joda-time-2.8.2-f40fc8e2c566e6d84fad57324cbc123326082027.jar" />
+    </item>
+    <item
+        jar="/users/ugrad/gargab/Desktop/android/app/build/intermediates/exploded-aar/com.mcxiaoke.volley/android-volley-master/1.0.19/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="5990469479c68518615648e534990ddbb867800e">
+        <dex dex="/users/ugrad/gargab/Desktop/android/app/build/intermediates/pre-dexed/debug/classes-ec18a1a00a6360a34cfd1de102ad7692b86ee8f9.jar" />
     </item>
 
 </items>

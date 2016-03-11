@@ -44,8 +44,8 @@ public class ParticularEntActivity extends AppCompatActivity{
             super(fm);
         }
 
-        SharedPreferences appPrefs = ParticularEntActivity.this.getSharedPreferences("appPrefs", 0);
-        String temp = appPrefs.getString("swipeEventId", "NULL");
+
+        String temp = getIntent().getStringExtra("swipeEventId");
         String[] swipeEventId = temp.split(",");
         @Override
         public Fragment getItem(int arg0) {
@@ -61,7 +61,7 @@ public class ParticularEntActivity extends AppCompatActivity{
                     Log.v("DisplayDates", "" + arg0);
 
                     Bundle bundle = new Bundle();
-                    int position = appPrefs.getInt("swipePosition", 0);
+                    int position = getIntent().getIntExtra("swipePosition", 0);
                     bundle.putInt("eventId", Integer.parseInt(swipeEventId[position+i]));
                     Fragment fragment = new ParticularEntFrag();
                     fragment.setArguments(bundle);
@@ -74,9 +74,9 @@ public class ParticularEntActivity extends AppCompatActivity{
         @Override
         public int getCount() {
             // TODO Auto-generated method stub
-            SharedPreferences appPrefs = ParticularEntActivity.this.getSharedPreferences("appPrefs", 0);
-            int count = appPrefs.getInt("swipeCount", 1);
-            count = count - appPrefs.getInt("swipePosition", 0);
+            int count = getIntent().getIntExtra("swipeCount",0);
+            int swipePosition = getIntent().getIntExtra("swipePosition",0);
+            count = count - swipePosition;
             return count;
         }
     }
