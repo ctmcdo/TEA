@@ -39,6 +39,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.util.ArrayList;
 
 
@@ -61,10 +63,46 @@ public class ParticularSocActivity extends ActionBarActivity implements AdapterV
         setContentView(R.layout.particular_soc_activity);
 
         //Pull information from database, then generate ListView of societies
-        establishConnection(new VolleyCallback() {
-                                @Override
-                                public void handleData(String response) {
+//            establishConnection(new VolleyCallback() {
+//                @Override
+//                public void handleData(String response) {
+//===============================================File handling===============================================================//
+//-----------------------------------------------Common setup for reading or writing-----------------------------------------//
+        String filename = "getInfo.php";      //what the getEvents.php will be saved as, can be anything
 
+        String contents ="";
+        File file;
+
+        file= new File(getApplicationContext().getApplicationContext().getFilesDir(),filename); //This points to the file we will use. It's in the apps directory, should be accessible to all activities. May not exist, so could do with adding code to handle thee file not existing for loading from it.
+//----------------------------------------------------------------------------------------------------------------------------//
+//-----------------------------------------------Writing to the file----------------------------------------------------------//
+/*
+                    try {
+                        FileOutputStream outputStream = new FileOutputStream(file);
+                        outputStream.write(response.getBytes()); //write the response string to the file
+                        outputStream.close();
+                    } catch (Exception e) {
+                        //put stuff here for if saving fails
+                        e.printStackTrace();
+                    }
+*/
+
+//---------------------------------------------------------------------------------------------------------------------------//
+//------------------------------------------------Reading from the file-----------------------------------------------------//
+        try{
+            int length = (int) file.length();
+            byte[] bytes = new byte[length];
+            FileInputStream in = new FileInputStream(file);
+            try {
+                in.read(bytes);
+            } finally {
+                in.close();
+            }
+            contents = new String(bytes);//contents is the same as "response" which we got from the server
+        } catch (Exception e) {
+            //could put stuff here for what to do if loading fails (set a bool loadingFailed=true and display a toast or something)
+            e.printStackTrace();
+        }
                                     JSONObject socData;
                                     byte[] data;
                                     Bitmap bitmap;
@@ -72,7 +110,7 @@ public class ParticularSocActivity extends ActionBarActivity implements AdapterV
 
                                     try {
 
-                                        JSONObject jsonObject = new JSONObject(response);
+                                        JSONObject jsonObject = new JSONObject(contents);
                                         JSONArray result = jsonObject.getJSONArray(Constants.JSON_ARRAY);
                                         len = result.length();
 
@@ -101,9 +139,6 @@ public class ParticularSocActivity extends ActionBarActivity implements AdapterV
                                     societies_listView = (ListView) findViewById(R.id.societies_list);
                                     societies_listView.setAdapter(particularSocAdapter);
                                     societies_listView.setOnItemClickListener(new SocietyList_ClickHandler());
-                                }
-                            }
-        );
 
         //Generate the navigation drawer
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerlayout);

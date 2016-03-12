@@ -1,5 +1,7 @@
 package com.tea.cmcdona2.casper.Socs;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.util.ArrayList;
 
 import android.app.Activity;
@@ -93,40 +95,79 @@ public class SocsActivity extends ActionBarActivity {
 
             //after establishing a connection and receiving data, do the following
 
-            establishConnection(new VolleyCallback() {
-                @Override
-                public void handleData(String response) {
+//            establishConnection(new VolleyCallback() {
+//                @Override
+//                public void handleData(String response) {
+//===============================================File handling===============================================================//
+//-----------------------------------------------Common setup for reading or writing-----------------------------------------//
+            String filename = "getInfo.php";      //what the getEvents.php will be saved as, can be anything
 
-                    JSONObject socData;
-                    byte[] data;
-                    Bitmap bitmap;
+            String contents ="";
+            File file;
 
+            file= new File(getApplicationContext().getApplicationContext().getFilesDir(),filename); //This points to the file we will use. It's in the apps directory, should be accessible to all activities. May not exist, so could do with adding code to handle thee file not existing for loading from it.
+//----------------------------------------------------------------------------------------------------------------------------//
+//-----------------------------------------------Writing to the file----------------------------------------------------------//
+/*
                     try {
-
-                        JSONObject jsonObject = new JSONObject(response);
-                        JSONArray result = jsonObject.getJSONArray(Constants.JSON_ARRAY);
-                        len = result.length();
-
-                        String[] name = new String[len];
-                        String[] imageTemp = new String[len];
-                        bm = new Bitmap[len];
-                        str = new String[len];
-
-                        appPrefsEditor.putInt("idsActive_size", len).commit();
-
-                        for (int i = 0; i < len; i++) {
-
-                            socData = result.getJSONObject(i);
-                            name[i] = socData.getString(Constants.KEY_NAME);
-                            imageTemp[i] = socData.getString(Constants.KEY_IMAGE);
-                            data = Base64.decode(imageTemp[i], Base64.DEFAULT);
-                            bitmap = BitmapFactory.decodeByteArray(data, 0, data.length);
-                            bm[i] = bitmap;
-                            str[i] = name[i];
-                        }
-                    } catch (JSONException e) {
+                        FileOutputStream outputStream = new FileOutputStream(file);
+                        outputStream.write(response.getBytes()); //write the response string to the file
+                        outputStream.close();
+                    } catch (Exception e) {
+                        //put stuff here for if saving fails
                         e.printStackTrace();
                     }
+*/
+
+//---------------------------------------------------------------------------------------------------------------------------//
+//------------------------------------------------Reading from the file-----------------------------------------------------//
+            try{
+                int length = (int) file.length();
+                byte[] bytes = new byte[length];
+                FileInputStream in = new FileInputStream(file);
+                try {
+                    in.read(bytes);
+                } finally {
+                    in.close();
+                }
+                contents = new String(bytes);//contents is the same as "response" which we got from the server
+            } catch (Exception e) {
+                //could put stuff here for what to do if loading fails (set a bool loadingFailed=true and display a toast or something)
+                e.printStackTrace();
+            }
+//--------------------------------------------------------------------------------------------------------------------------//
+//==========================================================================================================================//
+            //code from here is the regular stuff loading the JSONObject from contents instread of from response
+            JSONObject socData;
+            byte[] data;
+            Bitmap bitmap;
+
+            try {
+
+                JSONObject jsonObject = new JSONObject(contents);//using contents (from the file) instead of response (from the internet)
+                JSONArray result = jsonObject.getJSONArray(Constants.JSON_ARRAY);
+                len = result.length();
+
+                String[] name = new String[len];
+                String[] imageTemp = new String[len];
+                bm = new Bitmap[len];
+                str = new String[len];
+
+                appPrefsEditor.putInt("idsActive_size", len).commit();
+
+                for (int i = 0; i < len; i++) {
+
+                    socData = result.getJSONObject(i);
+                    name[i] = socData.getString(Constants.KEY_NAME);
+                    imageTemp[i] = socData.getString(Constants.KEY_IMAGE);
+                    data = Base64.decode(imageTemp[i], Base64.DEFAULT);
+                    bitmap = BitmapFactory.decodeByteArray(data, 0, data.length);
+                    bm[i] = bitmap;
+                    str[i] = name[i];
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
 
                     idsActive = new boolean[len];
 
@@ -162,9 +203,6 @@ public class SocsActivity extends ActionBarActivity {
                             storeArray(idsActive, "idsActive", SocsActivity.this);
                         }
                     });
-
-                }
-            });
 
             appPrefsEditor.putBoolean("fromEntsActivity", false);
             appPrefsEditor.commit();

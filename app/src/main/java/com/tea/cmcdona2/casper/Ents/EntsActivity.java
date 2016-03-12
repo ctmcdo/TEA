@@ -45,6 +45,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.util.Locale;
 
 public class EntsActivity extends ActionBarActivity implements ActionBar.TabListener, AdapterView.OnItemClickListener {
@@ -141,118 +143,155 @@ public class EntsActivity extends ActionBarActivity implements ActionBar.TabList
 
         Boolean recursive = getIntent().getBooleanExtra("recursive", false);
 
-        if (!recursive) {
-            establishConnection(new EntsActivity.VolleyCallback() {
-                @Override
-                public void handleData(String response) throws JSONException {
+        //        Boolean recursive = getIntent().getBooleanExtra("recursive", false);
 
-                    JSONObject entsData;
+        //    if (!recursive) {
+        //        establishConnection(new EntsActivity.VolleyCallback() {
+        //            @Override
+        //            public void handleData(String response) throws JSONException {
+//===============================================File handling===============================================================//
+//-----------------------------------------------Common setup for reading or writing-----------------------------------------//
+        String filename = "getEvents.php";      //what the getEvents.php will be saved as, can be anything
 
-                    try {
+        String contents ="";
+        File file;
 
-                        JSONObject jsonObject = new JSONObject(response);
-                        result = jsonObject.getJSONArray(Constants.JSON_ARRAY);
-                        len = result.length();
-
-                        societyName = new String[len];
-                        eventsTiming = new String[len];
-                        String[] name = new String[len];
-                        endDate = new String[len];
-                        startDate = new String[len];
-
-                        imageTemp = new String[len];
-                        receivedIDs = new int[len];
-                        bm = new Bitmap[len];
-                        eventName = new String[len];
-                        for (int i = 0; i < len; i++) {
-
-                            entsData = result.getJSONObject(i);
-                            receivedIDs[i] = entsData.getInt(Constants.KEY_ID);
-                            name[i] = entsData.getString(Constants.KEY_EVENTNAME);
-                            imageTemp[i] = entsData.getString(Constants.KEY_LOWRES);
-                            societyName[i] = entsData.getString(Constants.KEY_SOCIETYNAME);
-                            startDate[i] = entsData.getString(Constants.KEY_STARTDATE);
-                            endDate[i] = entsData.getString(Constants.KEY_ENDDATE);
-
-                            String endTime = endDate[i].split(" ")[1];
-
-                            startDate[i] = startDate[i].substring(0, Math.min(startDate[i].length(), 16));
-                            endTime = endTime.substring(0, Math.min(endTime.length(), 5));
-                            eventName[i] = name[i];
-                            eventsTiming[i] = startDate[i] + "-" + endTime;
-                        }
-                    } catch (JSONException e) {
+        file= new File(getApplicationContext().getApplicationContext().getFilesDir(),filename); //This points to the file we will use. It's in the apps directory, should be accessible to all activities. May not exist, so could do with adding code to handle thee file not existing for loading from it.
+//----------------------------------------------------------------------------------------------------------------------------//
+//-----------------------------------------------Writing to the file----------------------------------------------------------//
+/*                    try {
+                        FileOutputStream outputStream = new FileOutputStream(file);
+                        outputStream.write(response.getBytes()); //write the response string to the file
+                        outputStream.close();
+                    } catch (Exception e) {
+                        //put stuff here for if saving fails
                         e.printStackTrace();
                     }
-
-                    boolean[] idsActive;
-
-                    SharedPreferences appPrefs = EntsActivity.this.getSharedPreferences("appPrefs", 0);
-                    SharedPreferences.Editor appPrefsEditor = appPrefs.edit();
-
-                    boolean allSocsFlag = appPrefs.getBoolean("allSocsFlag", false);
-
-                    if (allSocsFlag) {
-
-                        int length = appPrefs.getInt("numSocs", 0);
-                        idsActive = new boolean[length];
-                        for (int i = 0; i < length; i++) {
-                            idsActive[i] = true;
-                        }
-                        appPrefsEditor.putBoolean("allSocsFlag", false).commit();
-
-                    } else {
-                        idsActive = loadArray(EntsActivity.this);
-                    }
-
-                    String temp;
-                    temp = appPrefs.getString("societyName", "NULL");
-                    String[] SelectedSociety = temp.split(",");
-
-                    numSocs = appPrefs.getInt("numSocs", 0);
-
-                    int counter = 0;
-                    int[] imgPos = new int[numSocs];
-                    eventIDs = new int[len];
-                    for (int i = 0; i < numSocs; i++) {
-
-                        if (idsActive[i]) {
-                            imgPos[counter] = i;
-                            counter++;
-                        }
-                    }
-
-                    int i;
-                    StringBuilder stringBuilder = new StringBuilder();
-                    String[] stringIDs = new String[len];
-
-                    int count = 0;
-                    for (i = 0; i < len; i++) {
-                        for (int j = 0; j < counter; j++) {
-                            int pos = imgPos[j];
-                            if (societyName[i].equals(SelectedSociety[pos])) {
-                                eventIDs[count] = receivedIDs[i];
-                                stringIDs[count] = Integer.toString(eventIDs[count]);
-                                appPrefsEditor.putString("societyName" + eventIDs[count], societyName[i]);
-                                appPrefsEditor.putString("eventName" + eventIDs[count], eventName[i]);
-                                appPrefsEditor.putString("imageTemp" + eventIDs[count], imageTemp[i]);
-                                appPrefsEditor.putString("eventIDsAndTimes" + eventIDs[count], eventsTiming[i]).commit();
-                                stringBuilder.append(stringIDs[count]).append(",");
-                                count++;
-                            }
-                        }
-
-                    }
-
-                    appPrefsEditor.putString("IDs", stringBuilder.toString());
-                    appPrefsEditor.putInt("count", count);
-                    appPrefsEditor.commit();
-
-                    mViewPager.setAdapter(mSectionsPagerAdapter);
-                    mViewPager.setCurrentItem(tabPosition);
-                }
-            });
+*/
+//---------------------------------------------------------------------------------------------------------------------------//
+//------------------------------------------------Reading from the file-----------------------------------------------------//
+        try{
+            int length = (int) file.length();
+            byte[] bytes = new byte[length];
+            FileInputStream in = new FileInputStream(file);
+            try {
+                in.read(bytes);
+            } finally {
+                in.close();
+            }
+            contents = new String(bytes);//contents is the same as "response" which we got from the server
+        } catch (Exception e) {
+            //could put stuff here for what to do if loading fails (set a bool loadingFailed=true and display a toast or something)
+            e.printStackTrace();
         }
+//--------------------------------------------------------------------------------------------------------------------------//
+//==========================================================================================================================//
+        JSONObject entsData;
+
+        try {
+
+            JSONObject jsonObject = new JSONObject(contents);//using contents (from the file) instead of response (from the internet)
+            result = jsonObject.getJSONArray(Constants.JSON_ARRAY);
+            len = result.length();
+
+            societyName = new String[len];
+            eventsTiming = new String[len];
+            String[] name = new String[len];
+            endDate = new String[len];
+            startDate = new String[len];
+
+            imageTemp = new String[len];
+            receivedIDs = new int[len];
+            bm = new Bitmap[len];
+            eventName = new String[len];
+            for (int i = 0; i < len; i++) {
+
+                entsData = result.getJSONObject(i);
+                receivedIDs[i] = entsData.getInt(Constants.KEY_ID);
+                name[i] = entsData.getString(Constants.KEY_EVENTNAME);
+                imageTemp[i] = entsData.getString(Constants.KEY_LOWRES);
+                societyName[i] = entsData.getString(Constants.KEY_SOCIETYNAME);
+                startDate[i] = entsData.getString(Constants.KEY_STARTDATE);
+                endDate[i] = entsData.getString(Constants.KEY_ENDDATE);
+
+                String endTime = endDate[i].split(" ")[1];
+
+                startDate[i] = startDate[i].substring(0, Math.min(startDate[i].length(), 16));
+                endTime = endTime.substring(0, Math.min(endTime.length(), 5));
+                eventName[i] = name[i];
+                eventsTiming[i] = startDate[i] + "-" + endTime;
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+
+        boolean[] idsActive;
+
+        SharedPreferences appPrefs = EntsActivity.this.getSharedPreferences("appPrefs", 0);
+        SharedPreferences.Editor appPrefsEditor = appPrefs.edit();
+
+        boolean allSocsFlag = appPrefs.getBoolean("allSocsFlag", false);
+
+        if (allSocsFlag) {
+
+            int length = appPrefs.getInt("numSocs", 0);
+            idsActive = new boolean[length];
+            for (int i = 0; i < length; i++) {
+                idsActive[i] = true;
+            }
+            appPrefsEditor.putBoolean("allSocsFlag", false).commit();
+
+        } else {
+            idsActive = loadArray(EntsActivity.this);
+        }
+
+        String temp;
+        temp = appPrefs.getString("societyName", "NULL");
+        String[] SelectedSociety = temp.split(",");
+
+        numSocs = appPrefs.getInt("numSocs", 0);
+
+        int counter = 0;
+        int[] imgPos = new int[numSocs];
+        eventIDs = new int[len];
+        for (int i = 0; i < numSocs; i++) {
+
+            if (idsActive[i]) {
+                imgPos[counter] = i;
+                counter++;
+            }
+        }
+
+        int i;
+        StringBuilder stringBuilder = new StringBuilder();
+        String[] stringIDs = new String[len];
+
+        int count = 0;
+        for (i = 0; i < len; i++) {
+            for (int j = 0; j < counter; j++) {
+                int pos = imgPos[j];
+                if (societyName[i].equals(SelectedSociety[pos])) {
+                    eventIDs[count] = receivedIDs[i];
+                    stringIDs[count] = Integer.toString(eventIDs[count]);
+                    appPrefsEditor.putString("societyName" + eventIDs[count], societyName[i]);
+                    appPrefsEditor.putString("eventName" + eventIDs[count], eventName[i]);
+                    appPrefsEditor.putString("imageTemp" + eventIDs[count], imageTemp[i]);
+                    appPrefsEditor.putString("eventIDsAndTimes" + eventIDs[count], eventsTiming[i]).commit();
+                    stringBuilder.append(stringIDs[count]).append(",");
+                    count++;
+                }
+            }
+
+        }
+
+        appPrefsEditor.putString("IDs", stringBuilder.toString());
+        appPrefsEditor.putInt("count", count);
+        appPrefsEditor.commit();
+
+        mViewPager.setAdapter(mSectionsPagerAdapter);
+        mViewPager.setCurrentItem(tabPosition);
+
     }
 
     @Override

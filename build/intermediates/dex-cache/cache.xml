@@ -2,53 +2,53 @@
 <items version="2" >
 
     <item
-        jar="/users/ugrad/gargab/Desktop/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="/users/ugrad/gargab/Desktop/android/app/build/intermediates/pre-dexed/debug/classes-fa575677105b27dbab48c24f10152fafe8a2829f.jar" />
-    </item>
-    <item
-        jar="/opt/android-sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="/users/ugrad/gargab/Desktop/android/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1-55544acaf7567404cc89c13faa7d16877bb6a718.jar" />
-    </item>
-    <item
-        jar="/users/ugrad/gargab/Desktop/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="/users/ugrad/gargab/Desktop/android/app/build/intermediates/pre-dexed/debug/classes-8ca80aa19162b1f713ebe03fcf8cb198229d00b3.jar" />
-    </item>
-    <item
-        jar="/users/ugrad/gargab/Desktop/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jar="C:\Users\Bryan\Desktop\TrinityEventsOffline\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="/users/ugrad/gargab/Desktop/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1-33666a4f545954d7714eb306c19d555c923e0943.jar" />
+        <dex dex="C:\Users\Bryan\Desktop\TrinityEventsOffline\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-16bd34846bb68baa94ccb8a8b2e6611cd7916fe3.jar" />
     </item>
     <item
-        jar="/users/ugrad/gargab/Desktop/android/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/jars/classes.jar"
+        jar="C:\Users\Bryan\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="C:\Users\Bryan\Desktop\TrinityEventsOffline\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-a91ac73719e8ece52550e8be2998d7084f5405ce.jar" />
+    </item>
+    <item
+        jar="C:\Users\Bryan\Desktop\TrinityEventsOffline\app\build\intermediates\exploded-aar\com.android.support\design\23.0.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
-        <dex dex="/users/ugrad/gargab/Desktop/android/app/build/intermediates/pre-dexed/debug/classes-698f03315d787f3b9ee755eece6652aa44b271a7.jar" />
+        <dex dex="C:\Users\Bryan\Desktop\TrinityEventsOffline\app\build\intermediates\pre-dexed\debug\classes-075f0059ca6e1f2d9c7cfeaa03f05569bc732a3b.jar" />
     </item>
     <item
-        jar="/users/ugrad/gargab/.gradle/caches/modules-2/files-2.1/joda-time/joda-time/2.8.2/d27c24204c5e507b16fec01006b3d0f1ec42aed4/joda-time-2.8.2.jar"
+        jar="C:\Users\Bryan\Desktop\TrinityEventsOffline\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="C:\Users\Bryan\Desktop\TrinityEventsOffline\app\build\intermediates\pre-dexed\debug\classes-ccbec3a3f59fccae99dc5912d50a73209fa5c2cb.jar" />
+    </item>
+    <item
+        jar="C:\Users\Bryan\.gradle\caches\modules-2\files-2.1\joda-time\joda-time\2.8.2\d27c24204c5e507b16fec01006b3d0f1ec42aed4\joda-time-2.8.2.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="d27c24204c5e507b16fec01006b3d0f1ec42aed4">
-        <dex dex="/users/ugrad/gargab/Desktop/android/app/build/intermediates/pre-dexed/debug/joda-time-2.8.2-f40fc8e2c566e6d84fad57324cbc123326082027.jar" />
+        <dex dex="C:\Users\Bryan\Desktop\TrinityEventsOffline\app\build\intermediates\pre-dexed\debug\joda-time-2.8.2-e08ba47549221de5b69c852ee17af7404abdc414.jar" />
     </item>
     <item
-        jar="/users/ugrad/gargab/Desktop/android/app/build/intermediates/exploded-aar/com.mcxiaoke.volley/android-volley-master/1.0.19/jars/classes.jar"
+        jar="C:\Users\Bryan\Desktop\TrinityEventsOffline\app\build\intermediates\exploded-aar\com.mcxiaoke.volley\android-volley-master\1.0.19\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="5990469479c68518615648e534990ddbb867800e">
-        <dex dex="/users/ugrad/gargab/Desktop/android/app/build/intermediates/pre-dexed/debug/classes-ec18a1a00a6360a34cfd1de102ad7692b86ee8f9.jar" />
+        sha1="8305c1d8347c5cb3e3b25adff9c54d2b9bc0ea01">
+        <dex dex="C:\Users\Bryan\Desktop\TrinityEventsOffline\app\build\intermediates\pre-dexed\debug\classes-60472de8eabfe97955c2bbb555366f7d94490026.jar" />
+    </item>
+    <item
+        jar="C:\Users\Bryan\Desktop\TrinityEventsOffline\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="C:\Users\Bryan\Desktop\TrinityEventsOffline\app\build\intermediates\pre-dexed\debug\classes-58289ebbf34fdf082181e9f2d77b22fc181e3bca.jar" />
     </item>
 
 </items>
