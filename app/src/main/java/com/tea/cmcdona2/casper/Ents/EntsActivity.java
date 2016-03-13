@@ -79,7 +79,7 @@ public class EntsActivity extends ActionBarActivity implements ActionBar.TabList
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.ents_to_frags);
-        SocsActivity.SocsActivity.finish();
+        //SocsActivity.SocsActivity.finish();
 
         //toolbar = (Toolbar) findViewById(R.id.toolbar);
         //Toolbar will now take on default Action Bar characteristics

@@ -81,13 +81,15 @@ public class SocsActivity extends ActionBarActivity {
 
             if (!fromEntsActivity) {
 
-                Intent intent = new Intent(SocsActivity.this, SplashActivity.class);
+                //Intent intent = new Intent(SocsActivity.this, SplashActivity.class);
                 appPrefsEditor.putBoolean("allSocsFlag", false).commit();
-                startActivity(intent);
-                if(!alreadyRegistered) {
-                    Intent loginIntent = new Intent(this, LogIn.class);
-                    startActivity(loginIntent);
-                }
+                //startActivity(intent);
+
+                //if(!alreadyRegistered) {
+                   // Intent loginIntent = new Intent(this, LogIn.class);
+                    //startActivity(loginIntent);
+                //}
+
             }
 
             //else fromEntsActivity so no need for splash, then run activity
