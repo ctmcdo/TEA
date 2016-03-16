@@ -46,7 +46,7 @@ public class TomorrowFrag extends android.support.v4.app.Fragment {
         EntsAdapter adapter;
         ListView listView;
         listView = (ListView) v.findViewById(R.id.list_view);
-        //listView.setEmptyView(v.findViewById(R.id.empty_list_item));
+        listView.setEmptyView(v.findViewById(R.id.empty_list_item));
         adapter = new EntsAdapter(this.getContext(), R.layout.ent_item);
 
         listView.setAdapter(adapter);
@@ -73,6 +73,9 @@ public class TomorrowFrag extends android.support.v4.app.Fragment {
         final int[] EventId = new int[numOfEventsPassed];
 
         int counter = 0;
+
+        int size = listView.getCount();
+        appPrefsEditor.putInt("tomorrowSize", size).commit();
 
         for (int i = 0; i < numOfEventsPassed; i++) {
 
@@ -102,10 +105,7 @@ public class TomorrowFrag extends android.support.v4.app.Fragment {
             }
         }
         counter1 = counter;
-
-        //Make "No events to show" message appear if the tab has no events
-        if(counter1 == 0)
-            listView.setEmptyView(v.findViewById(R.id.empty_list_item));
+        appPrefsEditor.putInt("tomorrowSize", counter1).commit();
 
 
         StringBuilder sb = new StringBuilder();
@@ -139,6 +139,7 @@ public class TomorrowFrag extends android.support.v4.app.Fragment {
                         intent.putExtra("swipeEventId", swipeEventId);
                         intent.putExtra("swipeCount", counter1);
                         intent.putExtra("swipePosition", position);
+                        intent.putExtra("eventPosition", position + appPrefs.getInt("todaySize",0));
                         startActivity(intent);
                     }
                 }

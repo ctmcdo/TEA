@@ -1,34 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
-
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
     <ImageView
 
-        android:layout_width="fill_parent"
-        android:paddingTop="20dp"
-        android:layout_height="120dp"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
         android:name="com.example.cmcdona2.theresgoodboostonight.SocietyPicture"
         android:id="@+id/myImgView"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"/>
 
-        />
+        <LinearLayout
+            android:id="@+id/buttonHolder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#A0000000">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/eventName"
-        android:text=""
-        android:layout_below="@+id/myImgView"
-        android:gravity="center_horizontal"
-        android:layout_marginTop="20dp" />
+            <ImageButton
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/oval_btn"
+                android:src="@drawable/directions_btn"
+                android:text="@string/directions"
+                android:layout_gravity="center"
+                android:width="65dp"
+                android:id="@+id/getDirections"
+                android:layout_marginRight="70dp"
+                android:layout_alignParentRight="true"
+                />
+
+            <ImageButton
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:width="100dp"
+                android:background="@drawable/oval_btn"
+                android:src="@drawable/calendar_btn"
+                android:text="Notify"
+                android:id="@+id/going"
+                android:layout_marginLeft="80dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:id="@+id/placeNameHolder"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:transitionName="tNameHolder">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/eventName"
+            android:text=""
+            android:layout_below="@+id/myImgView"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="20dp" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btn_add"
+            android:layout_width="@dimen/floating_button_size"
+            android:layout_height="@dimen/floating_button_size"
+            android:layout_gravity="end"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="28dp"
+            android:src="@drawable/icn_add"
+            android:elevation="@dimen/button_elevation"
+            android:contentDescription="@null"/>
+            <!--android:background="@drawable/btn_background"-->
+
+    </FrameLayout>
 
     <ScrollView
         android:id="@+id/SCROLLER_ID"
@@ -39,8 +101,7 @@
         android:layout_below="@+id/eventName"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:fillViewport="true"
-        android:paddingBottom="80dp">
+        android:fillViewport="true">
 
         <TextView
             android:layout_width="fill_parent"
@@ -48,37 +109,9 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:id="@+id/eventDescription"
             android:padding="12dp"
-            android:paddingBottom="80dp"
             android:layout_below="@+id/eventName"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:text="" />
     </ScrollView>
-
-    <ImageButton
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:width="100dp"
-        android:background="@drawable/oval_btn"
-        android:src="@drawable/calendar_btn"
-        android:text="Notify"
-        android:id="@+id/going"
-        android:layout_marginLeft="80dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true" />
-
-    <ImageButton
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="@drawable/oval_btn"
-        android:src="@drawable/directions_btn"
-        android:text="@string/directions"
-        android:width="65dp"
-        android:id="@+id/getDirections"
-        android:layout_marginRight="70dp"
-        android:layout_alignTop="@+id/going"
-        android:layout_alignParentRight="true"
-        />
-
-
-</RelativeLayout>
+</LinearLayout>

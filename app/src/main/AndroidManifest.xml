@@ -36,7 +36,7 @@
             android:name=".ParticularEnt.ParticularEntActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>
         <activity
             android:name=".ParticularSoc.ParticularSocActivity"
             android:screenOrientation="portrait" />

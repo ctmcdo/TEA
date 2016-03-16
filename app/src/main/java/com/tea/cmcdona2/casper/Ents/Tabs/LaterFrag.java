@@ -50,7 +50,7 @@ public class LaterFrag extends android.support.v4.app.Fragment {
         EntsAdapter adapter;
         ListView listView;
         listView = (ListView) v.findViewById(R.id.list_view);
-        //listView.setEmptyView(v.findViewById(R.id.empty_list_item));
+        listView.setEmptyView(v.findViewById(R.id.empty_list_item));
         adapter = new EntsAdapter(this.getContext(), R.layout.ent_item);
 
         listView.setAdapter(adapter);
@@ -61,7 +61,6 @@ public class LaterFrag extends android.support.v4.app.Fragment {
         loadedID = appPrefs.getString("IDs", "null");
         String[] stringIDs = loadedID.split(",");
         int numOfEventsPassed = stringIDs.length;
-
         String[] societyName = new String[numOfEventsPassed];
         String[] eventName = new String[numOfEventsPassed];
         String[] imageTemp = new String[numOfEventsPassed];
@@ -74,6 +73,9 @@ public class LaterFrag extends android.support.v4.app.Fragment {
         String eventIDsAndTimes;
         String additive;
         final int[] EventId = new int[numOfEventsPassed];
+
+        int size = listView.getCount();
+        appPrefsEditor.putInt("laterSize", size).commit();
 
 
 
@@ -107,16 +109,13 @@ public class LaterFrag extends android.support.v4.app.Fragment {
                         eventDisplayTimes[counter] = eventDisplayTimes[counter].split("-")[0];
                     Log.v("displayTime", "" + eventDisplayTimes[counter]);
                     EventId[counter] = Integer.parseInt(stringIDs[i]);
+                    Log.v("event_id", ""+EventId);
                     counter++;
                 }
             }
         }
 
         counter1 = counter;
-
-        //Make "No events to show" message appear if the tab has no events
-        if(counter1 == 0)
-            listView.setEmptyView(v.findViewById(R.id.empty_list_item));
 
 
         StringBuilder sb = new StringBuilder();
@@ -147,9 +146,11 @@ public class LaterFrag extends android.support.v4.app.Fragment {
                         String Event = String.valueOf(parent.getItemAtPosition(position));
                         Intent intent = new Intent(getActivity(), ParticularEntActivity.class);
                         intent.putExtra("Event", Event);
+                        Log.v("eventID", "" + Event + " " + position + " " + swipeEventId);
                         intent.putExtra("swipeEventId", swipeEventId);
                         intent.putExtra("swipeCount", counter1);
                         intent.putExtra("swipePosition", position);
+                        intent.putExtra("eventPosition", position + appPrefs.getInt("todaySize",0) + appPrefs.getInt("tomorrowSize",0) );
                         startActivity(intent);
                     }
                 }

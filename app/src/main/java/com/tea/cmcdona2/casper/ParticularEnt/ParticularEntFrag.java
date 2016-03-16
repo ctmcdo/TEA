@@ -1,22 +1,35 @@
 package com.tea.cmcdona2.casper.ParticularEnt;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.shapes.Shape;
+import android.media.Image;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.CalendarContract;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.graphics.Palette;
 import android.util.Base64;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewAnimationUtils;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -60,12 +73,40 @@ public class ParticularEntFrag extends Fragment {
     public String societyName;
     public View view;
     public int eventId;
+    public Boolean buttonVisible = true;
+    public LinearLayout buttonHolder;
 
     private static TextView eventName;
 
     private static TextView eventDescription;
 
     private static ImageView imgview;
+
+    public void hideEditText(final LinearLayout view) {
+        int cx = view.getRight() - 30;
+        int cy = view.getBottom() - 60;
+        int initialRadius = view.getWidth();
+        Animator anim = ViewAnimationUtils.createCircularReveal(view, cx, cy, initialRadius, 0);
+        anim.addListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                super.onAnimationEnd(animation);
+                view.setVisibility(View.INVISIBLE);
+            }
+        });
+        buttonVisible = false;
+        anim.start();
+    }
+
+    public void revealEditText(final LinearLayout view) {
+        int cx = view.getRight() - 30;
+        int cy = view.getBottom() - 60;
+        int finalRadius = Math.max(view.getWidth(), view.getHeight());
+        Animator anim = ViewAnimationUtils.createCircularReveal(view, cx, cy, 0, finalRadius);
+        view.setVisibility(View.VISIBLE);
+        buttonVisible = true;
+        anim.start();
+    }
 
 
     @Nullable
@@ -76,11 +117,20 @@ public class ParticularEntFrag extends Fragment {
 
                              @Nullable Bundle savedInstanceState) {
 
+
         view = inflater.inflate(R.layout.particular_ent_activity_fragment, container, false);
+
+        buttonHolder = (LinearLayout) view.findViewById(R.id.buttonHolder);
+
+        buttonHolder.setVisibility(View.INVISIBLE);
+        buttonVisible = false;
+
         Bundle bundle = this.getArguments();
         if (bundle != null) {
             eventId = bundle.getInt("eventId", 0);
         }
+
+        int pos = bundle.getInt("eventPosition",0);
         SharedPreferences appPrefs = ParticularEntFrag.this.getContext().getSharedPreferences("appPrefs", 0);
         SharedPreferences.Editor appPrefsEditor = appPrefs.edit();
         appPrefsEditor.putInt("ID", eventId).apply();
@@ -134,7 +184,7 @@ public class ParticularEntFrag extends Fragment {
             JSONArray result = jsonObject.getJSONArray(Constants.JSON_ARRAY);
             String imageTemp;
 
-            particularEntData = result.getJSONObject(0);
+            particularEntData = result.getJSONObject(pos);
             imageTemp = particularEntData.getString(Constants.KEY_LOWRES);
             EventName = particularEntData.getString(Constants.KEY_EVENTNAME);
             EventDescription = particularEntData.getString(Constants.KEY_EVENTDESCRIPTION);
@@ -162,17 +212,33 @@ public class ParticularEntFrag extends Fragment {
         }
 
                 ImageView imgview = (ImageView) view.findViewById(R.id.myImgView);
-                imgview.setImageBitmap(bm);
+        final LinearLayout placenameHolder = (LinearLayout) view.findViewById(R.id.placeNameHolder);
+        final ImageButton imgBtn = (ImageButton) view.findViewById(R.id.btn_add);
+        imgview.setImageBitmap(bm);
+
+        Palette.generateAsync(bm, new Palette.PaletteAsyncListener() {
+            @Override
+            public void onGenerated(Palette palette) {
+                // Here's your generated palette
+                int bgColor = palette.getLightVibrantColor(getContext().getResources().getColor(android.R.color.white));
+                placenameHolder.setBackgroundColor(bgColor);
+                int bgColor1 = palette.getDarkVibrantColor(getContext().getResources().getColor(android.R.color.darker_gray));
+                imgBtn.setBackgroundColor(bgColor1);
+
+            }
+        });
+
                 TextView eventDescription = (TextView) view.findViewById(R.id.eventDescription);
                 eventDescription.setText(EventDescription);
                 TextView eventName = (TextView) view.findViewById(R.id.eventName);
                 eventName.setText(EventName);
 
-
-
         final ImageButton getDirections = (ImageButton) view.findViewById(R.id.getDirections);
 
         final ImageButton going = (ImageButton) view.findViewById(R.id.going);
+
+        final ImageButton choices = (ImageButton) view.findViewById(R.id.btn_add);
+
         going.setOnClickListener(
                 new View.OnClickListener() {
                     public void onClick(View v) {
@@ -181,19 +247,30 @@ public class ParticularEntFrag extends Fragment {
                 }
         );
         getDirections.setOnClickListener(
-
                 new View.OnClickListener() {
-
                     public void onClick(View v)
-
-                    {
-
+                   {
                         GMAP();
-
                     }
-
                 }
+        );
 
+        choices.setOnClickListener(
+                new View.OnClickListener() {
+                    public void onClick(View v) {
+                        //Toast.makeText(getContext(), "hello", Toast.LENGTH_LONG).show();
+                        if (!buttonVisible) {
+                            revealEditText(buttonHolder);
+                            //mEditTextTodo.requestFocus();
+                            //mInputManager.showSoftInput(mEditTextTodo, InputMethodManager.SHOW_IMPLICIT);
+
+                        } else {
+                            //mInputManager.hideSoftInputFromWindow(mEditTextTodo.getWindowToken(), 0);
+                            hideEditText(buttonHolder);
+
+                        }
+                    }
+                }
         );
 
         return view;
