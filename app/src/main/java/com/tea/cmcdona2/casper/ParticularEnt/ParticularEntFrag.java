@@ -7,6 +7,7 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.ColorStateList;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.shapes.Shape;
@@ -16,6 +17,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.CalendarContract;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.graphics.Palette;
 import android.util.Base64;
@@ -213,7 +215,7 @@ public class ParticularEntFrag extends Fragment {
 
                 ImageView imgview = (ImageView) view.findViewById(R.id.myImgView);
         final LinearLayout placenameHolder = (LinearLayout) view.findViewById(R.id.placeNameHolder);
-        final ImageButton imgBtn = (ImageButton) view.findViewById(R.id.btn_add);
+        final FloatingActionButton imgBtn = (FloatingActionButton) view.findViewById(R.id.btn_add);
         imgview.setImageBitmap(bm);
 
         Palette.generateAsync(bm, new Palette.PaletteAsyncListener() {
@@ -223,7 +225,8 @@ public class ParticularEntFrag extends Fragment {
                 int bgColor = palette.getLightVibrantColor(getContext().getResources().getColor(android.R.color.white));
                 placenameHolder.setBackgroundColor(bgColor);
                 int bgColor1 = palette.getDarkVibrantColor(getContext().getResources().getColor(android.R.color.darker_gray));
-                imgBtn.setBackgroundColor(bgColor1);
+                //imgBtn.setBackgroundColor(bgColor1);
+                imgBtn.setBackgroundTintList(new ColorStateList(new int[][]{new int[]{0}}, new int[]{bgColor1}));
 
             }
         });
@@ -233,11 +236,11 @@ public class ParticularEntFrag extends Fragment {
                 TextView eventName = (TextView) view.findViewById(R.id.eventName);
                 eventName.setText(EventName);
 
-        final ImageButton getDirections = (ImageButton) view.findViewById(R.id.getDirections);
+        final FloatingActionButton getDirections = (FloatingActionButton) view.findViewById(R.id.getDirections);
 
-        final ImageButton going = (ImageButton) view.findViewById(R.id.going);
+        final FloatingActionButton going = (FloatingActionButton) view.findViewById(R.id.going);
 
-        final ImageButton choices = (ImageButton) view.findViewById(R.id.btn_add);
+        final FloatingActionButton choices = (FloatingActionButton) view.findViewById(R.id.btn_add);
 
         going.setOnClickListener(
                 new View.OnClickListener() {

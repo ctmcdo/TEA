@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android.support.design="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -24,34 +24,54 @@
             android:id="@+id/buttonHolder"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#A0000000">
-
-            <ImageButton
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="@drawable/oval_btn"
+            android:background="#A0000000"
+            >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="50dp"
                 android:src="@drawable/directions_btn"
                 android:text="@string/directions"
                 android:layout_gravity="center"
                 android:width="65dp"
                 android:id="@+id/getDirections"
-                android:layout_marginRight="70dp"
-                android:layout_alignParentRight="true"
                 />
+    </LinearLayout>
 
-            <ImageButton
-                android:layout_width="65dp"
-                android:layout_height="65dp"
-                android:width="100dp"
-                android:background="@drawable/oval_btn"
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="25dp"
+                android:width="65dp"
                 android:src="@drawable/calendar_btn"
                 android:text="Notify"
+                android:layout_gravity="center"
                 android:id="@+id/going"
-                android:layout_marginLeft="80dp"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true" />
-
+                 />
         </LinearLayout>
+
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:width="65dp"
+                android:layout_marginRight="50dp"
+                android:src="@drawable/favourite_btn"
+                android:text="Notify"
+                android:layout_gravity="center"
+                android:id="@+id/fav"
+                />
+            </LinearLayout>
+
+
 
     </FrameLayout>
 
@@ -78,13 +98,12 @@
 
         </LinearLayout>
 
-        <ImageButton
+        <android.support.design.widget.FloatingActionButton
             android:id="@+id/btn_add"
-            android:layout_width="@dimen/floating_button_size"
-            android:layout_height="@dimen/floating_button_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:layout_marginEnd="10dp"
-            android:layout_marginTop="28dp"
+            android:layout_margin="16dp"
             android:src="@drawable/icn_add"
             android:elevation="@dimen/button_elevation"
             android:contentDescription="@null"/>
