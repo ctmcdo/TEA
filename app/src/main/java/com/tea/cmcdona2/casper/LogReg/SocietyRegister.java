@@ -34,19 +34,19 @@ public class SocietyRegister extends AppCompatActivity implements View.OnClickLi
 
     Button register;
     TextView login;
-    EditText rSocName, etEmail, etPassword, etPassword2;
+    EditText etEmail, etPassword, etPassword2;
+    Spinner dropdown;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_society_register);
 
-        Spinner dropdown = (Spinner)findViewById(R.id.spinner1);
-        String[] items = new String[]{"1", "2", "three"};
+        dropdown = (Spinner)findViewById(R.id.spinner1);
+        String[] items = new String[]{"Select Society", "DUCCS", "The Phil", "Players"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, items);
         dropdown.setAdapter(adapter);
 
-        //rSocName = (EditText) findViewById(R.id.rName);
         etEmail = (EditText) findViewById(R.id.SocEmail);
         etPassword = (EditText) findViewById(R.id.SocPassword);
         etPassword2 = (EditText) findViewById(R.id.SocPassword2);
@@ -68,9 +68,10 @@ public class SocietyRegister extends AppCompatActivity implements View.OnClickLi
                 String email = etEmail.getText().toString();
                 String password1 = etPassword.getText().toString();
                 String password2 = etPassword2.getText().toString();
+                String societyName = dropdown.getSelectedItem().toString();
 
 
-                if ( email.equals("") || password1.equals("")) {
+                if ( email.equals("") || password1.equals("") || societyName.equals("Select Society")) {
                     Toast.makeText(this, "Incomplete User Details", Toast.LENGTH_SHORT).show();
                 }
 
@@ -78,7 +79,6 @@ public class SocietyRegister extends AppCompatActivity implements View.OnClickLi
                     Toast.makeText(this, "Passwords do not match", Toast.LENGTH_SHORT).show();
                 }
 
-                //add code checking for unique email when databases are set-up
 
                 if (!email.equals("") && !password1.equals("")) {
                     registerUser();
@@ -97,6 +97,7 @@ public class SocietyRegister extends AppCompatActivity implements View.OnClickLi
     private void registerUser(){
         final String email = etEmail.getText().toString().trim();
         final String password = etPassword.getText().toString().trim();
+        final String societyName = dropdown.getSelectedItem().toString();
         final String encryptedEmail = md5(email);
         final String encryptedPassword = md5(password);
 
@@ -130,6 +131,7 @@ public class SocietyRegister extends AppCompatActivity implements View.OnClickLi
                 params.put(Constants.KEY_EMAIL, encryptedEmail);
                 params.put(Constants.KEY_PASSWORD,encryptedPassword);
                 params.put(Constants.KEY_ACCTYPE, "soc");
+                params.put(Constants.KEY_SOCIETY, societyName);
                 return params;
             }
 
