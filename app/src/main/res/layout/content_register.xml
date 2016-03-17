@@ -54,12 +54,18 @@
         android:id="@+id/bRegister"
         android:text="Continue"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:textColor="@color/white"/>
+
     <TextView
         android:id="@+id/bLogin"
-        android:text="Log in"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/underlinedTextRegister"
+        android:textStyle="bold"
+        />
 
 </LinearLayout>
 

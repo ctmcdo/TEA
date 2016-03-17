@@ -22,6 +22,8 @@
         android:id="@+id/studentButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:textColor="@color/white"
         android:text="Student">
     </Button>
 
@@ -29,6 +31,8 @@
         android:id="@+id/societyButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:textColor="@color/white"
         android:text="Society">
     </Button>
 </LinearLayout>

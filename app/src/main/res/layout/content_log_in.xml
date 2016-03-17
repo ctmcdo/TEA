@@ -10,6 +10,14 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_main" tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/casperLogInImage"
+        android:layout_width="100dp"
+        android:layout_height="200dp"
+        android:src="@drawable/playstore_icon"
+        android:layout_gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
 
     <EditText
         android:id="@+id/etEmail"
@@ -33,6 +41,8 @@
         android:layout_width="match_parent"
         android:layout_marginBottom="10dp"
         android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:textColor="@color/white"
         android:text="Log in" />
 
     <TextView
@@ -40,7 +50,8 @@
         android:layout_width="wrap_content"
         android:layout_marginBottom="10dp"
         android:layout_height="wrap_content"
-        android:text="Register Here"
+        android:layout_gravity="center"
+        android:text="@string/underlinedTextLogIn"
         android:textStyle="bold" />
 
 </LinearLayout>
