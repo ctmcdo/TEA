@@ -25,5 +25,9 @@
     <string name="noEvents">"No Events to show</string>
     <string name="title_activity_log_in">LogIn</string>
     <string name="title_activity_register">Register</string>
+    <string name="underlinedTextLogIn"><u>Sign Up Here</u></string>
+    <string name="underlinedTextRegister"><u>Log In</u></string>
+    <string name="title_activity_societyor_student">SocietyorStudent</string>
+    <string name="title_activity_society_register">SocietyRegister</string>
 
 </resources>
