@@ -21,9 +21,11 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
@@ -100,7 +102,28 @@ public class EntsActivity extends ActionBarActivity implements ActionBar.TabList
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerlayout);
         String[] socs = getResources().getStringArray(R.array.societies);
         listView = (ListView) findViewById(R.id.drawer_list);
-        listView.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, socs));
+        listView.setAdapter(new ArrayAdapter<String>(this,
+                        android.R.layout.simple_list_item_1,
+                        socs) {
+
+                               @Override public View getView(int position, View convertView, ViewGroup parent){
+                                   TextView view = (TextView) super.getView(position, convertView, parent);
+
+                                   if(position == 0)
+                                       view.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_person_pin_black_24dp,0,0,0);
+                                   if(position == 1)
+                                       view.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_supervisor_account_black_24dp,0,0,0);
+                                   if(position == 2)
+                                       view.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_find_in_page_black_24dp,0,0,0);
+                                   if(position == 3)
+                                       view.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_settings_black_24dp,0,0,0);
+                                   view.setCompoundDrawablePadding(30);
+
+                                   return view;
+                               }
+
+                            }
+        );
         listView.setOnItemClickListener(this);
 
         actionBar = getSupportActionBar();

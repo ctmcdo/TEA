@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:padding="6dp">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cv"
+        card_view:cardElevation="2dp"
+        card_view:cardUseCompatPadding="true"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            >
+
+            <ImageView
+                android:id="@+id/event_poster"
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+                android:layout_alignParentLeft="true"
+                />
+            <TextView
+                android:id="@+id/event_title"
+                android:layout_width="175dp"
+                android:layout_height="75dp"
+                android:layout_toRightOf="@+id/event_poster"
+                android:text="This is event name"
+                android:gravity="center"
+                android:textColor="#000000"
+                />
+
+            <TextView
+                android:id="@+id/event_timming"
+                android:layout_width="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_height="75dp"
+                android:layout_toRightOf="@+id/event_title"
+                android:lineSpacingExtra="7dp"
+                android:text="10/02
+19:15"
+                android:gravity="center"
+                android:textColor="#000000"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_height="20dp"
+                android:layout_below="@+id/event_poster">
+            </View>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

@@ -5,14 +5,14 @@ import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ListView;
-import android.widget.Toast;
 
 import com.tea.cmcdona2.casper.Ents.EntItem;
 import com.tea.cmcdona2.casper.Ents.EntsAdapter;
@@ -24,11 +24,16 @@ import org.joda.time.Interval;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by Paddy on 03/12/2015.
  */
 
 public class LaterFrag extends android.support.v4.app.Fragment {
+
+    List Ent_Cards;
 
     public static LaterFrag newInstance(String text) {
         LaterFrag fragment = new LaterFrag();
@@ -41,43 +46,50 @@ public class LaterFrag extends android.support.v4.app.Fragment {
         // Required empty public constructor
     }
     int counter1 = 0;
+
+    String loadedID;
+    String[] stringIDs;
+    int numOfEventsPassed;
+    String[] societyName;
+    String[] eventName ;
+    String[] imageTemp ;
+    String[] eventTimes;
+    String[] eventDisplayDates ;
+    String[] eventDisplayTimes ;
+    String[] startTimes ;
+    String[] endTimes ;
+    String[] splitEventIDsAndTimes;
+    String eventIDsAndTimes;
+    String additive;
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        View v = inflater.inflate(R.layout.ents_activity, container, false);
-        EntsAdapter adapter;
-        ListView listView;
-        listView = (ListView) v.findViewById(R.id.list_view);
+        View v = inflater.inflate(R.layout.card_ents_activity, container, false);
 
-        adapter = new EntsAdapter(this.getContext(), R.layout.ent_item);
-
-        listView.setAdapter(adapter);
-
-        String loadedID;
+        RecyclerView rv = (RecyclerView)v.findViewById(R.id.rv);
         final SharedPreferences appPrefs = this.getActivity().getSharedPreferences("appPrefs", 0);
         final SharedPreferences.Editor appPrefsEditor = appPrefs.edit();
-        loadedID = appPrefs.getString("IDs", "null");
-        String[] stringIDs = loadedID.split(",");
-        int numOfEventsPassed = stringIDs.length;
-        String[] societyName = new String[numOfEventsPassed];
-        String[] eventName = new String[numOfEventsPassed];
-        String[] imageTemp = new String[numOfEventsPassed];
-        String[] eventTimes = new String[numOfEventsPassed];
-        String[] eventDisplayDates = new String[numOfEventsPassed];
-        String[] eventDisplayTimes = new String[numOfEventsPassed];
-        String[] startTimes = new String[numOfEventsPassed];
-        String[] endTimes = new String[numOfEventsPassed];
-        String[] splitEventIDsAndTimes;
-        String eventIDsAndTimes;
-        String additive;
+         loadedID = appPrefs.getString("IDs", "null");
+         stringIDs = loadedID.split(",");
+         numOfEventsPassed = stringIDs.length;
+        societyName = new String[numOfEventsPassed];
+        eventName = new String[numOfEventsPassed];
+         imageTemp = new String[numOfEventsPassed];
+         eventTimes = new String[numOfEventsPassed];
+         eventDisplayDates = new String[numOfEventsPassed];
+         eventDisplayTimes = new String[numOfEventsPassed];
+         startTimes = new String[numOfEventsPassed];
+         endTimes = new String[numOfEventsPassed];
+
+
         final int[] EventId = new int[numOfEventsPassed];
 
-        int size = listView.getCount();
-        appPrefsEditor.putInt("laterSize", size).commit();
-
-
+        LinearLayoutManager llm = new LinearLayoutManager(getContext());
+        rv.setLayoutManager(llm);
 
         int counter = 0;
 
@@ -117,48 +129,26 @@ public class LaterFrag extends android.support.v4.app.Fragment {
 
         counter1 = counter;
 
-        if(counter == 0)
-        listView.setEmptyView(v.findViewById(R.id.empty_list_item));
+        initializeData();
 
-        StringBuilder sb = new StringBuilder();
-        for(int i = 0; i < counter; i++){
-            sb.append(Integer.toString(EventId[i])).append(',');
-        }
+        RVAdapter RVadapter = new RVAdapter(Ent_Cards);
+        rv.setAdapter(RVadapter);
 
-        final String swipeEventId = sb.toString();
+        return v;
+    }
 
+    public void initializeData() {
+        Ent_Cards = new ArrayList<>();
 
-        for (int i = 0; i < counter; i++) {
+        for (int i = 0; i < counter1; i++) {
             byte[] eventsData;
             Bitmap bm;
 
             eventsData = Base64.decode(imageTemp[i], Base64.DEFAULT);
             bm = BitmapFactory.decodeByteArray(eventsData, 0, eventsData.length);
-
-            EntItem dataProvider = new EntItem(bm, eventName[i], eventDisplayDates[i] + '\n' + eventDisplayTimes[i]);
-            adapter.add(dataProvider);
+            Ent_Cards.add(new Ent_CardItem(eventName[i], eventDisplayDates[i] + '\n' + eventDisplayTimes[i], bm));
         }
 
-
-
-        listView.setOnItemClickListener(
-                new AdapterView.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView<?> parent, View view, int position, long ld) {
-                        String Event = String.valueOf(parent.getItemAtPosition(position));
-                        Intent intent = new Intent(getActivity(), ParticularEntActivity.class);
-                        intent.putExtra("Event", Event);
-                        Log.v("eventID", "" + Event + " " + position + " " + swipeEventId);
-                        intent.putExtra("swipeEventId", swipeEventId);
-                        intent.putExtra("swipeCount", counter1);
-                        intent.putExtra("swipePosition", position);
-                        intent.putExtra("eventPosition", position + appPrefs.getInt("todaySize",0) + appPrefs.getInt("tomorrowSize",0) );
-                        startActivity(intent);
-                    }
-                }
-        );
-
-        return v;
     }
 
 }

@@ -28,6 +28,7 @@ import android.view.ViewAnimationUtils;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.RotateAnimation;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -77,6 +78,8 @@ public class ParticularEntFrag extends Fragment {
     public int eventId;
     public Boolean buttonVisible = true;
     public LinearLayout buttonHolder;
+
+    public FloatingActionButton imgBtn;
 
     private static TextView eventName;
 
@@ -215,7 +218,7 @@ public class ParticularEntFrag extends Fragment {
 
                 ImageView imgview = (ImageView) view.findViewById(R.id.myImgView);
         final LinearLayout placenameHolder = (LinearLayout) view.findViewById(R.id.placeNameHolder);
-        final FloatingActionButton imgBtn = (FloatingActionButton) view.findViewById(R.id.btn_add);
+        imgBtn = (FloatingActionButton) view.findViewById(R.id.btn_add);
         final FloatingActionButton getDirections = (FloatingActionButton) view.findViewById(R.id.getDirections);
         final FloatingActionButton fav = (FloatingActionButton) view.findViewById(R.id.fav);
         final FloatingActionButton going = (FloatingActionButton) view.findViewById(R.id.going);
@@ -268,12 +271,14 @@ public class ParticularEntFrag extends Fragment {
                         //Toast.makeText(getContext(), "hello", Toast.LENGTH_LONG).show();
                         if (!buttonVisible) {
                             revealEditText(buttonHolder);
+                            rotate(45);
                             //mEditTextTodo.requestFocus();
                             //mInputManager.showSoftInput(mEditTextTodo, InputMethodManager.SHOW_IMPLICIT);
 
                         } else {
                             //mInputManager.hideSoftInputFromWindow(mEditTextTodo.getWindowToken(), 0);
                             hideEditText(buttonHolder);
+                            rotate(90);
 
                         }
                     }
@@ -346,6 +351,13 @@ public class ParticularEntFrag extends Fragment {
 
     public interface VolleyCallback {
         void handleData(String response);
+    }
+
+    private void rotate(float degree) {
+        final RotateAnimation rotateAnim = new RotateAnimation(0.0f, degree, RotateAnimation.RELATIVE_TO_SELF, 0.5f, RotateAnimation.RELATIVE_TO_SELF, 0.5f);
+        rotateAnim.setDuration(100);
+        rotateAnim.setFillAfter(true);
+        imgBtn.startAnimation(rotateAnim);
     }
 
 }
