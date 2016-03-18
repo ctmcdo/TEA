@@ -46,7 +46,7 @@ public class TomorrowFrag extends android.support.v4.app.Fragment {
         EntsAdapter adapter;
         ListView listView;
         listView = (ListView) v.findViewById(R.id.list_view);
-        listView.setEmptyView(v.findViewById(R.id.empty_list_item));
+
         adapter = new EntsAdapter(this.getContext(), R.layout.ent_item);
 
         listView.setAdapter(adapter);
@@ -105,6 +105,9 @@ public class TomorrowFrag extends android.support.v4.app.Fragment {
             }
         }
         counter1 = counter;
+
+        if(counter == 0)
+            listView.setEmptyView(v.findViewById(R.id.empty_list_item));
         appPrefsEditor.putInt("tomorrowSize", counter1).commit();
 
 

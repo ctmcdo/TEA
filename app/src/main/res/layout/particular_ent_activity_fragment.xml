@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android.support.design="http://schemas.android.com/tools"
+    android:id="@+id/SCROLLER_ID"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="vertical"
+    android:layout_below="@+id/eventName"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:fillViewport="true">
+<LinearLayout
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
 
     <ImageView
 
@@ -24,7 +36,7 @@
             android:id="@+id/buttonHolder"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#A0000000"
+            android:background="#A0FFFFFF"
             >
     <LinearLayout
         android:layout_width="match_parent"
@@ -103,24 +115,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:layout_margin="16dp"
             android:src="@drawable/icn_add"
+            app:layout_anchor="@id/placeNameHolder"
+            app:layout_anchorGravity="bottom|right|end"
             android:elevation="@dimen/button_elevation"
+            android:layout_marginTop= "30dp"
+            android:layout_marginRight="16dp"
             android:contentDescription="@null"/>
             <!--android:background="@drawable/btn_background"-->
 
     </FrameLayout>
 
-    <ScrollView
-        android:id="@+id/SCROLLER_ID"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:scrollbars="vertical"
-        android:paddingTop="15dp"
-        android:layout_below="@+id/eventName"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:fillViewport="true">
+
 
         <TextView
             android:layout_width="fill_parent"
@@ -132,5 +138,9 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:text="" />
-    </ScrollView>
+
+
+
 </LinearLayout>
+
+</ScrollView>

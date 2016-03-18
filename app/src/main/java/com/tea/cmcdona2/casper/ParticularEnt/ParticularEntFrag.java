@@ -216,6 +216,11 @@ public class ParticularEntFrag extends Fragment {
                 ImageView imgview = (ImageView) view.findViewById(R.id.myImgView);
         final LinearLayout placenameHolder = (LinearLayout) view.findViewById(R.id.placeNameHolder);
         final FloatingActionButton imgBtn = (FloatingActionButton) view.findViewById(R.id.btn_add);
+        final FloatingActionButton getDirections = (FloatingActionButton) view.findViewById(R.id.getDirections);
+        final FloatingActionButton fav = (FloatingActionButton) view.findViewById(R.id.fav);
+        final FloatingActionButton going = (FloatingActionButton) view.findViewById(R.id.going);
+
+
         imgview.setImageBitmap(bm);
 
         Palette.generateAsync(bm, new Palette.PaletteAsyncListener() {
@@ -224,9 +229,12 @@ public class ParticularEntFrag extends Fragment {
                 // Here's your generated palette
                 int bgColor = palette.getLightVibrantColor(getContext().getResources().getColor(android.R.color.white));
                 placenameHolder.setBackgroundColor(bgColor);
-                int bgColor1 = palette.getDarkVibrantColor(getContext().getResources().getColor(android.R.color.darker_gray));
+                int bgColor1 = palette.getDarkMutedColor(getContext().getResources().getColor(android.R.color.darker_gray));
                 //imgBtn.setBackgroundColor(bgColor1);
                 imgBtn.setBackgroundTintList(new ColorStateList(new int[][]{new int[]{0}}, new int[]{bgColor1}));
+                going.setBackgroundTintList(new ColorStateList(new int[][]{new int[]{0}}, new int[]{bgColor1}));
+                getDirections.setBackgroundTintList(new ColorStateList(new int[][]{new int[]{0}}, new int[]{bgColor1}));
+                fav.setBackgroundTintList(new ColorStateList(new int[][]{new int[]{0}}, new int[]{bgColor1}));
 
             }
         });
@@ -236,11 +244,7 @@ public class ParticularEntFrag extends Fragment {
                 TextView eventName = (TextView) view.findViewById(R.id.eventName);
                 eventName.setText(EventName);
 
-        final FloatingActionButton getDirections = (FloatingActionButton) view.findViewById(R.id.getDirections);
 
-        final FloatingActionButton going = (FloatingActionButton) view.findViewById(R.id.going);
-
-        final FloatingActionButton choices = (FloatingActionButton) view.findViewById(R.id.btn_add);
 
         going.setOnClickListener(
                 new View.OnClickListener() {
@@ -258,7 +262,7 @@ public class ParticularEntFrag extends Fragment {
                 }
         );
 
-        choices.setOnClickListener(
+        imgBtn.setOnClickListener(
                 new View.OnClickListener() {
                     public void onClick(View v) {
                         //Toast.makeText(getContext(), "hello", Toast.LENGTH_LONG).show();
