@@ -1,6 +1,7 @@
 package com.tea.cmcdona2.casper.LogReg;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -91,7 +92,7 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
                 break;
 
             case R.id.tvRegisterLink:
-                Intent registerIntent = new Intent(this, Register.class);
+                Intent registerIntent = new Intent(this, SocietyorStudent.class);
                 startActivity(registerIntent);
 
                 break;
@@ -108,6 +109,11 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
                     @Override
                     public void onResponse(String response) {
                         if(response.trim().equals("success")){
+
+                            SharedPreferences appPrefs = LogIn.this.getSharedPreferences("appPrefs", 0);
+                            final SharedPreferences.Editor appPrefsEditor = appPrefs.edit();
+                            //boolean alreadyRegistered = true;
+                            appPrefsEditor.putString("loggedInUser", email).commit();
 
                             Intent hIntent = new Intent(LogIn.this, EntsActivity.class);
                             startActivity(hIntent);
@@ -152,6 +158,12 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
             e.printStackTrace();
         }
         return "";
+    }
+
+    @Override
+    public void onBackPressed() {
+        //Include the code here
+        return;
     }
 }
 

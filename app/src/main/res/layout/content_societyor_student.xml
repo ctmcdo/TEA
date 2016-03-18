@@ -10,10 +10,20 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_main" tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/casperLogInImage"
+        android:layout_width="100dp"
+        android:layout_height="200dp"
+        android:src="@drawable/playstore_icon"
+        android:layout_gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
     <TextView
         android:id="@+id/bLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
         android:text="Select account type"
         android:textStyle="bold"
         />
@@ -22,6 +32,7 @@
         android:id="@+id/studentButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:background="@color/blue"
         android:textColor="@color/white"
         android:text="Student">
@@ -31,6 +42,7 @@
         android:id="@+id/societyButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:background="@color/blue"
         android:textColor="@color/white"
         android:text="Society">

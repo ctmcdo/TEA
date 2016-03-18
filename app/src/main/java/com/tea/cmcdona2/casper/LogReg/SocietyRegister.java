@@ -79,8 +79,11 @@ public class SocietyRegister extends AppCompatActivity implements View.OnClickLi
                     Toast.makeText(this, "Passwords do not match", Toast.LENGTH_SHORT).show();
                 }
 
+                if (!validEmail(email)) {
+                    Toast.makeText(this, "Invalid email", Toast.LENGTH_SHORT).show();
+                }
 
-                if (!email.equals("") && !password1.equals("")) {
+                if (!email.equals("") && !password1.equals("") && password1.equals(password2) && validEmail(email)) {
                     registerUser();
 
                 }
@@ -159,5 +162,28 @@ public class SocietyRegister extends AppCompatActivity implements View.OnClickLi
         }
         return "";
     }
+
+    boolean validEmail(String testEmail){
+        int len = testEmail.length();
+        char testChar;
+        boolean atPresent = false;
+        boolean dotPresent = false;
+
+        for(int i = 0; i<len; i++){
+            testChar = testEmail.charAt(i);
+            if(testChar == '@'){
+                atPresent = true;
+            }
+            if(testChar == '.'){
+                dotPresent = true;
+            }
+        }
+        if(atPresent && dotPresent){
+            return true;
+        }
+        else return false;
+    }
+
+
 
 }

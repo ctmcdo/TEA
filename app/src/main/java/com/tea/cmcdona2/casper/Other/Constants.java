@@ -25,4 +25,6 @@ public class Constants {
     public static final String KEY_PASSWORD = "password";
     public static final String KEY_ACCTYPE = "accountType";
     public static final String KEY_SOCIETY= "society";
+    public static final String KEY_FIRSTNAME = "name";
+    public static final String KEY_LASTNAME = "lastname";
 }
