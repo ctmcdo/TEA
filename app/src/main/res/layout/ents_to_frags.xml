@@ -8,7 +8,9 @@
     android:layout_height="match_parent"
     android:orientation="horizontal"
     >
-
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <android.support.v4.view.ViewPager
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
@@ -16,6 +18,27 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context="com.tea.cmcdona2.casper.Ents.EntsActivity"/>
+        <LinearLayout android:id="@+id/footer" android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:orientation="horizontal"
+            android:layout_alignParentBottom="true" android:background="@color/blue" style="@android:style/Holo.Light.ButtonBar">
+
+            <Button android:id="@+id/MyButton" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_weight="1"
+                android:background="@color/blue"
+                android:textColor="@color/white"
+                android:text="My Socs" />
+
+            <View android:layout_height="fill_parent"
+                android:layout_width="2px"
+                android:background="#DDFFFFFF"/>
+
+            <Button android:id="@+id/AllButton" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_weight="1"
+                android:background="@color/blue"
+                android:textColor="@color/white"
+                android:text="All Socs" />
+        </LinearLayout>
+    </RelativeLayout>
 
 
     <FrameLayout
@@ -33,7 +56,7 @@
         android:layout_gravity="left"
         android:background="@color/white"
         >
-
     </ListView>
+
 
 </android.support.v4.widget.DrawerLayout>

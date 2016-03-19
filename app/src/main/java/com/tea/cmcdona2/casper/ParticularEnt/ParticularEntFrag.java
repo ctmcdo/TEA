@@ -5,11 +5,13 @@ import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
 import android.graphics.drawable.shapes.Shape;
 import android.media.Image;
 import android.net.Uri;
@@ -20,6 +22,7 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.graphics.Palette;
+import android.util.AttributeSet;
 import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -360,4 +363,29 @@ public class ParticularEntFrag extends Fragment {
         imgBtn.startAnimation(rotateAnim);
     }
 
+    public class ProportionalImageView extends ImageView {
+
+        public ProportionalImageView(Context context) {
+            super(context);
+        }
+
+        public ProportionalImageView(Context context, AttributeSet attrs) {
+            super(context, attrs);
+        }
+
+        public ProportionalImageView(Context context, AttributeSet attrs, int defStyle) {
+            super(context, attrs, defStyle);
+        }
+
+        @Override
+        public void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+            Drawable d = getDrawable();
+            if (d != null) {
+                int w = MeasureSpec.getSize(widthMeasureSpec);
+                int h = w * d.getIntrinsicHeight() / d.getIntrinsicWidth();
+                setMeasuredDimension(w, h);
+            }
+            else super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        }
+    }
 }

@@ -25,7 +25,7 @@
     <ImageView
 
         android:layout_width="match_parent"
-        android:layout_height="220dp"
+        android:layout_height="165dp"
         android:name="com.example.cmcdona2.theresgoodboostonight.SocietyPicture"
         android:id="@+id/myImgView"
         android:layout_alignParentTop="true"

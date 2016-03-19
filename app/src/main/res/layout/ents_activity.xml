@@ -34,7 +34,6 @@
                 android:visibility="gone"
                 android:text="@string/noEvents" >
             </TextView>
-
         </FrameLayout>
 
 
