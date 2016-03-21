@@ -221,10 +221,15 @@ public class ParticularEntFrag extends Fragment {
 
                 ImageView imgview = (ImageView) view.findViewById(R.id.myImgView);
         final LinearLayout placenameHolder = (LinearLayout) view.findViewById(R.id.placeNameHolder);
+        final TextView eventName = (TextView) view.findViewById(R.id.eventName);
         imgBtn = (FloatingActionButton) view.findViewById(R.id.btn_add);
         final FloatingActionButton getDirections = (FloatingActionButton) view.findViewById(R.id.getDirections);
         final FloatingActionButton fav = (FloatingActionButton) view.findViewById(R.id.fav);
         final FloatingActionButton going = (FloatingActionButton) view.findViewById(R.id.going);
+
+        final TextView event_date = (TextView) view.findViewById(R.id.eventDate);
+        final TextView event_time = (TextView) view.findViewById(R.id.eventTime);
+        final TextView event_about = (TextView) view.findViewById(R.id.about);
 
 
         imgview.setImageBitmap(bm);
@@ -233,21 +238,27 @@ public class ParticularEntFrag extends Fragment {
             @Override
             public void onGenerated(Palette palette) {
                 // Here's your generated palette
-                int bgColor = palette.getLightVibrantColor(getContext().getResources().getColor(android.R.color.white));
+                int bgColor = palette.getLightVibrantColor(getContext().getResources().getColor(android.R.color.background_light));
                 placenameHolder.setBackgroundColor(bgColor);
                 int bgColor1 = palette.getDarkMutedColor(getContext().getResources().getColor(android.R.color.darker_gray));
+                int bgColor2 = palette.getDarkVibrantColor(getContext().getResources().getColor(android.R.color.black));
+                int bgColor3 = palette.getDarkMutedColor(getContext().getResources().getColor(android.R.color.black));
                 //imgBtn.setBackgroundColor(bgColor1);
                 imgBtn.setBackgroundTintList(new ColorStateList(new int[][]{new int[]{0}}, new int[]{bgColor1}));
+                imgBtn.setRippleColor(bgColor);
                 going.setBackgroundTintList(new ColorStateList(new int[][]{new int[]{0}}, new int[]{bgColor1}));
                 getDirections.setBackgroundTintList(new ColorStateList(new int[][]{new int[]{0}}, new int[]{bgColor1}));
                 fav.setBackgroundTintList(new ColorStateList(new int[][]{new int[]{0}}, new int[]{bgColor1}));
+                eventName.setTextColor(bgColor3);
+                event_date.setTextColor(bgColor2);
+                event_time.setTextColor(bgColor2);
+                event_about.setTextColor(bgColor2);
 
             }
         });
 
                 TextView eventDescription = (TextView) view.findViewById(R.id.eventDescription);
                 eventDescription.setText(EventDescription);
-                TextView eventName = (TextView) view.findViewById(R.id.eventName);
                 eventName.setText(EventName);
 
 

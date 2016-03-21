@@ -1,42 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-
-<ScrollView
+<android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android.support.design="http://schemas.android.com/tools"
-    android:id="@+id/SCROLLER_ID"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:scrollbars="vertical"
-    android:layout_below="@+id/eventName"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentStart="true"
-    android:fillViewport="true">
-<LinearLayout
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <FrameLayout
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:fitsSystemWindows="true"
+    tools:context=".ParticularEntActivity">
+
+    <android.support.design.widget.AppBarLayout android:id="@+id/app_bar"
+        android:fitsSystemWindows="true" android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout android:id="@+id/toolbar_layout"
+            android:fitsSystemWindows="true" android:layout_width="match_parent"
+            android:layout_height="wrap_content" app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleMarginEnd="64dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/toolbar_holder"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <FrameLayout
+        android:id="@+id/image_holder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <ImageView
 
-    <ImageView
-
-        android:layout_width="match_parent"
-        android:layout_height="165dp"
-        android:name="com.example.cmcdona2.theresgoodboostonight.SocietyPicture"
-        android:id="@+id/myImgView"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:scaleType="centerCrop"/>
-
+            android:layout_width="match_parent"
+            android:layout_height="165dp"
+            android:name="com.example.cmcdona2.theresgoodboostonight.SocietyPicture"
+            android:id="@+id/myImgView"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            app:layout_collapseMode="parallax"  />
         <LinearLayout
             android:id="@+id/buttonHolder"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#A0FFFFFF"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
             >
     <LinearLayout
         android:layout_width="match_parent"
@@ -70,6 +81,10 @@
                 android:id="@+id/going"
                  />
         </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
 
             <android.support.design.widget.FloatingActionButton
                 android:layout_width="60dp"
@@ -82,65 +97,56 @@
                 android:id="@+id/fav"
                 />
             </LinearLayout>
-
-
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-
-        <LinearLayout
-            android:id="@+id/placeNameHolder"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:transitionName="tNameHolder">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:id="@+id/eventName"
-            android:text=""
-            android:layout_below="@+id/myImgView"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="20dp" />
-
-        </LinearLayout>
-
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/btn_add"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:src="@drawable/icn_add"
-            app:layout_anchor="@id/placeNameHolder"
-            app:layout_anchorGravity="bottom|right|end"
-            android:elevation="@dimen/button_elevation"
-            android:layout_marginTop= "30dp"
-            android:layout_marginRight="16dp"
-            android:contentDescription="@null"/>
-            <!--android:background="@drawable/btn_background"-->
+            </LinearLayout>
 
     </FrameLayout>
 
+                <LinearLayout
+                    android:id="@+id/placeNameHolder"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:transitionName="tNameHolder"
+                    android:layout_below="@id/image_holder">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_marginLeft="12dp"
+                        android:id="@+id/eventName"
+                        android:text=""
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:textColor="@android:color/background_dark"
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:nestedScrollingEnabled="false" />
+
+                </LinearLayout>
+    </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar android:id="@+id/toolbar"
+                android:layout_height="?attr/actionBarSize" android:layout_width="match_parent"
+                app:layout_collapseMode="pin" app:popupTheme="@style/AppTheme.PopupOverlay"
+                android:transitionGroup="false" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
 
 
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:id="@+id/eventDescription"
-            android:padding="12dp"
-            android:layout_below="@+id/eventName"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:text="" />
+    <include layout="@layout/content_scrolling" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/icn_add"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="bottom|end"
+        android:elevation="@dimen/button_elevation"/>
+    <!--android:background="@drawable/btn_background"-->
 
 
-
-</LinearLayout>
-
-</ScrollView>
+</android.support.design.widget.CoordinatorLayout>

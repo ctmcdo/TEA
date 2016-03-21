@@ -2,137 +2,81 @@
 <items version="2" >
 
     <item
-        jar="/Users/colinmcdonagh/Desktop/mygui/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
-        <dex dex="/Users/colinmcdonagh/Desktop/mygui/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.1-94948a4034d62a4bfd45a30d90ccc30c417502c4.jar" />
-    </item>
-    <item
-        jar="/Users/colinmcdonagh/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
-        <dex dex="/Users/colinmcdonagh/Downloads/Android-gui 3/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.1-134d6b76784f55f5990ff2795c6576cc4027e6bb.jar" />
-    </item>
-    <item
-        jar="/Users/colinmcdonagh/Desktop/mygui/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
-        <dex dex="/Users/colinmcdonagh/Desktop/mygui/app/build/intermediates/pre-dexed/debug/classes-33c2e7be027bb9af75913307b67f7615bb1137d3.jar" />
-    </item>
-    <item
-        jar="/Users/colinmcdonagh/Desktop/mygui/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
-        <dex dex="/Users/colinmcdonagh/Desktop/mygui/app/build/intermediates/pre-dexed/debug/classes-793633e504f737d61d338d2d7aafad155bbada46.jar" />
-    </item>
-    <item
-        jar="/Users/colinmcdonagh/Downloads/Android-gui 3/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.1.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="5e412e954a24c5310a459c09870e4e2081aceb03">
-        <dex dex="/Users/colinmcdonagh/Downloads/Android-gui 3/app/build/intermediates/pre-dexed/debug/classes-7b910aec074786206c2627b1f10750ca891c2b9c.jar" />
-    </item>
-    <item
-        jar="/Users/colinmcdonagh/Downloads/Android-gui 3/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/jars/classes.jar"
+        jar="/users/ugrad/bhardwap/AndroidStudioProjects/tea/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
-        <dex dex="/Users/colinmcdonagh/Downloads/Android-gui 3/app/build/intermediates/pre-dexed/debug/classes-4872687f84041c80fa223819658b53c453241621.jar" />
+        <dex dex="/users/ugrad/bhardwap/AndroidStudioProjects/tea/app/build/intermediates/pre-dexed/debug/classes-41e8c4cdbe99325def981d526736e5a4fa71bd72.jar" />
     </item>
     <item
-        jar="/Users/colinmcdonagh/Desktop/mygui/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jar="/opt/android-sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="/Users/colinmcdonagh/Desktop/mygui/app/build/intermediates/pre-dexed/debug/classes-b4ca8a01cdf9fdafe3fa0e8b5f737081d40a16a3.jar" />
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/users/ugrad/bhardwap/AndroidStudioProjects/tea/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1-55544acaf7567404cc89c13faa7d16877bb6a718.jar" />
     </item>
     <item
-        jar="/Users/colinmcdonagh/Desktop/mygui/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.1.1/jars/classes.jar"
+        jar="/users/ugrad/bhardwap/AndroidStudioProjects/tea/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.0.1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="5e412e954a24c5310a459c09870e4e2081aceb03">
-        <dex dex="/Users/colinmcdonagh/Desktop/mygui/app/build/intermediates/pre-dexed/debug/classes-3c97391625c79043e3d4e013b10fd13eb92f1eea.jar" />
+        sha1="4356e230a981d1bbf047d848b91bc0d9b7c5bacc">
+        <dex dex="/users/ugrad/bhardwap/AndroidStudioProjects/tea/app/build/intermediates/pre-dexed/debug/classes-4ae4715226fa19a4f60fb03f5872cef34bf3920e.jar" />
     </item>
     <item
-        jar="/Users/colinmcdonagh/Downloads/Android-gui 3/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
+        jar="/users/ugrad/bhardwap/AndroidStudioProjects/tea/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
-        <dex dex="/Users/colinmcdonagh/Downloads/Android-gui 3/app/build/intermediates/pre-dexed/debug/classes-66110b3d5eaacb11a216f14e38d9b7d70bbefc85.jar" />
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/users/ugrad/bhardwap/AndroidStudioProjects/tea/app/build/intermediates/pre-dexed/debug/classes-b365a4da498ec23d89504728b5f35f82ec02eeb2.jar" />
     </item>
     <item
-        jar="/Users/colinmcdonagh/Desktop/mygui/app/build/intermediates/exploded-aar/com.mcxiaoke.volley/android-volley-master/1.0.19/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="c4eaa447013e83581a69b677716e82a5f13d2673">
-        <dex dex="/Users/colinmcdonagh/Desktop/mygui/app/build/intermediates/pre-dexed/debug/classes-800c31a4c9f43846d56b0d07738324e99b7c2507.jar" />
-    </item>
-    <item
-        jar="/Users/colinmcdonagh/Desktop/mygui/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
-        <dex dex="/Users/colinmcdonagh/Desktop/mygui/app/build/intermediates/pre-dexed/debug/classes-5faf0eceb52895c8802b8a020a6d199e6fbe4e4a.jar" />
-    </item>
-    <item
-        jar="/Users/colinmcdonagh/Downloads/Android-gui 3/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="/Users/colinmcdonagh/Downloads/Android-gui 3/app/build/intermediates/pre-dexed/debug/classes-4198bdee33ab4f1598ddde04fc48f2d910e951d3.jar" />
-    </item>
-    <item
-        jar="/Users/colinmcdonagh/Downloads/Android-gui 3/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
-        <dex dex="/Users/colinmcdonagh/Downloads/Android-gui 3/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.1-f4ec51250010c9fa61c37d52e4f46d421bfbb40c.jar" />
-    </item>
-    <item
-        jar="/Users/colinmcdonagh/Desktop/mygui/app/build/intermediates/exploded-aar/com.android.support/palette-v7/23.0.0/jars/classes.jar"
+        jar="/users/ugrad/bhardwap/AndroidStudioProjects/tea/app/build/intermediates/exploded-aar/com.android.support/palette-v7/23.0.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="15b669fd484d82539a354ccd1f2a08737474e95e">
-        <dex dex="/Users/colinmcdonagh/Desktop/mygui/app/build/intermediates/pre-dexed/debug/classes-b53624f68cdd9a40557f2a572984be365c6682a4.jar" />
+        <dex dex="/users/ugrad/bhardwap/AndroidStudioProjects/tea/app/build/intermediates/pre-dexed/debug/classes-3b429287980923f4a0f4561297ef51a3b3d28f0f.jar" />
     </item>
     <item
-        jar="/Users/colinmcdonagh/Downloads/Android-gui 3/app/build/intermediates/exploded-aar/com.android.support/palette-v7/23.0.0/jars/classes.jar"
+        jar="/users/ugrad/bhardwap/AndroidStudioProjects/tea/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="15b669fd484d82539a354ccd1f2a08737474e95e">
-        <dex dex="/Users/colinmcdonagh/Downloads/Android-gui 3/app/build/intermediates/pre-dexed/debug/classes-6c55d69fbd4705d7b87caf6d7bc19d0de0a43098.jar" />
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/users/ugrad/bhardwap/AndroidStudioProjects/tea/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1-7347f20dff6089b187345a56c369c88463c257c0.jar" />
     </item>
     <item
-        jar="/Users/colinmcdonagh/Downloads/Android-gui 3/app/build/intermediates/exploded-aar/com.mcxiaoke.volley/android-volley-master/1.0.19/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="be4beb21fdd6c57fc0dc1b679bd54fc0d7f7f988">
-        <dex dex="/Users/colinmcdonagh/Downloads/Android-gui 3/app/build/intermediates/pre-dexed/debug/classes-c1e24ae273dbfd65e932e1db14bc1ca56af6b89b.jar" />
-    </item>
-    <item
-        jar="/Users/colinmcdonagh/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.0/7ff0e000d1e27e356567f56c92af3b8ab912636f/picasso-2.5.0.jar"
+        jar="/users/ugrad/bhardwap/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.0/7ff0e000d1e27e356567f56c92af3b8ab912636f/picasso-2.5.0.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="7ff0e000d1e27e356567f56c92af3b8ab912636f">
-        <dex dex="/Users/colinmcdonagh/Downloads/Android-gui 3/app/build/intermediates/pre-dexed/debug/picasso-2.5.0-1ba88fb4c096208559408c53821ef652d1a3d556.jar" />
+        <dex dex="/users/ugrad/bhardwap/AndroidStudioProjects/tea/app/build/intermediates/pre-dexed/debug/picasso-2.5.0-f82c1cb8a919ec8358251e1f73816b2fcf2ec617.jar" />
     </item>
     <item
-        jar="/Users/colinmcdonagh/.gradle/caches/modules-2/files-2.1/joda-time/joda-time/2.8.2/d27c24204c5e507b16fec01006b3d0f1ec42aed4/joda-time-2.8.2.jar"
+        jar="/users/ugrad/bhardwap/AndroidStudioProjects/tea/app/build/intermediates/exploded-aar/com.mcxiaoke.volley/android-volley-master/1.0.19/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e7b965877626e6064c2270d45fe28f4a22f9f32e">
+        <dex dex="/users/ugrad/bhardwap/AndroidStudioProjects/tea/app/build/intermediates/pre-dexed/debug/classes-9ad31fc22da3ee87134cdbf2511ad8db438c72b4.jar" />
+    </item>
+    <item
+        jar="/users/ugrad/bhardwap/AndroidStudioProjects/tea/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/users/ugrad/bhardwap/AndroidStudioProjects/tea/app/build/intermediates/pre-dexed/debug/classes-466e2de33bf94628cec13d20a1c6d6c3ce59ad55.jar" />
+    </item>
+    <item
+        jar="/users/ugrad/bhardwap/AndroidStudioProjects/tea/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="39ae02ce40c3ac828abbf780ce0ff5d7a28b7d6a">
+        <dex dex="/users/ugrad/bhardwap/AndroidStudioProjects/tea/app/build/intermediates/pre-dexed/debug/classes-408e335d972704b9f855d06a5f98ec54d131bbf7.jar" />
+    </item>
+    <item
+        jar="/users/ugrad/bhardwap/.gradle/caches/modules-2/files-2.1/joda-time/joda-time/2.8.2/d27c24204c5e507b16fec01006b3d0f1ec42aed4/joda-time-2.8.2.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="d27c24204c5e507b16fec01006b3d0f1ec42aed4">
-        <dex dex="/Users/colinmcdonagh/Downloads/Android-gui 3/app/build/intermediates/pre-dexed/debug/joda-time-2.8.2-5d974010c3c71053d85e513d67fa371f9fcfbb97.jar" />
-    </item>
-    <item
-        jar="/Users/colinmcdonagh/Downloads/Android-gui 3/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
-        <dex dex="/Users/colinmcdonagh/Downloads/Android-gui 3/app/build/intermediates/pre-dexed/debug/classes-08dea86cd77328402296dd20457e4def3548c7ec.jar" />
+        <dex dex="/users/ugrad/bhardwap/AndroidStudioProjects/tea/app/build/intermediates/pre-dexed/debug/joda-time-2.8.2-8711451b9c1dd3675f2a07f25fd91e8491c24b1c.jar" />
     </item>
 
 </items>

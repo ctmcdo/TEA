@@ -56,6 +56,8 @@ public class ParticularEntActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
 
         setWindowContentOverlayCompat();
+        //make the status bar translucent
+        this.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 
         //Remove title bar
         //this.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -73,6 +75,8 @@ public class ParticularEntActivity extends AppCompatActivity{
         viewpager = (ViewPager) findViewById(R.id.pager1);
         ft = new FragmentPageAdapter(getSupportFragmentManager());
         viewpager.setAdapter(ft);
+        //hide app name
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
     }
 
