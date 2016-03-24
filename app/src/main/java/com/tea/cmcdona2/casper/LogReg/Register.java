@@ -108,6 +108,8 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
         final String encryptedEmail = md5(email);
         final String encryptedPassword = md5(password);
 
+
+
         StringRequest stringRequest = new StringRequest(Request.Method.POST, Constants.REGISTER_URL,
                 new Response.Listener<String>() {
                     @Override
@@ -118,6 +120,10 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
                             final SharedPreferences.Editor appPrefsEditor = appPrefs.edit();
                             boolean alreadyRegistered = true;
                             appPrefsEditor.putBoolean("alreadyRegistered", alreadyRegistered).commit();
+
+                            SharedPreferences appPrefs1 = Register.this.getSharedPreferences("appPrefs", 0);
+                            final SharedPreferences.Editor appPrefsEditor1 = appPrefs1.edit();
+                            appPrefsEditor1.putString("loggedInUser", email).commit();
 
                             Intent hIntent = new Intent(Register.this, SocsActivity.class);
                             startActivity(hIntent);

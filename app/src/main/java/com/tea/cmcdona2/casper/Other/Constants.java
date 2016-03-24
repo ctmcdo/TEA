@@ -27,4 +27,5 @@ public class Constants {
     public static final String KEY_SOCIETY= "society";
     public static final String KEY_FIRSTNAME = "name";
     public static final String KEY_LASTNAME = "lastname";
+    public static final String KEY_SUBS = "subscriptions";
 }
