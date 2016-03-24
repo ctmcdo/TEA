@@ -244,7 +244,7 @@ public class EntsActivity extends ActionBarActivity implements ActionBar.TabList
 
         } else {
             idsActive = loadArray1(EntsActivity.this);
-            //idsActive =
+            //
         }
 
         String temp;
