@@ -243,7 +243,8 @@ public class EntsActivity extends ActionBarActivity implements ActionBar.TabList
             appPrefsEditor.putBoolean("allSocsFlag", false).commit();
 
         } else {
-            idsActive = loadArray(EntsActivity.this);
+            idsActive = loadArray1(EntsActivity.this);
+            //idsActive =
         }
 
         String temp;
@@ -520,6 +521,50 @@ public class EntsActivity extends ActionBarActivity implements ActionBar.TabList
 
         return array;   //Return the array of societies whose events are to be displayed
     }
+
+    public boolean[] loadArray1(Context mContext) {
+        SharedPreferences appPrefs = mContext.getSharedPreferences("appPrefs", 0);
+
+        int size = appPrefs.getInt("idsActive" + "_size", 0);
+        boolean array[] = new boolean[size];
+        final int chosenSociety = appPrefs.getInt("chosenSociety", -1);
+
+        if (chosenSociety >= 0)  //Was this activity started from ParticularSocActivity?
+        {
+            /*
+            If this activity was started by ParticularSocActivity, chosenSociety will be a positive number,
+            corresponding to the list position of the society clicked on by the user
+            */
+
+            SharedPreferences.Editor appPrefsEditor = appPrefs.edit();
+            appPrefsEditor.putInt("chosenSociety", -1); //Set this flag back to -1, to prevent the particularSoc selection from being permanent
+            appPrefsEditor.commit();
+
+            //Set all societies to have their events hidden, except the one clicked on by the user in ParticularSocActivity
+            for (int i = 0; i < size; i++)
+                array[i] = false;
+
+            array[chosenSociety] = true;
+        } else //Did not come from ParticularSocActivity - set society events to appear as normal
+        {
+            String subbos = appPrefs.getString("subbys", "NULL");
+
+            int len = subbos.length();
+            char testChar;
+
+            for (int i = 0; i < len; i++) {
+                testChar = subbos.charAt(i);
+                if (testChar == '1') {
+                    array[i] = true;
+                } else array[i] = false;
+            }
+        }
+            return array;   //Return the array of societies whose events are to be displayed
+
+
+    }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

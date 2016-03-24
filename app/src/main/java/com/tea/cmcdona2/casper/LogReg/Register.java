@@ -137,9 +137,9 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
                 Map<String,String> params = new HashMap<String, String>();
                 params.put(Constants.KEY_EMAIL, email);
                 params.put(Constants.KEY_PASSWORD,encryptedPassword);
-                params.put(Constants.KEY_ACCTYPE, "student");
-                params.put(Constants.KEY_FIRSTNAME, name);
-                params.put(Constants.KEY_LASTNAME, lastName);
+                //params.put(Constants.KEY_ACCTYPE, "student");
+                //params.put(Constants.KEY_FIRSTNAME, name);
+                //params.put(Constants.KEY_LASTNAME, lastName);
                 return params;
             }
 

@@ -206,6 +206,8 @@ public class SocsActivity extends ActionBarActivity {
                         }
                     });
 
+
+
             appPrefsEditor.putBoolean("fromEntsActivity", false);
             appPrefsEditor.commit();
         } else {
@@ -281,6 +283,20 @@ public class SocsActivity extends ActionBarActivity {
 
     public void tickOnClickCallback() {
 
+        String subs = booleanArrayToString(idsActive);
+
+        StringBuilder sb1 = new StringBuilder();
+        sb1.append("");
+
+        sb1.append(subs);
+        String subbys = sb1.toString();
+        Toast.makeText(SocsActivity.this, subbys,Toast.LENGTH_LONG).show();
+
+        SharedPreferences appPrefs1 = SocsActivity.this.getSharedPreferences("appPrefs", 0);
+        final SharedPreferences.Editor appPrefsEditor1 = appPrefs1.edit();
+        String subscriptions = subbys;
+        appPrefsEditor1.putString("subbys", subscriptions).commit();
+
         Intent intent = new Intent(SocsActivity.this, EntsActivity.class);
 
         SharedPreferences appPrefs = SocsActivity.this.getSharedPreferences("appPrefs", 0);
@@ -338,6 +354,25 @@ public class SocsActivity extends ActionBarActivity {
             array[i] = appPrefs.getBoolean(arrayName + "_" + i, false);
         return array;
     }
+
+    public String booleanArrayToString (boolean array[]){
+        String n;
+        len = array.length;
+
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("");
+
+        for (int i = 0; i < len; i++) {
+            if(array[i]) {
+                stringBuilder.append("1");
+            }
+            else stringBuilder.append("0");
+        }
+
+        n = stringBuilder.toString();
+        return n;
+    }
+
 
 }
 
