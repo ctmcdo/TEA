@@ -135,7 +135,7 @@ public class TomorrowFrag extends android.support.v4.app.Fragment {
 
             eventsData = Base64.decode(imageTemp[i], Base64.DEFAULT);
             bm = BitmapFactory.decodeByteArray(eventsData, 0, eventsData.length);
-            Ent_Cards.add(new Ent_CardItem(eventName[i], tomorrowString.split("-")[2].split(" ")[0] + "/" + tomorrowString.split("-")[1].trim() + '\n' + eventDisplayTimes[i], bm));
+            Ent_Cards.add(new Ent_CardItem(eventName[i],startTimes[i], bm));
         }
 
     }

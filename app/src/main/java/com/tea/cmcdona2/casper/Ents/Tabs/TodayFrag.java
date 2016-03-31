@@ -4,11 +4,14 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.opengl.Matrix;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Base64;
+import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,6 +35,8 @@ public class TodayFrag extends android.support.v4.app.Fragment {
 
     List Ent_Cards;
 
+
+
     public static TodayFrag newInstance(String text) {
         TodayFrag fragment = new TodayFrag();
         Bundle args = new Bundle();
@@ -44,6 +49,7 @@ public class TodayFrag extends android.support.v4.app.Fragment {
     }
     int counter1 = 0;
 
+    public Integer screenWidth;
     String loadedID;
     String[] stringIDs;
     int numOfEventsPassed;
@@ -69,6 +75,7 @@ public class TodayFrag extends android.support.v4.app.Fragment {
         RecyclerView rv = (RecyclerView)v.findViewById(R.id.rv);
         final SharedPreferences appPrefs = this.getActivity().getSharedPreferences("appPrefs", 0);
         final SharedPreferences.Editor appPrefsEditor = appPrefs.edit();
+        screenWidth = appPrefs.getInt("screenWidth", 0);
         loadedID = appPrefs.getString("IDs", "null");
         stringIDs = loadedID.split(",");
         numOfEventsPassed = stringIDs.length;
@@ -146,9 +153,18 @@ public class TodayFrag extends android.support.v4.app.Fragment {
 
             eventsData = Base64.decode(imageTemp[i], Base64.DEFAULT);
             bm = BitmapFactory.decodeByteArray(eventsData, 0, eventsData.length);
-            Ent_Cards.add(new Ent_CardItem(eventName[i], todayString.split("-")[2].split(" ")[0] + "/" + todayString.split("-")[1].trim() + '\n' + eventDisplayTimes[i], bm));
+            Bitmap screenBitmap = scaleToScreen(bm);
+            Ent_Cards.add(new Ent_CardItem(eventName[i], startTimes[i], screenBitmap));
         }
 
     }
+
+    public Bitmap scaleToScreen(Bitmap bm) {
+        Log.v("screenWidth", ""+screenWidth);
+        Bitmap newBitmap = Bitmap.createScaledBitmap(bm, screenWidth,
+                (screenWidth * 5/7), false);
+        return newBitmap;
+    }
+
 
 }

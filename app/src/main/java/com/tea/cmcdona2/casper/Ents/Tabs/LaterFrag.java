@@ -146,7 +146,7 @@ public class LaterFrag extends android.support.v4.app.Fragment {
 
             eventsData = Base64.decode(imageTemp[i], Base64.DEFAULT);
             bm = BitmapFactory.decodeByteArray(eventsData, 0, eventsData.length);
-            Ent_Cards.add(new Ent_CardItem(eventName[i], eventDisplayDates[i] + '\n' + eventDisplayTimes[i], bm));
+            Ent_Cards.add(new Ent_CardItem(eventName[i], eventDisplayDates[i] + '\n' + startTimes[i], bm));
         }
 
     }
