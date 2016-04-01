@@ -80,9 +80,13 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
                     Toast.makeText(this, "Passwords do not match", Toast.LENGTH_SHORT).show();
                 }
 
+                if(!validEmail(email)){
+                    Toast.makeText(this, "Invalid Email", Toast.LENGTH_SHORT).show();
+                }
+
                 //add code checking for unique email when databases are set-up
 
-                if (!name.equals("") && !email.equals("") && !lastname.equals("") && !password1.equals("")) {
+                if (!name.equals("") && !email.equals("") && !lastname.equals("") && !password1.equals("") && password1.equals(password2) && validEmail(email)) {
                     registerUser();
 
                 }
@@ -99,8 +103,12 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
     private void registerUser(){
         final String email = etEmail.getText().toString().trim();
         final String password = etPassword.getText().toString().trim();
+        final String name = rName.getText().toString();
+        final String lastName = rLastName.getText().toString();
         final String encryptedEmail = md5(email);
         final String encryptedPassword = md5(password);
+
+
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, Constants.REGISTER_URL,
                 new Response.Listener<String>() {
@@ -112,6 +120,10 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
                             final SharedPreferences.Editor appPrefsEditor = appPrefs.edit();
                             boolean alreadyRegistered = true;
                             appPrefsEditor.putBoolean("alreadyRegistered", alreadyRegistered).commit();
+
+                            SharedPreferences appPrefs1 = Register.this.getSharedPreferences("appPrefs", 0);
+                            final SharedPreferences.Editor appPrefsEditor1 = appPrefs1.edit();
+                            appPrefsEditor1.putString("loggedInUser", email).commit();
 
                             Intent hIntent = new Intent(Register.this, SocsActivity.class);
                             startActivity(hIntent);
@@ -129,8 +141,11 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
             @Override
             protected Map<String,String> getParams(){
                 Map<String,String> params = new HashMap<String, String>();
-                params.put(Constants.KEY_EMAIL, encryptedEmail);
+                params.put(Constants.KEY_EMAIL, email);
                 params.put(Constants.KEY_PASSWORD,encryptedPassword);
+                //params.put(Constants.KEY_ACCTYPE, "student");
+                //params.put(Constants.KEY_FIRSTNAME, name);
+                //params.put(Constants.KEY_LASTNAME, lastName);
                 return params;
             }
 
@@ -157,6 +172,27 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
             e.printStackTrace();
         }
         return "";
+    }
+
+    boolean validEmail(String testEmail){
+        int len = testEmail.length();
+        char testChar;
+        boolean atPresent = false;
+        boolean dotPresent = false;
+
+        for(int i = 0; i<len; i++){
+            testChar = testEmail.charAt(i);
+            if(testChar == '@'){
+                atPresent = true;
+            }
+            if(testChar == '.'){
+                dotPresent = true;
+            }
+        }
+        if(atPresent && dotPresent){
+            return true;
+        }
+        else return false;
     }
 
 }

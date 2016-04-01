@@ -23,4 +23,9 @@ public class Constants {
     public static final String REGISTER_URL = "http://clontarfguitarlessons.com/registerUser.php";
     public static final String KEY_EMAIL = "email";
     public static final String KEY_PASSWORD = "password";
+    public static final String KEY_ACCTYPE = "accountType";
+    public static final String KEY_SOCIETY= "society";
+    public static final String KEY_FIRSTNAME = "name";
+    public static final String KEY_LASTNAME = "lastname";
+    public static final String KEY_SUBS = "subscriptions";
 }

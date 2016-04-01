@@ -10,6 +10,14 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_register" tools:context="com.legend.eoin.newact.Register">
 
+    <ImageView
+        android:id="@+id/casperLogInImage"
+        android:layout_width="60dp"
+        android:layout_height="120dp"
+        android:src="@drawable/playstore_icon"
+        android:layout_gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -54,12 +62,18 @@
         android:id="@+id/bRegister"
         android:text="Continue"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:textColor="@color/white"/>
+
     <TextView
         android:id="@+id/bLogin"
-        android:text="Log in"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/underlinedTextRegister"
+        android:textStyle="bold"
+        />
 
 </LinearLayout>
 

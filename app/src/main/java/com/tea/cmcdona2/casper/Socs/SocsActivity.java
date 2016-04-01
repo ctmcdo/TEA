@@ -3,6 +3,8 @@ package com.tea.cmcdona2.casper.Socs;
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -24,6 +26,8 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -206,6 +210,8 @@ public class SocsActivity extends ActionBarActivity {
                         }
                     });
 
+
+
             appPrefsEditor.putBoolean("fromEntsActivity", false);
             appPrefsEditor.commit();
         } else {
@@ -281,6 +287,22 @@ public class SocsActivity extends ActionBarActivity {
 
     public void tickOnClickCallback() {
 
+        String subs = booleanArrayToString(idsActive);
+
+        StringBuilder sb1 = new StringBuilder();
+        sb1.append("");
+
+        sb1.append(subs);
+        String subbys = sb1.toString();
+        Toast.makeText(SocsActivity.this, subbys,Toast.LENGTH_LONG).show();
+
+        SharedPreferences appPrefs1 = SocsActivity.this.getSharedPreferences("appPrefs", 0);
+        final SharedPreferences.Editor appPrefsEditor1 = appPrefs1.edit();
+        String subscriptions = subbys;
+        appPrefsEditor1.putString("subbys", subscriptions).commit();
+
+        //sendSubs(subscriptions);
+
         Intent intent = new Intent(SocsActivity.this, EntsActivity.class);
 
         SharedPreferences appPrefs = SocsActivity.this.getSharedPreferences("appPrefs", 0);
@@ -338,6 +360,65 @@ public class SocsActivity extends ActionBarActivity {
             array[i] = appPrefs.getBoolean(arrayName + "_" + i, false);
         return array;
     }
+
+    public String booleanArrayToString (boolean array[]){
+        String n;
+        len = array.length;
+
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("");
+
+        for (int i = 0; i < len; i++) {
+            if(array[i]) {
+                stringBuilder.append("1");
+            }
+            else stringBuilder.append("0");
+        }
+
+        n = stringBuilder.toString();
+        return n;
+    }
+
+    private void sendSubs(String subs) {
+        //email = etEmail.getText().toString().trim();
+        //password = etPassword.getText().toString().trim();
+        SharedPreferences appPrefs = SocsActivity.this.getSharedPreferences("appPrefs", 0);
+        final SharedPreferences.Editor appPrefsEditor = appPrefs.edit();
+
+        final String email = appPrefs.getString("loggedInUser", "NULL");
+        final String subscriptions = subs;
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, Constants.LOGIN_URL,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        if(response.trim().equals("success")){
+
+
+                        }else{
+                            Toast.makeText(SocsActivity.this,response,Toast.LENGTH_LONG).show();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(SocsActivity.this,error.toString(),Toast.LENGTH_LONG ).show();
+                    }
+                }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String,String> map = new HashMap<String,String>();
+                map.put(Constants.KEY_EMAIL, email);
+                map.put(Constants.KEY_SUBS, subscriptions);
+                return map;
+            }
+        };
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
+    }
+
 
 }
 
