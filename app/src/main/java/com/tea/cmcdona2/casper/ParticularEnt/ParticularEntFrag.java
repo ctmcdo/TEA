@@ -228,13 +228,7 @@ public class ParticularEntFrag extends Fragment {
         final FloatingActionButton getDirections = (FloatingActionButton) view.findViewById(R.id.getDirections);
         final FloatingActionButton fav = (FloatingActionButton) view.findViewById(R.id.fav);
         final FloatingActionButton going = (FloatingActionButton) view.findViewById(R.id.going);
-        final Toolbar toolbar = (Toolbar)view.findViewById(R.id.toolbar);
 
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                GMAP();
-            }
-        });
 
         final TextView event_date = (TextView) view.findViewById(R.id.eventDate);
         final TextView event_time = (TextView) view.findViewById(R.id.eventTime);
@@ -400,30 +394,5 @@ public class ParticularEntFrag extends Fragment {
         rotateAnim.setFillAfter(true);
         imgBtn.startAnimation(rotateAnim);
     }
-
-    public class ProportionalImageView extends ImageView {
-
-        public ProportionalImageView(Context context) {
-            super(context);
-        }
-
-        public ProportionalImageView(Context context, AttributeSet attrs) {
-            super(context, attrs);
-        }
-
-        public ProportionalImageView(Context context, AttributeSet attrs, int defStyle) {
-            super(context, attrs, defStyle);
-        }
-
-        @Override
-        public void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-            Drawable d = getDrawable();
-            if (d != null) {
-                int w = MeasureSpec.getSize(widthMeasureSpec);
-                int h = w * d.getIntrinsicHeight() / d.getIntrinsicWidth();
-                setMeasuredDimension(w, h);
-            }
-            else super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        }
-    }
+    
 }
