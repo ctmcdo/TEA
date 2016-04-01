@@ -4,22 +4,28 @@ import android.animation.AnimatorListenerAdapter;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
-import android.widget.Toolbar;
+import android.support.v7.widget.Toolbar;
+import android.widget.Toast;
+
 import com.tea.cmcdona2.casper.R;
 
 public class ParticularEntActivity extends AppCompatActivity{
@@ -75,19 +81,24 @@ public class ParticularEntActivity extends AppCompatActivity{
         viewpager = (ViewPager) findViewById(R.id.pager1);
         ft = new FragmentPageAdapter(getSupportFragmentManager());
         viewpager.setAdapter(ft);
+
         //hide app name
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
     }
 
-    //@Override
-    //public boolean onCreateOptionsMenu(Menu menu) {
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        menu.clear();
+         //Inflate the menu items for use in the action bar
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.back_button, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
 
-        // Inflate the menu items for use in the action bar
-        //MenuInflater inflater = getMenuInflater();
-        //inflater.inflate(R.menu.activity_main_actions, menu);
-    //    return super.onCreateOptionsMenu(menu);
-    //}
+    public void backPressed(MenuItem item) {
+        onBackPressed();
+    }
 
     public class FragmentPageAdapter extends FragmentPagerAdapter {
         public FragmentPageAdapter(FragmentManager fm) {
@@ -134,6 +145,11 @@ public class ParticularEntActivity extends AppCompatActivity{
             count = count - swipePosition;
             return count;
         }
+    }
+
+    @Override
+    public void onBackPressed(){
+        this.finish();
     }
 
 }

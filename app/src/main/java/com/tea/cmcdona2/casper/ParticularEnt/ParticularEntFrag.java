@@ -38,6 +38,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.support.v7.widget.Toolbar;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -227,6 +228,13 @@ public class ParticularEntFrag extends Fragment {
         final FloatingActionButton getDirections = (FloatingActionButton) view.findViewById(R.id.getDirections);
         final FloatingActionButton fav = (FloatingActionButton) view.findViewById(R.id.fav);
         final FloatingActionButton going = (FloatingActionButton) view.findViewById(R.id.going);
+        final Toolbar toolbar = (Toolbar)view.findViewById(R.id.toolbar);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                GMAP();
+            }
+        });
 
         final TextView event_date = (TextView) view.findViewById(R.id.eventDate);
         final TextView event_time = (TextView) view.findViewById(R.id.eventTime);
@@ -312,6 +320,10 @@ public class ParticularEntFrag extends Fragment {
                 }
         );
 
+
+
+
+
         return view;
 
     }
@@ -342,6 +354,8 @@ public class ParticularEntFrag extends Fragment {
 
         startActivity(calIntent);
     }
+
+
 
 
     private String establishConnection(final VolleyCallback callback) {
