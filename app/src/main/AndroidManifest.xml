@@ -60,6 +60,11 @@
             android:label="@string/title_activity_register"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+        <activity
+            android:name=".Admin.AdminActivity"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
 
     </application>
 

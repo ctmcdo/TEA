@@ -21,6 +21,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.tea.cmcdona2.casper.Admin.AdminActivity;
 import com.tea.cmcdona2.casper.Other.Constants;
 import com.tea.cmcdona2.casper.R;
 import com.tea.cmcdona2.casper.Socs.SocsActivity;
@@ -115,7 +116,7 @@ public class SocietyRegister extends AppCompatActivity implements View.OnClickLi
                             boolean alreadyRegistered = true;
                             appPrefsEditor.putBoolean("alreadyRegistered", alreadyRegistered).commit();
 
-                            Intent hIntent = new Intent(SocietyRegister.this, SocsActivity.class);
+                            Intent hIntent = new Intent(SocietyRegister.this, AdminActivity.class);
                             startActivity(hIntent);
                         }else{
                             Toast.makeText(SocietyRegister.this,response,Toast.LENGTH_LONG).show();
