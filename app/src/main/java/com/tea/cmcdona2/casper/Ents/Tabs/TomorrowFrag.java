@@ -5,6 +5,8 @@ import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -23,6 +25,9 @@ import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TomorrowFrag extends android.support.v4.app.Fragment {
 
     public static TomorrowFrag newInstance(String text) {
@@ -36,43 +41,53 @@ public class TomorrowFrag extends android.support.v4.app.Fragment {
         // Required empty public constructor
     }
     int counter1 = 0;
+    String loadedID;
+    String[] stringIDs;
+    int numOfEventsPassed;
+    String[] societyName;
+    String[] eventName ;
+    String[] imageTemp ;
+    String[] eventTimes;
+    String[] eventDisplayDates ;
+    String[] eventDisplayTimes ;
+    String[] startTimes ;
+    String[] endTimes ;
+    String[] splitEventIDsAndTimes;
+    String eventIDsAndTimes;
+    String additive;
+    List Ent_Cards;
+    String tomorrowString;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
 
-        View v = inflater.inflate(R.layout.ents_activity, container, false);
-        EntsAdapter adapter;
-        ListView listView;
-        listView = (ListView) v.findViewById(R.id.list_view);
-        //listView.setEmptyView(v.findViewById(R.id.empty_list_item));
-        adapter = new EntsAdapter(this.getContext(), R.layout.ent_item);
+        View v = inflater.inflate(R.layout.card_ents_activity, container, false);
 
-        listView.setAdapter(adapter);
-
-        String loadedString;
+        RecyclerView rv = (RecyclerView)v.findViewById(R.id.rv);
         final SharedPreferences appPrefs = this.getActivity().getSharedPreferences("appPrefs", 0);
         final SharedPreferences.Editor appPrefsEditor = appPrefs.edit();
-        loadedString = appPrefs.getString("IDs", "null");
+        loadedID = appPrefs.getString("IDs", "null");
+        stringIDs = loadedID.split(",");
+        numOfEventsPassed = stringIDs.length;
+        societyName = new String[numOfEventsPassed];
+        eventName = new String[numOfEventsPassed];
+        imageTemp = new String[numOfEventsPassed];
+        eventTimes = new String[numOfEventsPassed];
+        eventDisplayDates = new String[numOfEventsPassed];
+        eventDisplayTimes = new String[numOfEventsPassed];
+        startTimes = new String[numOfEventsPassed];
+        endTimes = new String[numOfEventsPassed];
 
-        String[] stringIDs = loadedString.split(",");
 
-        int numOfEventsPassed = stringIDs.length;
-
-        String[] societyName = new String[numOfEventsPassed];
-        String[] eventName = new String[numOfEventsPassed];
-        String[] imageTemp = new String[numOfEventsPassed];
-        String[] eventTimings = new String[numOfEventsPassed];
-        String[] eventDisplayTimes = new String[numOfEventsPassed];
-        String[] startTimes = new String[numOfEventsPassed];
-        String[] endTimes = new String[numOfEventsPassed];
-        String[] splitEventIDsAndTimes;
-        String eventIDsAndTimes;
-        String additive;
         final int[] EventId = new int[numOfEventsPassed];
 
+        LinearLayoutManager llm = new LinearLayoutManager(getContext());
+        rv.setLayoutManager(llm);
+
         int counter = 0;
+
 
         for (int i = 0; i < numOfEventsPassed; i++) {
 
@@ -84,14 +99,14 @@ public class TomorrowFrag extends android.support.v4.app.Fragment {
 
             DateTime tomorrow = DateTime.now().plusDays(1);
             DateTimeFormatter fmt = DateTimeFormat.forPattern("yyyy-MM-dd");
-            String tomorrowString = fmt.print(tomorrow);
+            tomorrowString = fmt.print(tomorrow);
 
             if (splitEventIDsAndTimes[0].trim().equals(tomorrowString.trim())) {
                 societyName[counter] = appPrefs.getString("societyName" + additive, "");
                 eventName[counter] = appPrefs.getString("eventName" + additive, "");
                 imageTemp[counter] = appPrefs.getString("imageTemp" + additive, "");
-                eventTimings[counter] = eventIDsAndTimes;
-                eventDisplayTimes[counter] = eventTimings[counter].split(" ")[1];
+                eventTimes[counter] = eventIDsAndTimes;
+                eventDisplayTimes[counter] = eventTimes[counter].split(" ")[1];
                 startTimes[counter] = eventDisplayTimes[counter].split("-")[0].trim();
                 endTimes[counter] = eventDisplayTimes[counter].split("-")[1].trim();
                 if(startTimes[counter].equals(endTimes[counter]))
@@ -103,47 +118,26 @@ public class TomorrowFrag extends android.support.v4.app.Fragment {
         }
         counter1 = counter;
 
-        //Make "No events to show" message appear if the tab has no events
-        if(counter1 == 0)
-            listView.setEmptyView(v.findViewById(R.id.empty_list_item));
+        initializeData();
 
+        RVAdapter RVadapter = new RVAdapter(Ent_Cards);
+        rv.setAdapter(RVadapter);
 
-        StringBuilder sb = new StringBuilder();
-        for(int i = 0; i < counter; i++){
-            sb.append(Integer.toString(EventId[i])).append(',');
-        }
+        return v;
+    }
 
-        final String swipeEventId = sb.toString();
+    public void initializeData() {
+        Ent_Cards = new ArrayList<>();
 
-
-        for (int i = 0; i < counter; i++) {
-            byte[] data;
+        for (int i = 0; i < counter1; i++) {
+            byte[] eventsData;
             Bitmap bm;
 
-            data = Base64.decode(imageTemp[i], Base64.DEFAULT);
-            bm = BitmapFactory.decodeByteArray(data, 0, data.length);
-
-            EntItem dataProvider = new EntItem(bm, eventName[i], eventDisplayTimes[i]);
-            adapter.add(dataProvider);
+            eventsData = Base64.decode(imageTemp[i], Base64.DEFAULT);
+            bm = BitmapFactory.decodeByteArray(eventsData, 0, eventsData.length);
+            Ent_Cards.add(new Ent_CardItem(eventName[i],startTimes[i], bm));
         }
 
-
-
-        listView.setOnItemClickListener(
-                new AdapterView.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView<?> parent, View view, int position, long ld) {
-                        String Event = String.valueOf(parent.getItemAtPosition(position));
-                        Intent intent = new Intent(getActivity(), ParticularEntActivity.class);
-                        intent.putExtra("Event", Event);
-                        intent.putExtra("swipeEventId", swipeEventId);
-                        intent.putExtra("swipeCount", counter1);
-                        intent.putExtra("swipePosition", position);
-                        startActivity(intent);
-                    }
-                }
-        );
-        return v;
     }
 
 }

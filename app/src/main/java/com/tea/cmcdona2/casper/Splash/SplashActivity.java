@@ -9,6 +9,7 @@ import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Looper;
 import android.os.Message;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -47,6 +48,12 @@ public class SplashActivity extends Activity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash);
+
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+
+        int screenWidth = displayMetrics.widthPixels;
+        appPrefsEditor.putInt("screenWidth", screenWidth).apply();
 
         final String eventsUrl = "http://clontarfguitarlessons.com/getEvents.php";
         final String infoUrl = "http://clontarfguitarlessons.com/getInfo.php";

@@ -21,9 +21,12 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
@@ -100,7 +103,29 @@ public class EntsActivity extends ActionBarActivity implements ActionBar.TabList
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerlayout);
         String[] socs = getResources().getStringArray(R.array.societies);
         listView = (ListView) findViewById(R.id.drawer_list);
-        listView.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, socs));
+        listView.setAdapter(new ArrayAdapter<String>(this,
+                                    android.R.layout.simple_list_item_1,
+                                    socs) {
+
+                                @Override
+                                public View getView(int position, View convertView, ViewGroup parent) {
+                                    TextView view = (TextView) super.getView(position, convertView, parent);
+
+                                    //if(position == 0)
+                                    //view.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_person_pin_black_24dp,0,0,0);
+                                    //if(position == 1)
+                                    //view.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_supervisor_account_black_24dp,0,0,0);
+                                    if (position == 0)
+                                        view.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_find_in_page_black_24dp, 0, 0, 0);
+                                    if (position == 1)
+                                        view.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_settings_black_24dp, 0, 0, 0);
+                                    view.setCompoundDrawablePadding(30);
+
+                                    return view;
+                                }
+
+                            }
+        );
         listView.setOnItemClickListener(this);
 
         actionBar = getSupportActionBar();
@@ -115,6 +140,41 @@ public class EntsActivity extends ActionBarActivity implements ActionBar.TabList
                 actionBar.setSelectedNavigationItem(position);
             }
         });
+
+        Button allButton = (Button) findViewById(R.id.AllButton);
+        Button myButton = (Button) findViewById(R.id.MyButton);
+
+        allButton.setOnClickListener(
+                new View.OnClickListener() {
+                    public void onClick(View v) {
+                        SharedPreferences appPrefs = EntsActivity.this.getSharedPreferences("appPrefs", 0);
+                        SharedPreferences.Editor appPrefsEditor = appPrefs.edit();
+                        appPrefsEditor.putBoolean("allSocsFlag", true).commit();
+                        Intent intent = new Intent(EntsActivity.this, EntsActivity.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                        startActivity(intent);
+                        overridePendingTransition(0, 0); //0 for no animation
+                        finish();
+
+                    }
+                }
+        );
+
+        myButton.setOnClickListener(
+                new View.OnClickListener() {
+                    public void onClick(View v) {
+                        SharedPreferences appPrefs = EntsActivity.this.getSharedPreferences("appPrefs", 0);
+                        SharedPreferences.Editor appPrefsEditor = appPrefs.edit();
+                        appPrefsEditor.putBoolean("allSocsFlag", false).commit();
+                        Intent intent = new Intent(EntsActivity.this, EntsActivity.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                        startActivity(intent);
+                        overridePendingTransition(0, 0); //0 for no animation
+                        finish();
+
+                    }
+                }
+        );
 
 
         final int tabPosition = getIntent().getIntExtra("tabPosition", 0);
@@ -295,6 +355,7 @@ public class EntsActivity extends ActionBarActivity implements ActionBar.TabList
 
     }
 
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
@@ -363,25 +424,6 @@ public class EntsActivity extends ActionBarActivity implements ActionBar.TabList
 
         if (position == 0) {
 
-            appPrefsEditor.putBoolean("allSocsFlag", false).commit();
-            Intent intent = new Intent(EntsActivity.this, EntsActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-            startActivity(intent);
-            overridePendingTransition(0, 0); //0 for no animation
-            finish();
-
-        } else if (position == 1) {
-
-
-            appPrefsEditor.putBoolean("allSocsFlag", true).commit();
-            Intent intent = new Intent(EntsActivity.this, EntsActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-            startActivity(intent);
-            overridePendingTransition(0, 0); //0 for no animation
-            finish();
-
-        } else if (position == 2) {
-
             appPrefsEditor.putBoolean("fromEntsActivity", true).commit();
 
             Intent intent = new Intent(EntsActivity.this, ParticularSocActivity.class);
@@ -389,7 +431,7 @@ public class EntsActivity extends ActionBarActivity implements ActionBar.TabList
             startActivity(intent);
             finish();
 
-        } else if (position == 3) {
+        } else if (position == 1) {
 
             appPrefsEditor.putBoolean("fromEntsActivity", true).commit();
 

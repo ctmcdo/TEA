@@ -4,14 +4,10 @@
     <string name="text2">Fragment2</string>
     <string name="title_section1">Today</string>
     <string name="title_section2">Tomorrow</string>
-    <string name="title_section3">Later</string>
+    <string name="title_section3">Week</string>
     <string-array name="societies">
 
-        <item>My Societies</item>
-
-        <item>All Societies</item>
-
-        <item>Particular Society</item>
+        <item>Societies</item>
 
         <item>Preferences</item>
 
