@@ -229,10 +229,10 @@ public class ParticularEntFrag extends Fragment {
         final FloatingActionButton going = (FloatingActionButton) view.findViewById(R.id.going);
 
         final TextView event_date = (TextView) view.findViewById(R.id.eventDate);
-        final TextView event_date_description = (TextView) view.findViewById(R.id.eventDateDescription);
         final TextView event_time = (TextView) view.findViewById(R.id.eventTime);
         final TextView event_about = (TextView) view.findViewById(R.id.about);
-
+        final TextView event_date_des = (TextView) view.findViewById(R.id.eventDateDescription);
+        final TextView event_time_des = (TextView) view.findViewById(R.id.eventTimeDescription);
 
         imgview.setImageBitmap(bm);
 
@@ -262,6 +262,17 @@ public class ParticularEntFrag extends Fragment {
                 TextView eventDescription = (TextView) view.findViewById(R.id.eventDescription);
                 eventDescription.setText(EventDescription);
                 eventName.setText(EventName);
+
+        String sStartday = Integer.toString(StartDay);
+        String sStartMonth = Integer.toString(StartMonth);
+        String sStartYear = Integer.toString(StartYear);
+        String date = sStartday + "/" + sStartMonth + "/" + sStartYear;
+        event_date_des.setText(date);
+
+        String sStartHour = Integer.toString(StartHour);
+        String sStartMinute = StartDate.substring(14, 16);
+        String time = sStartHour + ":" + sStartMinute;
+        event_time_des.setText(time);
 
 
 

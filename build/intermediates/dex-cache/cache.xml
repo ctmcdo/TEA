@@ -2,81 +2,81 @@
 <items version="2" >
 
     <item
-        jar="/users/ugrad/holohaj/Desktop/socActiv/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
+        jar="/users/ugrad/cmcdona2/Desktop/String/app/build/intermediates/exploded-aar/com.mcxiaoke.volley/android-volley-master/1.0.19/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e6903a0f0ea6cfe780c96baaf7ed622f6090e425">
+        <dex dex="/users/ugrad/cmcdona2/Desktop/String/app/build/intermediates/pre-dexed/debug/classes-c7283ecc7e06315d122cfa1bced7abbfcf3adeb9.jar" />
+    </item>
+    <item
+        jar="/users/ugrad/cmcdona2/Desktop/String/app/build/intermediates/exploded-aar/com.android.support/palette-v7/23.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="15b669fd484d82539a354ccd1f2a08737474e95e">
+        <dex dex="/users/ugrad/cmcdona2/Desktop/String/app/build/intermediates/pre-dexed/debug/classes-c6791e4872ebab37e111cfbd80d3a69ba7a60e67.jar" />
+    </item>
+    <item
+        jar="/users/ugrad/cmcdona2/Desktop/String/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="/users/ugrad/holohaj/Desktop/socActiv/app/build/intermediates/pre-dexed/debug/classes-a804324db7815e8d866cb1f4d6cfd2375d68d4aa.jar" />
+        <dex dex="/users/ugrad/cmcdona2/Desktop/String/app/build/intermediates/pre-dexed/debug/classes-f6146c77a7cd50d29c61e457ce501786f547e9c3.jar" />
     </item>
     <item
-        jar="/users/ugrad/holohaj/Desktop/socActiv/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.0.1/jars/classes.jar"
+        jar="/users/ugrad/cmcdona2/Desktop/String/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="4356e230a981d1bbf047d848b91bc0d9b7c5bacc">
-        <dex dex="/users/ugrad/holohaj/Desktop/socActiv/app/build/intermediates/pre-dexed/debug/classes-8668571e1491c57fa25bdaa5e32eade7530f6618.jar" />
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/users/ugrad/cmcdona2/Desktop/String/app/build/intermediates/pre-dexed/debug/classes-16c293f77cdd389bedcb1d638472cb8195b63905.jar" />
     </item>
     <item
         jar="/opt/android-sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="/users/ugrad/holohaj/Desktop/socActiv/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1-55544acaf7567404cc89c13faa7d16877bb6a718.jar" />
+        <dex dex="/users/ugrad/cmcdona2/Desktop/String/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1-55544acaf7567404cc89c13faa7d16877bb6a718.jar" />
     </item>
     <item
-        jar="/users/ugrad/holohaj/.gradle/caches/modules-2/files-2.1/joda-time/joda-time/2.8.2/d27c24204c5e507b16fec01006b3d0f1ec42aed4/joda-time-2.8.2.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d27c24204c5e507b16fec01006b3d0f1ec42aed4">
-        <dex dex="/users/ugrad/holohaj/Desktop/socActiv/app/build/intermediates/pre-dexed/debug/joda-time-2.8.2-1464ae7877b2dd6294837b2a03182ee6f797b9bd.jar" />
-    </item>
-    <item
-        jar="/users/ugrad/holohaj/Desktop/socActiv/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="39ae02ce40c3ac828abbf780ce0ff5d7a28b7d6a">
-        <dex dex="/users/ugrad/holohaj/Desktop/socActiv/app/build/intermediates/pre-dexed/debug/classes-95a89dc720aa8bc1a55da30bcc8d8f5bda3dbf77.jar" />
-    </item>
-    <item
-        jar="/users/ugrad/holohaj/Desktop/socActiv/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jar="/users/ugrad/cmcdona2/Desktop/String/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="/users/ugrad/holohaj/Desktop/socActiv/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1-117226643ad177f6bf6779f61adb0ebab55ba44e.jar" />
+        <dex dex="/users/ugrad/cmcdona2/Desktop/String/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1-00f7b5bd4bdd50f5f57cfb8617e9c47d064caab9.jar" />
     </item>
     <item
-        jar="/users/ugrad/holohaj/Desktop/socActiv/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/jars/classes.jar"
+        jar="/users/ugrad/cmcdona2/Desktop/String/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="39ae02ce40c3ac828abbf780ce0ff5d7a28b7d6a">
+        <dex dex="/users/ugrad/cmcdona2/Desktop/String/app/build/intermediates/pre-dexed/debug/classes-8ad393cd81a70ccfe08f86a7fbcb1dd6040a9f07.jar" />
+    </item>
+    <item
+        jar="/users/ugrad/cmcdona2/Desktop/String/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4356e230a981d1bbf047d848b91bc0d9b7c5bacc">
+        <dex dex="/users/ugrad/cmcdona2/Desktop/String/app/build/intermediates/pre-dexed/debug/classes-5443560ae104ef8ecfc53828f36c58c7e7f448d4.jar" />
+    </item>
+    <item
+        jar="/users/ugrad/cmcdona2/.gradle/caches/modules-2/files-2.1/joda-time/joda-time/2.8.2/d27c24204c5e507b16fec01006b3d0f1ec42aed4/joda-time-2.8.2.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d27c24204c5e507b16fec01006b3d0f1ec42aed4">
+        <dex dex="/users/ugrad/cmcdona2/Desktop/String/app/build/intermediates/pre-dexed/debug/joda-time-2.8.2-6cf9aa9f77cbba58af02c3b11e104963c40ba267.jar" />
+    </item>
+    <item
+        jar="/users/ugrad/cmcdona2/Desktop/String/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
-        <dex dex="/users/ugrad/holohaj/Desktop/socActiv/app/build/intermediates/pre-dexed/debug/classes-031f98d8f7ea838293f227ecee6e83858141f71e.jar" />
+        <dex dex="/users/ugrad/cmcdona2/Desktop/String/app/build/intermediates/pre-dexed/debug/classes-82215f1db0db0978d46b62dfefb7ba74e1fa577d.jar" />
     </item>
     <item
-        jar="/users/ugrad/holohaj/Desktop/socActiv/app/build/intermediates/exploded-aar/com.mcxiaoke.volley/android-volley-master/1.0.19/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="81d72722e47e5eb0a9c9c1da41484ce29bb99849">
-        <dex dex="/users/ugrad/holohaj/Desktop/socActiv/app/build/intermediates/pre-dexed/debug/classes-b99e8a315cfe2b4f8e11ab6d39029b4865b2e203.jar" />
-    </item>
-    <item
-        jar="/users/ugrad/holohaj/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.0/7ff0e000d1e27e356567f56c92af3b8ab912636f/picasso-2.5.0.jar"
+        jar="/users/ugrad/cmcdona2/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.0/7ff0e000d1e27e356567f56c92af3b8ab912636f/picasso-2.5.0.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="7ff0e000d1e27e356567f56c92af3b8ab912636f">
-        <dex dex="/users/ugrad/holohaj/Desktop/socActiv/app/build/intermediates/pre-dexed/debug/picasso-2.5.0-8d76ca2fdba43f63516b65d801d2d6c0997c0067.jar" />
-    </item>
-    <item
-        jar="/users/ugrad/holohaj/Desktop/socActiv/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="/users/ugrad/holohaj/Desktop/socActiv/app/build/intermediates/pre-dexed/debug/classes-0fc81a4ead04af29aec7f18c7c88e5e14736c47c.jar" />
-    </item>
-    <item
-        jar="/users/ugrad/holohaj/Desktop/socActiv/app/build/intermediates/exploded-aar/com.android.support/palette-v7/23.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="15b669fd484d82539a354ccd1f2a08737474e95e">
-        <dex dex="/users/ugrad/holohaj/Desktop/socActiv/app/build/intermediates/pre-dexed/debug/classes-c3a0199039fbc3a66914d81135e07355f5bb20ef.jar" />
+        <dex dex="/users/ugrad/cmcdona2/Desktop/String/app/build/intermediates/pre-dexed/debug/picasso-2.5.0-075389c39ac5940900f9bd7a8f6f0a218c89eb12.jar" />
     </item>
 
 </items>
