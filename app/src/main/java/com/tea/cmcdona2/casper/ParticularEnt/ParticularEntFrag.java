@@ -50,6 +50,7 @@ import com.tea.cmcdona2.casper.R;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -228,6 +229,7 @@ public class ParticularEntFrag extends Fragment {
         final FloatingActionButton going = (FloatingActionButton) view.findViewById(R.id.going);
 
         final TextView event_date = (TextView) view.findViewById(R.id.eventDate);
+        final TextView event_date_description = (TextView) view.findViewById(R.id.eventDateDescription);
         final TextView event_time = (TextView) view.findViewById(R.id.eventTime);
         final TextView event_about = (TextView) view.findViewById(R.id.about);
 

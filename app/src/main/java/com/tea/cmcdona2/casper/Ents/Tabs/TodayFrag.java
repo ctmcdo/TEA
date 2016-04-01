@@ -90,6 +90,7 @@ public class TodayFrag extends android.support.v4.app.Fragment {
 
 
         final int[] EventId = new int[numOfEventsPassed];
+        final int[] EventPositions = new int[numOfEventsPassed];
 
         LinearLayoutManager llm = new LinearLayoutManager(getContext());
         rv.setLayoutManager(llm);
@@ -102,6 +103,7 @@ public class TodayFrag extends android.support.v4.app.Fragment {
         int numOfEventsPassed = splitActiveIDs.length;
         Log.v("numOfEventsPassed", "" + numOfEventsPassed);
 
+        int eventPosition = 0;  //Position in array of all events from all 3 fragments
 
         for (String stringID : splitActiveIDs) {
 
@@ -112,8 +114,6 @@ public class TodayFrag extends android.support.v4.app.Fragment {
             DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
             Date date = new Date();
             todayString = dateFormat.format(date);
-
-
 
 
             if (splitEventIDsAndTimes[0].trim().equals(todayString.trim())) {
@@ -129,15 +129,33 @@ public class TodayFrag extends android.support.v4.app.Fragment {
                 Log.v("displayTime", "" + eventDisplayTimes[counter]);
 
                 EventId[counter] = Integer.parseInt(stringID);
+                EventPositions[counter] = eventPosition;
                 counter++;
             }
+
+            eventPosition++;
         }
 
         counter1= counter;
-        appPrefsEditor.putInt("todaySize", counter1).commit();
+
         initializeData();
 
-        RVAdapter RVadapter = new RVAdapter(Ent_Cards);
+        //Pass filtered IDs to RVAdapter
+        StringBuilder sb = new StringBuilder();
+        for(int i = 0; i < counter1; i++){
+            sb.append(EventId[i]).append(',');
+        }
+
+        //Pass positions
+        StringBuilder sb1 = new StringBuilder();
+        for(int i = 0; i < counter1; i++){
+            sb1.append(EventPositions[i]).append(',');
+        }
+
+        String filteredIds = sb.toString();
+        String eventPositions = sb1.toString();
+
+        RVAdapter RVadapter = new RVAdapter(Ent_Cards,filteredIds, eventPositions);
         rv.setAdapter(RVadapter);
 
         return v;

@@ -23,7 +23,10 @@ import java.util.List;
 public class RVAdapter extends RecyclerView.Adapter<RVAdapter.PersonViewHolder>{
 
     static int position;
+    static int numOfEvents;
     static List<Ent_CardItem> EntCards;
+   static String filteredIDs1;
+    static String eventPositions1;
 
     public static class PersonViewHolder extends RecyclerView.ViewHolder {
         CardView cv;
@@ -42,24 +45,19 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.PersonViewHolder>{
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override public void onClick(View v) {
                     final SharedPreferences appPrefs = v.getContext().getSharedPreferences("appPrefs", 0);
-                    String loadedID = appPrefs.getString("IDs", "null");
-                    String[] stringIDs = loadedID.split(",");
+                    String loadedID = filteredIDs1;
 
 
                     String Event = personName.getText().toString();
-                    StringBuilder sb = new StringBuilder();
-                    for(int i = 0; i < EntCards.size(); i++){
-                        sb.append(stringIDs[i]).append(',');
-                    }
 
-                    final String swipeEventId = sb.toString();
+                    final String swipeEventId = loadedID;
                     Intent intent = new Intent(v.getContext(), ParticularEntActivity.class);
                     intent.putExtra("Event", Event);
                     intent.putExtra("swipeEventId", swipeEventId);
                     intent.putExtra("swipeCount", EntCards.size());
                     position = getAdapterPosition();
                     intent.putExtra("swipePosition", position);
-                    intent.putExtra("eventPosition", position + appPrefs.getInt("todaySize",0) + appPrefs.getInt("tomorrowSize",0) );
+                    intent.putExtra("eventPosition", eventPositions1 );
                     v.getContext().startActivity(intent);
                 }
             });
@@ -68,8 +66,11 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.PersonViewHolder>{
 
 
 
-    RVAdapter(List<Ent_CardItem> EntCards){
+    RVAdapter(List<Ent_CardItem> EntCards, String filteredIDs, String eventPositions){
         this.EntCards = EntCards;
+        filteredIDs1 = filteredIDs;
+        eventPositions1 = eventPositions;
+
     }
 
     @Override

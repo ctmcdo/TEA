@@ -82,12 +82,13 @@ public class TomorrowFrag extends android.support.v4.app.Fragment {
 
 
         final int[] EventId = new int[numOfEventsPassed];
+        final int[] EventPositions = new int[numOfEventsPassed];
 
         LinearLayoutManager llm = new LinearLayoutManager(getContext());
         rv.setLayoutManager(llm);
 
         int counter = 0;
-
+        int eventPosition = 0;
 
         for (int i = 0; i < numOfEventsPassed; i++) {
 
@@ -113,14 +114,31 @@ public class TomorrowFrag extends android.support.v4.app.Fragment {
                     eventDisplayTimes[counter] = eventDisplayTimes[counter].split("-")[0];
                 Log.v("displayTime", "" + eventDisplayTimes[counter]);
                 EventId[counter] = Integer.parseInt(stringIDs[i]);
+                EventPositions[counter] = eventPosition;
                 counter++;
             }
+
+            eventPosition++;
         }
         counter1 = counter;
 
         initializeData();
 
-        RVAdapter RVadapter = new RVAdapter(Ent_Cards);
+        //Pass filtered IDs to RVAdapter
+        StringBuilder sb = new StringBuilder();
+        for(int i = 0; i < counter1; i++){
+            sb.append(EventId[i]).append(',');
+        }
+        //Pass positions
+        StringBuilder sb1 = new StringBuilder();
+        for(int i = 0; i < counter1; i++){
+            sb1.append(EventPositions[i]).append(',');
+        }
+
+        String filteredIds = sb.toString();
+        String eventPositions = sb1.toString();
+
+        RVAdapter RVadapter = new RVAdapter(Ent_Cards, filteredIds, eventPositions);
         rv.setAdapter(RVadapter);
 
         return v;

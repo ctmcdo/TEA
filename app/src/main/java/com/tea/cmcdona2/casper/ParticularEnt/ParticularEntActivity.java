@@ -97,6 +97,8 @@ public class ParticularEntActivity extends AppCompatActivity{
 
         String temp = getIntent().getStringExtra("swipeEventId");
         String[] swipeEventId = temp.split(",");
+        String temp1 = getIntent().getStringExtra("eventPosition");
+        String[] eventPosition = temp1.split(",");
         @Override
         public Fragment getItem(int arg0) {
             // TODO Auto-generated method stub
@@ -115,7 +117,7 @@ public class ParticularEntActivity extends AppCompatActivity{
                     int pos = getIntent().getIntExtra("eventPosition", 0);
                     Log.v("testCase", ""+pos);
                     bundle.putInt("eventId", Integer.parseInt(swipeEventId[position + i]));
-                    bundle.putInt("eventPosition", pos);
+                    bundle.putInt("eventPosition", Integer.parseInt(eventPosition[position + i]));
                     Fragment fragment = new ParticularEntFrag();
                     fragment.setArguments(bundle);
                     return fragment;
