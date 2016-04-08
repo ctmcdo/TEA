@@ -30,6 +30,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
+import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -50,7 +51,9 @@ import org.json.JSONObject;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 
 public class EntsActivity extends ActionBarActivity implements ActionBar.TabListener, AdapterView.OnItemClickListener {
 
@@ -589,6 +592,9 @@ public class EntsActivity extends ActionBarActivity implements ActionBar.TabList
             array[chosenSociety] = true;
         } else //Did not come from ParticularSocActivity - set society events to appear as normal
         {
+            //String subbos = appPrefs.getString("subbys", "NULL");
+
+            getSubs();
             String subbos = appPrefs.getString("subbys", "NULL");
 
             int len = subbos.length();
@@ -624,5 +630,54 @@ public class EntsActivity extends ActionBarActivity implements ActionBar.TabList
             super.onBackPressed();
         }
     }
+
+    private void getSubs() {
+        //email = etEmail.getText().toString().trim();
+        //password = etPassword.getText().toString().trim();
+        SharedPreferences appPrefs = EntsActivity.this.getSharedPreferences("appPrefs", 0);
+
+        //final String email = appPrefs.getString("loggedInUser", "NULL");
+        final String email = "hello9";
+        final String password = "pass9";
+
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, Constants.GETSUBS_URL,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        if(response.trim().equals("Failure")){
+                            Toast.makeText(EntsActivity.this,response,Toast.LENGTH_LONG).show();
+
+
+                        }else{
+                            Toast.makeText(EntsActivity.this,response,Toast.LENGTH_LONG).show();
+                            /*
+                            SharedPreferences appPrefs1 = EntsActivity.this.getSharedPreferences("appPrefs", 0);
+                            final SharedPreferences.Editor appPrefsEditor1 = appPrefs1.edit();
+                            String subscriptions = response;
+                            appPrefsEditor1.putString("subbys", subscriptions).commit(); */
+
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(EntsActivity.this,error.toString(),Toast.LENGTH_LONG ).show();
+                    }
+                }){
+            @Override
+            protected Map<String,String> getParams(){
+                Map<String,String> params = new HashMap<String, String>();
+                params.put(Constants.KEY_EMAIL, email);
+                params.put(Constants.KEY_PASSWORD, password);
+                return params;
+            }
+        };
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
+
+    }
+
 
 }

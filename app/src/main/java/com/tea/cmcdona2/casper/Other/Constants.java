@@ -21,11 +21,14 @@ public class Constants {
     public static final String KEY_ENDDATE = "End Date";
     public static final String LOGIN_URL = "http://clontarfguitarlessons.com/verifyUser.php";
     public static final String REGISTER_URL = "http://clontarfguitarlessons.com/registerUser.php";
+    public static final String SUBS_URL = "http://clontarfguitarlessons.com/addSubs.php";
+    public static final String GETSUBS_URL = "http://clontarfguitarlessons.com/getSubs.php";
+    public static final String SENDEMAIL_URL = "http://clontarfguitarlessons.com/resetPassword.php";
     public static final String KEY_EMAIL = "email";
     public static final String KEY_PASSWORD = "password";
     public static final String KEY_ACCTYPE = "accountType";
     public static final String KEY_SOCIETY= "society";
     public static final String KEY_FIRSTNAME = "name";
     public static final String KEY_LASTNAME = "lastname";
-    public static final String KEY_SUBS = "subscriptions";
+    public static final String KEY_SUBS = "subs";
 }

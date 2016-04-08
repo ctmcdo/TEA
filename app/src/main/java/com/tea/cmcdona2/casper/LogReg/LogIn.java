@@ -33,6 +33,7 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
     //Button reglink;
     public EditText etEmail, etPassword;
     TextView reglink;
+    TextView resetlink;
     boolean userExists;
     String email, password;
     String encryptedEmail;
@@ -50,9 +51,11 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
         etEmail = (EditText) findViewById(R.id.etEmail);
         etPassword = (EditText) findViewById(R.id.etPassword);
         reglink = (TextView) findViewById(R.id.tvRegisterLink);
+        resetlink = (TextView) findViewById(R.id.resetpass);
 
         press.setOnClickListener(this);
         reglink.setOnClickListener(this);
+        resetlink.setOnClickListener(this);
 
         //databaseHelper = new DatabaseHelper(this);
         //localUserHelper = new LocalUserHelper(this);
@@ -96,12 +99,17 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
                 startActivity(registerIntent);
 
                 break;
+            case R.id.resetpass:
+                Intent resetIntent = new Intent(this, resetPassword.class);
+                startActivity(resetIntent);
+
+                break;
         }
 
     }
 
     private void userLogin() {
-        //email = etEmail.getText().toString().trim();
+        email = etEmail.getText().toString().trim();
         //password = etPassword.getText().toString().trim();
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, Constants.LOGIN_URL,
@@ -131,7 +139,7 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String,String> map = new HashMap<String,String>();
-                map.put(Constants.KEY_EMAIL,encryptedEmail);
+                map.put(Constants.KEY_EMAIL,email);
                 map.put(Constants.KEY_PASSWORD, encryptedPassword);
                 return map;
             }

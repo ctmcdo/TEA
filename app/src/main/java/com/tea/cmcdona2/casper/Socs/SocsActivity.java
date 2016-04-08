@@ -292,16 +292,21 @@ public class SocsActivity extends ActionBarActivity {
         StringBuilder sb1 = new StringBuilder();
         sb1.append("");
 
+
+
         sb1.append(subs);
         String subbys = sb1.toString();
-        Toast.makeText(SocsActivity.this, subbys,Toast.LENGTH_LONG).show();
+
+
 
         SharedPreferences appPrefs1 = SocsActivity.this.getSharedPreferences("appPrefs", 0);
         final SharedPreferences.Editor appPrefsEditor1 = appPrefs1.edit();
         String subscriptions = subbys;
         appPrefsEditor1.putString("subbys", subscriptions).commit();
 
-        //sendSubs(subscriptions);
+        sendSubs(subscriptions);
+
+
 
         Intent intent = new Intent(SocsActivity.this, EntsActivity.class);
 
@@ -379,21 +384,23 @@ public class SocsActivity extends ActionBarActivity {
         return n;
     }
 
-    private void sendSubs(String subs) {
+    private void sendSubs(String subos) {
         //email = etEmail.getText().toString().trim();
         //password = etPassword.getText().toString().trim();
         SharedPreferences appPrefs = SocsActivity.this.getSharedPreferences("appPrefs", 0);
         final SharedPreferences.Editor appPrefsEditor = appPrefs.edit();
 
         final String email = appPrefs.getString("loggedInUser", "NULL");
-        final String subscriptions = subs;
+        final String subs = subos;
+        //final String email = "tester";
+        //final String subs = "tester";
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, Constants.LOGIN_URL,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, Constants.SUBS_URL,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         if(response.trim().equals("success")){
-
+                            Toast.makeText(SocsActivity.this,response,Toast.LENGTH_LONG).show();
 
                         }else{
                             Toast.makeText(SocsActivity.this,response,Toast.LENGTH_LONG).show();
@@ -407,11 +414,11 @@ public class SocsActivity extends ActionBarActivity {
                     }
                 }){
             @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String,String> map = new HashMap<String,String>();
-                map.put(Constants.KEY_EMAIL, email);
-                map.put(Constants.KEY_SUBS, subscriptions);
-                return map;
+            protected Map<String,String> getParams(){
+                Map<String,String> params = new HashMap<String, String>();
+                params.put(Constants.KEY_EMAIL, email);
+                params.put(Constants.KEY_SUBS, subs);
+                return params;
             }
         };
 

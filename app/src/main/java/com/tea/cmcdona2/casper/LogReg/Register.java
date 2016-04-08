@@ -41,8 +41,8 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        rName = (EditText) findViewById(R.id.rName);
-        rLastName = (EditText) findViewById(R.id.rLastName);
+
+
         etEmail = (EditText) findViewById(R.id.etEmail);
         etPassword = (EditText) findViewById(R.id.etPassword);
         etPassword2 = (EditText) findViewById(R.id.etPassword2);
@@ -65,14 +65,13 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
 
             case R.id.bRegister:
 
-                String name = rName.getText().toString();
+
                 String email = etEmail.getText().toString();
                 String password1 = etPassword.getText().toString();
                 String password2 = etPassword2.getText().toString();
-                String lastname = rLastName.getText().toString();
 
 
-                if (name.equals("") || lastname.equals("") || email.equals("") || password1.equals("")) {
+                if (email.equals("") || password1.equals("")) {
                     Toast.makeText(this, "Incomplete User Details", Toast.LENGTH_SHORT).show();
                 }
 
@@ -86,7 +85,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
 
                 //add code checking for unique email when databases are set-up
 
-                if (!name.equals("") && !email.equals("") && !lastname.equals("") && !password1.equals("") && password1.equals(password2) && validEmail(email)) {
+                if (!email.equals("")  && !password1.equals("") && password1.equals(password2) && validEmail(email)) {
                     registerUser();
 
                 }

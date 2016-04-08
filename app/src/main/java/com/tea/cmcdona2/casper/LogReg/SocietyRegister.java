@@ -105,7 +105,7 @@ public class SocietyRegister extends AppCompatActivity implements View.OnClickLi
         final String encryptedEmail = md5(email);
         final String encryptedPassword = md5(password);
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, Constants.REGISTER_URL,
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, Constants.REGISTER_URL,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -132,7 +132,7 @@ public class SocietyRegister extends AppCompatActivity implements View.OnClickLi
             @Override
             protected Map<String,String> getParams(){
                 Map<String,String> params = new HashMap<String, String>();
-                params.put(Constants.KEY_EMAIL, encryptedEmail);
+                params.put(Constants.KEY_EMAIL, email);
                 params.put(Constants.KEY_PASSWORD,encryptedPassword);
                 params.put(Constants.KEY_ACCTYPE, "soc");
                 params.put(Constants.KEY_SOCIETY, societyName);
