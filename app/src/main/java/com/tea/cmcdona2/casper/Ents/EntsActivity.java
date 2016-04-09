@@ -645,11 +645,11 @@ public class EntsActivity extends ActionBarActivity implements ActionBar.TabList
                     @Override
                     public void onResponse(String response) {
                         if(response.trim().equals("Failure")){
-                            Toast.makeText(EntsActivity.this,response,Toast.LENGTH_LONG).show();
+                            //Toast.makeText(EntsActivity.this,response,Toast.LENGTH_LONG).show();
 
 
                         }else{
-                            Toast.makeText(EntsActivity.this,response,Toast.LENGTH_LONG).show();
+                            //Toast.makeText(EntsActivity.this,response,Toast.LENGTH_LONG).show();
                             /*
                             SharedPreferences appPrefs1 = EntsActivity.this.getSharedPreferences("appPrefs", 0);
                             final SharedPreferences.Editor appPrefsEditor1 = appPrefs1.edit();

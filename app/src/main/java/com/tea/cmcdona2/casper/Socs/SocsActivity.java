@@ -400,7 +400,7 @@ public class SocsActivity extends ActionBarActivity {
                     @Override
                     public void onResponse(String response) {
                         if(response.trim().equals("success")){
-                            Toast.makeText(SocsActivity.this,response,Toast.LENGTH_LONG).show();
+                            //Toast.makeText(SocsActivity.this,response,Toast.LENGTH_LONG).show();
 
                         }else{
                             Toast.makeText(SocsActivity.this,response,Toast.LENGTH_LONG).show();

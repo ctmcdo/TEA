@@ -27,5 +27,6 @@
     <string name="title_activity_societyor_student">SocietyorStudent</string>
     <string name="title_activity_society_register">SocietyRegister</string>
     <string name="title_activity_reset_password">resetPassword</string>
+    <string name="about"><u>About</u></string>
 
 </resources>

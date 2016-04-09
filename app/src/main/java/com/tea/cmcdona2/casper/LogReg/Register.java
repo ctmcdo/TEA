@@ -102,8 +102,8 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
     private void registerUser(){
         final String email = etEmail.getText().toString().trim();
         final String password = etPassword.getText().toString().trim();
-        final String name = rName.getText().toString();
-        final String lastName = rLastName.getText().toString();
+        //final String name = rName.getText().toString();
+        //final String lastName = rLastName.getText().toString();
         final String encryptedEmail = md5(email);
         final String encryptedPassword = md5(password);
 
